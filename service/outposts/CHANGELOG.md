@@ -1,3 +1,7 @@
+# v1.63.0 (2026-07-02)
+
+* **Feature**: Tighten Outpost site ContactPhoneNumber regex to perform phone number validation.
+
 # v1.62.2 (2026-07-01)
 
 * **Bug Fix**: Bump smithy-go to 1.27.3, fix JSON encorder for document.Number, endpoint host label format validation and CBOR union serialization on new serde

@@ -1,3 +1,7 @@
+# v1.63.0 (2026-07-02)
+
+* **Feature**: Add support for provisioned limit management, enabling customers to view and update their provisioned API rate limits for Amazon Cognito User Pools programmatically through the new GetProvisionedLimit and UpdateProvisionedLimit APIs.
+
 # v1.62.2 (2026-07-01)
 
 * **Bug Fix**: Bump smithy-go to 1.27.3, fix JSON encorder for document.Number, endpoint host label format validation and CBOR union serialization on new serde

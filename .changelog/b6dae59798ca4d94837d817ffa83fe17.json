@@ -1,8 +1,0 @@
-{
-    "id": "b6dae597-98ca-4d94-837d-817ffa83fe17",
-    "type": "feature",
-    "description": "Added dual-stack (IPv4 and IPv6) endpoint fields to SSAI and Channel Assembly API responses.",
-    "modules": [
-        "service/mediatailor"
-    ]
-}

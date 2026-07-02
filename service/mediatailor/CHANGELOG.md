@@ -1,3 +1,7 @@
+# v1.60.0 (2026-07-02)
+
+* **Feature**: Added dual-stack (IPv4 and IPv6) endpoint fields to SSAI and Channel Assembly API responses.
+
 # v1.59.8 (2026-07-01)
 
 * **Bug Fix**: Bump smithy-go to 1.27.3, fix JSON encorder for document.Number, endpoint host label format validation and CBOR union serialization on new serde

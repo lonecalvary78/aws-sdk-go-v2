@@ -1,8 +1,0 @@
-{
-    "id": "b642efdf-75aa-4899-8c17-2b0f80ccfa7d",
-    "type": "feature",
-    "description": "Updated model definitions for ODB service.",
-    "modules": [
-        "service/odb"
-    ]
-}

@@ -1,8 +1,0 @@
-{
-    "id": "26406aad-bdff-4ed8-8326-10ccccde9fe3",
-    "type": "feature",
-    "description": "Amazon Connect Customer Profiles adds support for diversityConfig to recommenderConfig which can be used for diversifying the recommendations. This release also includes model versioning support which helps customer to rollback trained models.",
-    "modules": [
-        "service/customerprofiles"
-    ]
-}

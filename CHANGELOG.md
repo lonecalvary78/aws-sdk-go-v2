@@ -1,3 +1,19 @@
+# Release (2026-07-02)
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/cognitoidentityprovider`: [v1.63.0](service/cognitoidentityprovider/CHANGELOG.md#v1630-2026-07-02)
+  * **Feature**: Add support for provisioned limit management, enabling customers to view and update their provisioned API rate limits for Amazon Cognito User Pools programmatically through the new GetProvisionedLimit and UpdateProvisionedLimit APIs.
+* `github.com/aws/aws-sdk-go-v2/service/configservice`: [v1.65.0](service/configservice/CHANGELOG.md#v1650-2026-07-02)
+  * **Feature**: AWS Config now supports tag-on-create for organization-managed Config rules and conformance packs through the PutOrganizationConfigRule and PutOrganizationConformancePack APIs.
+* `github.com/aws/aws-sdk-go-v2/service/customerprofiles`: [v1.63.0](service/customerprofiles/CHANGELOG.md#v1630-2026-07-02)
+  * **Feature**: Amazon Connect Customer Profiles adds support for diversityConfig to recommenderConfig which can be used for diversifying the recommendations. This release also includes model versioning support which helps customer to rollback trained models.
+* `github.com/aws/aws-sdk-go-v2/service/elementalinference`: [v1.2.0](service/elementalinference/CHANGELOG.md#v120-2026-07-02)
+  * **Feature**: Adding new BDD representation of endpoint ruleset
+* `github.com/aws/aws-sdk-go-v2/service/mediatailor`: [v1.60.0](service/mediatailor/CHANGELOG.md#v1600-2026-07-02)
+  * **Feature**: Added dual-stack (IPv4 and IPv6) endpoint fields to SSAI and Channel Assembly API responses.
+* `github.com/aws/aws-sdk-go-v2/service/outposts`: [v1.63.0](service/outposts/CHANGELOG.md#v1630-2026-07-02)
+  * **Feature**: Tighten Outpost site ContactPhoneNumber regex to perform phone number validation.
+
 # Release (2026-07-01)
 
 ## General Highlights

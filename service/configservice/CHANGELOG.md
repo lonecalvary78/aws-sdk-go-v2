@@ -1,3 +1,7 @@
+# v1.65.0 (2026-07-02)
+
+* **Feature**: AWS Config now supports tag-on-create for organization-managed Config rules and conformance packs through the PutOrganizationConfigRule and PutOrganizationConformancePack APIs.
+
 # v1.64.3 (2026-07-01)
 
 * **Bug Fix**: Bump smithy-go to 1.27.3, fix JSON encorder for document.Number, endpoint host label format validation and CBOR union serialization on new serde

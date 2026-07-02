@@ -1,8 +1,0 @@
-{
-    "id": "b7102cd8-e8ef-424b-8a23-12a9ceb35d1d",
-    "type": "feature",
-    "description": "Adding new BDD representation of endpoint ruleset",
-    "modules": [
-        "service/elementalinference"
-    ]
-}

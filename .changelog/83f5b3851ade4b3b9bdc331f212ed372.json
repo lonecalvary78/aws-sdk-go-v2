@@ -1,8 +1,0 @@
-{
-    "id": "83f5b385-1ade-4b3b-9bdc-331f212ed372",
-    "type": "feature",
-    "description": "Tighten Outpost site ContactPhoneNumber regex to perform phone number validation.",
-    "modules": [
-        "service/outposts"
-    ]
-}
