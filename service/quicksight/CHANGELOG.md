@@ -1,3 +1,7 @@
+# v1.117.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.116.0 (2026-07-01)
 
 * **Feature**: Adding support for FileSource PhysicalTables.  This adds support for datasets with file sources.

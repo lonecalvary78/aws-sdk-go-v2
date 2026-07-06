@@ -1,3 +1,7 @@
+# v1.180.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.179.0 (2026-07-01)
 
 * **Feature**: Adds a new Amazon Connect Service API, SendOutboundWebNotification, that delivers web notifications to end-customer chat widget sessions. Callable only by the Amazon Connect Outbound Campaigns service principal.

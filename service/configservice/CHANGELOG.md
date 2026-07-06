@@ -1,3 +1,7 @@
+# v1.66.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.65.0 (2026-07-02)
 
 * **Feature**: AWS Config now supports tag-on-create for organization-managed Config rules and conformance packs through the PutOrganizationConfigRule and PutOrganizationConformancePack APIs.

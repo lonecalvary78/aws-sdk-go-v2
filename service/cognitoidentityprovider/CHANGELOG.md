@@ -1,3 +1,7 @@
+# v1.64.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.63.0 (2026-07-02)
 
 * **Feature**: Add support for provisioned limit management, enabling customers to view and update their provisioned API rate limits for Amazon Cognito User Pools programmatically through the new GetProvisionedLimit and UpdateProvisionedLimit APIs.

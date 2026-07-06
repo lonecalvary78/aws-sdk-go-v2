@@ -3,4 +3,4 @@
 package securityhub
 
 // goModuleVersion is the tagged release for this module
-const goModuleVersion = "1.71.9"
+const goModuleVersion = "1.72.0"

@@ -1,3 +1,7 @@
+# v1.3.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.2.0 (2026-07-02)
 
 * **Feature**: Adding new BDD representation of endpoint ruleset

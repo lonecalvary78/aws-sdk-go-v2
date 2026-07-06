@@ -1,3 +1,7 @@
+# v1.64.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.63.0 (2026-07-02)
 
 * **Feature**: Tighten Outpost site ContactPhoneNumber regex to perform phone number validation.

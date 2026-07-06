@@ -1,3 +1,7 @@
+# v1.18.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.17.0 (2026-07-01)
 
 * **Feature**: Add support for Assurance Assistant APIs for managing compliance inquiries along with tagging features.

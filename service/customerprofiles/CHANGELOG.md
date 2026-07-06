@@ -1,3 +1,7 @@
+# v1.64.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.63.0 (2026-07-02)
 
 * **Feature**: Amazon Connect Customer Profiles adds support for diversityConfig to recommenderConfig which can be used for diversifying the recommendations. This release also includes model versioning support which helps customer to rollback trained models.

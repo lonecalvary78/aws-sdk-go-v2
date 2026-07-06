@@ -1,3 +1,7 @@
+# v1.13.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.12.0 (2026-07-01)
 
 * **Feature**: Added CreateStreamSessionAdminShell API operation to enable customers to establish secure terminal connections to the live runtime environment of streaming sessions for troubleshooting purposes.

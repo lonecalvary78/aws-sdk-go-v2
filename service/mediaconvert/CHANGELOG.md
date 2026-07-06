@@ -1,3 +1,7 @@
+# v1.95.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.94.0 (2026-07-01)
 
 * **Feature**: Adds support for integer-second duration normalization and the option to disable explicit weighted prediction.

@@ -1,8 +1,0 @@
-{
-    "id": "a47fbb95-f468-4859-9cdc-60ef782c63af",
-    "type": "feature",
-    "description": "Adds support for managing AWS account credits and billing preferences, including retrieving credit details, viewing per-month credit allocation history, redeeming promotional codes, and configuring credit sharing and billing preferences.",
-    "modules": [
-        "service/billing"
-    ]
-}

@@ -1,3 +1,8 @@
+# v1.20.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+* **Feature**: This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+
 # v1.19.7 (2026-07-01)
 
 * **Bug Fix**: Bump smithy-go to 1.27.3, fix JSON encorder for document.Number, endpoint host label format validation and CBOR union serialization on new serde

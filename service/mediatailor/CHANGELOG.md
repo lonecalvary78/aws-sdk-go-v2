@@ -1,3 +1,7 @@
+# v1.61.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+
 # v1.60.0 (2026-07-02)
 
 * **Feature**: Added dual-stack (IPv4 and IPv6) endpoint fields to SSAI and Channel Assembly API responses.

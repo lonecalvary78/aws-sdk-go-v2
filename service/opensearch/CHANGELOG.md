@@ -1,3 +1,8 @@
+# v1.74.0 (2026-07-06)
+
+* **Feature**: Add request serialization snapshot tests.
+* **Feature**: This release introduces Saved Object Migration APIs, enabling users to migrate dashboards, visualizations, index patterns, and other saved objects from a data source into an Amazon OpenSearch Service application workspace with configurable export filters and conflict resolution strategies.
+
 # v1.73.0 (2026-07-01)
 
 * **Feature**: To create a Mustang domain via the AWS CLI, you must pass EngineMode OPTIMIZED (along with UseCase OBSERVABILITY or MIXED)  without it, the domain defaults to a regular (GENERAL) domain. Also this release includes Insights Feedback API which user can use to provide feedback for Insight API.
