@@ -1,0 +1,8 @@
+{
+    "id": "a6eee39e-878b-468e-a04a-9749ee67da54",
+    "type": "feature",
+    "description": "Added PutStorageTierPolicy and GetStorageTierPolicy APIs to Amazon CloudWatch Logs. Customers can now configure account-level Intelligent Tiering to automatically optimize log storage costs by moving infrequently accessed data to lower-cost storage tiers.",
+    "modules": [
+        "service/cloudwatchlogs"
+    ]
+}

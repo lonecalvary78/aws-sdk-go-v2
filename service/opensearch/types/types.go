@@ -1705,6 +1705,24 @@ type ErrorDetails struct {
 	noSmithyDocumentSerde
 }
 
+// Options to filter the scope of saved objects to export during a migration.
+type ExportOptions struct {
+
+	// Specifies whether to include all objects referenced by the exported objects,
+	// recursively.
+	IncludeReferencesDeep *bool
+
+	// A list of specific saved objects to include in the migration, identified by
+	// type and ID.
+	Objects []SavedObjectIdentifier
+
+	// A list of saved object types to include in the migration. Valid values include
+	// dashboard , visualization , index-pattern , search , and query .
+	Types []string
+
+	noSmithyDocumentSerde
+}
+
 // A filter used to limit results when describing inbound or outbound
 // cross-cluster connections. You can specify multiple values per filter. A
 // cross-cluster connection must match at least one of the specified values for it
@@ -2217,6 +2235,110 @@ type MasterUserOptions struct {
 	// Password for the master user. Only specify if InternalUserDatabaseEnabled is
 	// true .
 	MasterUserPassword *string
+
+	noSmithyDocumentSerde
+}
+
+// Contains error details for a migration that failed or completed with errors.
+type MigrationError struct {
+
+	// The error code identifying the type of failure.
+	Code *string
+
+	// A human-readable description of the error.
+	Message *string
+
+	noSmithyDocumentSerde
+}
+
+// The configuration options for a saved objects migration job.
+type MigrationOptions struct {
+
+	// The data source from which to export saved objects.
+	//
+	// This member is required.
+	Source *MigrationSource
+
+	// The target workspace configuration for importing saved objects. You can specify
+	// an existing workspace or request creation of a new workspace.
+	//
+	// This member is required.
+	Workspace *MigrationWorkspace
+
+	// The strategy for resolving conflicts when saved objects already exist in the
+	// target workspace. Valid values are CREATE_NEW_COPIES , which creates new objects
+	// with unique IDs, and overwrite , which replaces existing objects.
+	ConflictResolution *string
+
+	// Options to filter the scope of saved objects to export from the source.
+	ExportOptions *ExportOptions
+
+	noSmithyDocumentSerde
+}
+
+// The source configuration for a migration, specifying the data source from which
+// to export saved objects.
+type MigrationSource struct {
+
+	// The Amazon Resource Name (ARN) of the data source to migrate saved objects from.
+	//
+	// This member is required.
+	DatasourceArn *string
+
+	noSmithyDocumentSerde
+}
+
+// A summary of a migration job, including its status and progress.
+type MigrationSummary struct {
+
+	// The unique identifier of the OpenSearch application associated with the
+	// migration.
+	ApplicationId *string
+
+	// The date and time when the migration job was created.
+	CreatedAt *time.Time
+
+	// Error details if the migration failed or completed with errors.
+	Error *MigrationError
+
+	// The number of saved objects exported from the source data source.
+	ExportedCount int32
+
+	// The number of saved objects successfully imported into the target workspace.
+	ImportedCount int32
+
+	// The unique identifier of the migration job.
+	MigrationId *string
+
+	// The source configuration for the migration.
+	Source *MigrationSource
+
+	// The current status of the migration job.
+	Status *string
+
+	// The date and time when the migration job was last updated.
+	UpdatedAt *time.Time
+
+	noSmithyDocumentSerde
+}
+
+// The target workspace configuration for a migration. You can specify an existing
+// workspace by ID or request creation of a new workspace.
+type MigrationWorkspace struct {
+
+	// Specifies whether to create a new workspace as the migration target. If true ,
+	// you must also specify name .
+	CreateWorkspace *bool
+
+	// The name of the new workspace to create. Required when createWorkspace is true .
+	Name *string
+
+	// The type of the new workspace to create.
+	Type *string
+
+	// The unique identifier of an existing workspace to use as the migration target.
+	// Specify either this parameter or createWorkspace .
+	WorkspaceId *string
 
 	noSmithyDocumentSerde
 }
@@ -2880,6 +3002,23 @@ type SAMLOptionsOutput struct {
 
 	// The key used for matching the SAML subject attribute.
 	SubjectKey *string
+
+	noSmithyDocumentSerde
+}
+
+// Identifies a specific saved object by its type and unique identifier.
+type SavedObjectIdentifier struct {
+
+	// The unique identifier of the saved object.
+	//
+	// This member is required.
+	Id *string
+
+	// The type of the saved object, such as dashboard , visualization , index-pattern
+	// , search , or query .
+	//
+	// This member is required.
+	Type *string
 
 	noSmithyDocumentSerde
 }

@@ -1,0 +1,8 @@
+{
+    "id": "cd24ff1f-e8dd-4f27-a59d-269c4e3ffda1",
+    "type": "feature",
+    "description": "This release introduces Saved Object Migration APIs, enabling users to migrate dashboards, visualizations, index patterns, and other saved objects from a data source into an Amazon OpenSearch Service application workspace with configurable export filters and conflict resolution strategies.",
+    "modules": [
+        "service/opensearch"
+    ]
+}

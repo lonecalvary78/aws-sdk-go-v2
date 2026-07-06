@@ -2109,6 +2109,33 @@ func TestSerdeCheckSnapshot_GetIndex(t *testing.T) {
 	}
 }
 
+func TestSerdeCheckSnapshot_GetMigration(t *testing.T) {
+	input := &GetMigrationInput{
+		MigrationId: ptr.String("__MigrationId__"),
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.GetMigration(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeTestSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "GetMigration"); err != nil {
+		t.Fatal(err)
+	}
+}
+
 func TestSerdeCheckSnapshot_GetPackageVersionHistory(t *testing.T) {
 	input := &GetPackageVersionHistoryInput{
 		PackageID:  ptr.String("__PackageID__"),
@@ -2494,6 +2521,36 @@ func TestSerdeCheckSnapshot_ListInstanceTypeDetails(t *testing.T) {
 		t.Fatal(err)
 	}
 	if err := serdeTestSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "ListInstanceTypeDetails"); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestSerdeCheckSnapshot_ListMigrations(t *testing.T) {
+	input := &ListMigrationsInput{
+		ApplicationId: ptr.String("__ApplicationId__"),
+		Status:        ptr.String("__Status__"),
+		MaxResults:    1,
+		NextToken:     ptr.String("__NextToken__"),
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.ListMigrations(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeTestSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "ListMigrations"); err != nil {
 		t.Fatal(err)
 	}
 }
@@ -2927,6 +2984,63 @@ func TestSerdeCheckSnapshot_StartDomainMaintenance(t *testing.T) {
 		t.Fatal(err)
 	}
 	if err := serdeTestSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "StartDomainMaintenance"); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestSerdeCheckSnapshot_StartMigration(t *testing.T) {
+	input := &StartMigrationInput{
+		ApplicationId: ptr.String("__ApplicationId__"),
+		MigrationOptions: &types.MigrationOptions{
+			Source: &types.MigrationSource{
+				DatasourceArn: ptr.String("__DatasourceArn__"),
+			},
+			Workspace: &types.MigrationWorkspace{
+				WorkspaceId:     ptr.String("__WorkspaceId__"),
+				CreateWorkspace: ptr.Bool(true),
+				Name:            ptr.String("__Name__"),
+				Type:            ptr.String("__Type__"),
+			},
+			ExportOptions: &types.ExportOptions{
+				Types: []string{
+					"__Member__",
+					"__Member__",
+				},
+				Objects: []types.SavedObjectIdentifier{
+					{
+						Type: ptr.String("__Type__"),
+						Id:   ptr.String("__Id__"),
+					},
+					{
+						Type: ptr.String("__Type__"),
+						Id:   ptr.String("__Id__"),
+					},
+				},
+				IncludeReferencesDeep: ptr.Bool(true),
+			},
+			ConflictResolution: ptr.String("__ConflictResolution__"),
+		},
+		ClientToken: ptr.String("__ClientToken__"),
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.StartMigration(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeTestSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "StartMigration"); err != nil {
 		t.Fatal(err)
 	}
 }
@@ -5432,6 +5546,33 @@ func TestSerdeUpdateSnapshot_GetIndex(t *testing.T) {
 	}
 }
 
+func TestSerdeUpdateSnapshot_GetMigration(t *testing.T) {
+	input := &GetMigrationInput{
+		MigrationId: ptr.String("__MigrationId__"),
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.GetMigration(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeUpdateSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "GetMigration"); err != nil {
+		t.Fatal(err)
+	}
+}
+
 func TestSerdeUpdateSnapshot_GetPackageVersionHistory(t *testing.T) {
 	input := &GetPackageVersionHistoryInput{
 		PackageID:  ptr.String("__PackageID__"),
@@ -5817,6 +5958,36 @@ func TestSerdeUpdateSnapshot_ListInstanceTypeDetails(t *testing.T) {
 		t.Fatal(err)
 	}
 	if err := serdeUpdateSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "ListInstanceTypeDetails"); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestSerdeUpdateSnapshot_ListMigrations(t *testing.T) {
+	input := &ListMigrationsInput{
+		ApplicationId: ptr.String("__ApplicationId__"),
+		Status:        ptr.String("__Status__"),
+		MaxResults:    1,
+		NextToken:     ptr.String("__NextToken__"),
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.ListMigrations(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeUpdateSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "ListMigrations"); err != nil {
 		t.Fatal(err)
 	}
 }
@@ -6250,6 +6421,63 @@ func TestSerdeUpdateSnapshot_StartDomainMaintenance(t *testing.T) {
 		t.Fatal(err)
 	}
 	if err := serdeUpdateSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "StartDomainMaintenance"); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestSerdeUpdateSnapshot_StartMigration(t *testing.T) {
+	input := &StartMigrationInput{
+		ApplicationId: ptr.String("__ApplicationId__"),
+		MigrationOptions: &types.MigrationOptions{
+			Source: &types.MigrationSource{
+				DatasourceArn: ptr.String("__DatasourceArn__"),
+			},
+			Workspace: &types.MigrationWorkspace{
+				WorkspaceId:     ptr.String("__WorkspaceId__"),
+				CreateWorkspace: ptr.Bool(true),
+				Name:            ptr.String("__Name__"),
+				Type:            ptr.String("__Type__"),
+			},
+			ExportOptions: &types.ExportOptions{
+				Types: []string{
+					"__Member__",
+					"__Member__",
+				},
+				Objects: []types.SavedObjectIdentifier{
+					{
+						Type: ptr.String("__Type__"),
+						Id:   ptr.String("__Id__"),
+					},
+					{
+						Type: ptr.String("__Type__"),
+						Id:   ptr.String("__Id__"),
+					},
+				},
+				IncludeReferencesDeep: ptr.Bool(true),
+			},
+			ConflictResolution: ptr.String("__ConflictResolution__"),
+		},
+		ClientToken: ptr.String("__ClientToken__"),
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.StartMigration(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeUpdateSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "StartMigration"); err != nil {
 		t.Fatal(err)
 	}
 }
