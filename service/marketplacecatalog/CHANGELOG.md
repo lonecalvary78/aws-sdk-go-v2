@@ -1,3 +1,7 @@
+# v1.42.0 (2026-07-07)
+
+* **Feature**: This release enhances the ListEntities API to support ResellerRole filter for ResaleAuthorization entity.
+
 # v1.41.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

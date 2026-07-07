@@ -1,3 +1,7 @@
+# v1.71.0 (2026-07-07)
+
+* **Feature**: Adding SSM Cloud Connector to support Azure Virtual Machines onboarding to AWS Systems Manager
+
 # v1.70.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

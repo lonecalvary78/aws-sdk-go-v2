@@ -1,3 +1,7 @@
+# v1.96.0 (2026-07-07)
+
+* **Feature**: AWS Lambda Durable Functions now supports customer managed KMS keys. This allows customers to configure a KMS key in Durable Config to have all their durable execution data encrypted.
+
 # v1.95.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

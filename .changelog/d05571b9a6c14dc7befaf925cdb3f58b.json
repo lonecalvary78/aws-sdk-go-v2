@@ -1,8 +1,0 @@
-{
-    "id": "d05571b9-a6c1-4dc7-befa-f925cdb3f58b",
-    "type": "feature",
-    "description": "This release enhances the ListEntities API to support ResellerRole filter for ResaleAuthorization entity.",
-    "modules": [
-        "service/marketplacecatalog"
-    ]
-}

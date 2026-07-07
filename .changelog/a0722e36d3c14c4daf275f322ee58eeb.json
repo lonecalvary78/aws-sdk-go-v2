@@ -1,8 +1,0 @@
-{
-    "id": "a0722e36-d3c1-4c4d-af27-5f322ee58eeb",
-    "type": "feature",
-    "description": "This launch surfaces the public SSM parameter associated with public AMIs in the AMI metadata.",
-    "modules": [
-        "service/ec2"
-    ]
-}

@@ -1,8 +1,0 @@
-{
-    "id": "e0948f5e-e641-462d-ae72-239110b9198f",
-    "type": "feature",
-    "description": "Adds ListSharedDNSViews operation to list all DNS Views shared with caller using AWS Resource Access Manager. Also updates ListHostedZoneAssociations operation so that resource ARN param is optional, allowing caller to list all HostedZoneAssociations in account.",
-    "modules": [
-        "service/route53globalresolver"
-    ]
-}

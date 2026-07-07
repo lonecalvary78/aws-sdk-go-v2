@@ -1,3 +1,7 @@
+# v1.73.0 (2026-07-07)
+
+* **Feature**: release SecurityHub MultiCloud integration with Azure
+
 # v1.72.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

@@ -1,3 +1,30 @@
+# Release (2026-07-07)
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/configservice`: [v1.67.0](service/configservice/CHANGELOG.md#v1670-2026-07-07)
+  * **Feature**: Added support for connecting AWS Config to third-party cloud service providers. New APIs include PutConnector, GetConnector, DeleteConnector, and ListConnectors for managing connectors, and PutThirdPartyServiceLinkedConfigurationRecorder for creating third-party service-linked recorders.
+* `github.com/aws/aws-sdk-go-v2/service/connect`: [v1.181.0](service/connect/CHANGELOG.md#v11810-2026-07-07)
+  * **Feature**: Adds support for CreateAuthCode and DeleteSession APIs.
+* `github.com/aws/aws-sdk-go-v2/service/ec2`: [v1.313.0](service/ec2/CHANGELOG.md#v13130-2026-07-07)
+  * **Feature**: This launch surfaces the public SSM parameter associated with public AMIs in the AMI metadata.
+* `github.com/aws/aws-sdk-go-v2/service/inspector2`: [v1.51.0](service/inspector2/CHANGELOG.md#v1510-2026-07-07)
+  * **Feature**: This release extends vulnerability management to Azure VM, container registries and function apps. Adds support for per-member-account scan configuration settings.
+* `github.com/aws/aws-sdk-go-v2/service/lambda`: [v1.96.0](service/lambda/CHANGELOG.md#v1960-2026-07-07)
+  * **Feature**: AWS Lambda Durable Functions now supports customer managed KMS keys. This allows customers to configure a KMS key in Durable Config to have all their durable execution data encrypted.
+* `github.com/aws/aws-sdk-go-v2/service/marketplacecatalog`: [v1.42.0](service/marketplacecatalog/CHANGELOG.md#v1420-2026-07-07)
+  * **Feature**: This release enhances the ListEntities API to support ResellerRole filter for ResaleAuthorization entity.
+* `github.com/aws/aws-sdk-go-v2/service/marketplacemetering`: [v1.38.1](service/marketplacemetering/CHANGELOG.md#v1381-2026-07-07)
+  * **Documentation**: The usage reporting window for the BatchMeterUsage API has been extended from 6 hours to 24 hours. Sellers can now submit usage records for up to 24 hours after a metered event occurs. The existing 6-hour grace period at the end of a billing cycle still applies.
+* `github.com/aws/aws-sdk-go-v2/service/partnercentralrevenuemeasurement`: [v1.0.0](service/partnercentralrevenuemeasurement/CHANGELOG.md#v100-2026-07-07)
+  * **Release**: New AWS service client module
+  * **Feature**: Add support for AWS Partner Central Revenue Measurement API for creating, managing, and tracking revenue attributions and marketplace revenue share allocations.
+* `github.com/aws/aws-sdk-go-v2/service/route53globalresolver`: [v1.5.0](service/route53globalresolver/CHANGELOG.md#v150-2026-07-07)
+  * **Feature**: Adds ListSharedDNSViews operation to list all DNS Views shared with caller using AWS Resource Access Manager. Also updates ListHostedZoneAssociations operation so that resource ARN param is optional, allowing caller to list all HostedZoneAssociations in account.
+* `github.com/aws/aws-sdk-go-v2/service/securityhub`: [v1.73.0](service/securityhub/CHANGELOG.md#v1730-2026-07-07)
+  * **Feature**: release SecurityHub MultiCloud integration with Azure
+* `github.com/aws/aws-sdk-go-v2/service/ssm`: [v1.71.0](service/ssm/CHANGELOG.md#v1710-2026-07-07)
+  * **Feature**: Adding SSM Cloud Connector to support Azure Virtual Machines onboarding to AWS Systems Manager
+
 # Release (2026-07-06)
 
 ## General Highlights

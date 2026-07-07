@@ -1,8 +1,0 @@
-{
-    "id": "f4841ebe-087e-4ff1-89ba-dfce1d3874b5",
-    "type": "feature",
-    "description": "Adds support for CreateAuthCode and DeleteSession APIs.",
-    "modules": [
-        "service/connect"
-    ]
-}

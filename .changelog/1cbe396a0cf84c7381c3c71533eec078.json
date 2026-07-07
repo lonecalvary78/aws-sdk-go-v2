@@ -1,8 +1,0 @@
-{
-    "id": "1cbe396a-0cf8-4c73-81c3-c71533eec078",
-    "type": "feature",
-    "description": "Add support for AWS Partner Central Revenue Measurement API for creating, managing, and tracking revenue attributions and marketplace revenue share allocations.",
-    "modules": [
-        "service/partnercentralrevenuemeasurement"
-    ]
-}

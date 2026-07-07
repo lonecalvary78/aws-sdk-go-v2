@@ -1,8 +1,0 @@
-{
-    "id": "12f8e051-3555-4ddb-bc58-449a82579c57",
-    "type": "feature",
-    "description": "This release extends vulnerability management to Azure VM, container registries and function apps. Adds support for per-member-account scan configuration settings.",
-    "modules": [
-        "service/inspector2"
-    ]
-}

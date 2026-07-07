@@ -1,3 +1,7 @@
+# v1.181.0 (2026-07-07)
+
+* **Feature**: Adds support for CreateAuthCode and DeleteSession APIs.
+
 # v1.180.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

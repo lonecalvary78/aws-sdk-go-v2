@@ -1,3 +1,7 @@
+# v1.38.1 (2026-07-07)
+
+* **Documentation**: The usage reporting window for the BatchMeterUsage API has been extended from 6 hours to 24 hours. Sellers can now submit usage records for up to 24 hours after a metered event occurs. The existing 6-hour grace period at the end of a billing cycle still applies.
+
 # v1.38.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

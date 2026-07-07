@@ -1,3 +1,7 @@
+# v1.51.0 (2026-07-07)
+
+* **Feature**: This release extends vulnerability management to Azure VM, container registries and function apps. Adds support for per-member-account scan configuration settings.
+
 # v1.50.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

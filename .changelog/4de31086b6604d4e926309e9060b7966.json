@@ -1,8 +1,0 @@
-{
-    "id": "4de31086-b660-4d4e-9263-09e9060b7966",
-    "type": "feature",
-    "description": "Adding SSM Cloud Connector to support Azure Virtual Machines onboarding to AWS Systems Manager",
-    "modules": [
-        "service/ssm"
-    ]
-}

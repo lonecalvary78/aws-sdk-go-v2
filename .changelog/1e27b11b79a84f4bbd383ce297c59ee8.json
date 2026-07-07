@@ -1,8 +1,0 @@
-{
-    "id": "1e27b11b-79a8-4f4b-bd38-3ce297c59ee8",
-    "type": "feature",
-    "description": "Added support for connecting AWS Config to third-party cloud service providers. New APIs include PutConnector, GetConnector, DeleteConnector, and ListConnectors for managing connectors, and PutThirdPartyServiceLinkedConfigurationRecorder for creating third-party service-linked recorders.",
-    "modules": [
-        "service/configservice"
-    ]
-}

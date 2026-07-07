@@ -1,8 +1,0 @@
-{
-    "id": "0e880484-226b-4bb3-b316-8c1e7797577b",
-    "type": "feature",
-    "description": "release SecurityHub MultiCloud integration with Azure",
-    "modules": [
-        "service/securityhub"
-    ]
-}

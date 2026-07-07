@@ -1,3 +1,7 @@
+# v1.5.0 (2026-07-07)
+
+* **Feature**: Adds ListSharedDNSViews operation to list all DNS Views shared with caller using AWS Resource Access Manager. Also updates ListHostedZoneAssociations operation so that resource ARN param is optional, allowing caller to list all HostedZoneAssociations in account.
+
 # v1.4.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

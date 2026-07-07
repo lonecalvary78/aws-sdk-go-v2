@@ -6,8 +6,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.22.31
 	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.55.0
 	github.com/aws/aws-sdk-go-v2/service/dynamodb v1.60.0
-	github.com/aws/aws-sdk-go-v2/service/ec2 v1.312.0
-	github.com/aws/aws-sdk-go-v2/service/lambda v1.95.0
+	github.com/aws/aws-sdk-go-v2/service/ec2 v1.313.0
+	github.com/aws/aws-sdk-go-v2/service/lambda v1.96.0
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.105.0
 	github.com/aws/aws-sdk-go-v2/service/s3control v1.72.0
 	github.com/aws/aws-sdk-go-v2/service/sqs v1.45.0
