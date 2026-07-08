@@ -1,8 +1,0 @@
-{
-    "id": "f5873e75-7531-4d76-9006-473ea0aeeab9",
-    "type": "feature",
-    "description": "Replace Root Volume now supports a VolumeId parameter. This allows the customer to pass in a pre-prepared volume as the target root volume for an RRV workflow.",
-    "modules": [
-        "service/ec2"
-    ]
-}

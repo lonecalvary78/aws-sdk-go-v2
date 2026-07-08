@@ -1,3 +1,7 @@
+# v1.11.0 (2026-07-08)
+
+* **Feature**: Added AddressNamesMode, AddressNameTranslations, MobilityMode, PostalCodeMode, SecondaryAddresses, and DriveThrough features across Places V2 APIs to support address name formatting,  multilingual translations, travel-aware search, multi-city postal codes, and unit-level address resolution.
+
 # v1.10.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

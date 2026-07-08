@@ -1,8 +1,0 @@
-{
-    "id": "7cb4fbb9-8dc2-40fa-a9be-0fd87138df09",
-    "type": "feature",
-    "description": "AgentCore Gateway now supports mapping allowed scopes to separate advertised scopes on the inbound authorizer.",
-    "modules": [
-        "service/bedrockagentcorecontrol"
-    ]
-}

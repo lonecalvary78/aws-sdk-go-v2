@@ -1,8 +1,0 @@
-{
-    "id": "6c97f636-3b91-4869-92b1-55f4c0cd12fc",
-    "type": "feature",
-    "description": "Update ExperimentRun APIs to support ConflictExceptions.",
-    "modules": [
-        "service/appconfig"
-    ]
-}

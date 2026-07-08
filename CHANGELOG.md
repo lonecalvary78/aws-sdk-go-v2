@@ -1,3 +1,23 @@
+# Release (2026-07-08)
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/feature/s3/transfermanager`: [v0.3.0](feature/s3/transfermanager/CHANGELOG.md#v030-2026-07-08)
+  * **Feature**: Add RequestChecksumCalculation config.
+* `github.com/aws/aws-sdk-go-v2/service/appconfig`: [v1.47.0](service/appconfig/CHANGELOG.md#v1470-2026-07-08)
+  * **Feature**: Update ExperimentRun APIs to support ConflictExceptions.
+* `github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol`: [v1.47.0](service/bedrockagentcorecontrol/CHANGELOG.md#v1470-2026-07-08)
+  * **Feature**: AgentCore Gateway now supports mapping allowed scopes to separate advertised scopes on the inbound authorizer.
+* `github.com/aws/aws-sdk-go-v2/service/ec2`: [v1.314.0](service/ec2/CHANGELOG.md#v13140-2026-07-08)
+  * **Feature**: Replace Root Volume now supports a VolumeId parameter. This allows the customer to pass in a pre-prepared volume as the target root volume for an RRV workflow.
+* `github.com/aws/aws-sdk-go-v2/service/ecs`: [v1.88.0](service/ecs/CHANGELOG.md#v1880-2026-07-08)
+  * **Feature**: Amazon ECS now automatically detects the correct CPU architecture for Express Mode services.
+* `github.com/aws/aws-sdk-go-v2/service/geoplaces`: [v1.11.0](service/geoplaces/CHANGELOG.md#v1110-2026-07-08)
+  * **Feature**: Added AddressNamesMode, AddressNameTranslations, MobilityMode, PostalCodeMode, SecondaryAddresses, and DriveThrough features across Places V2 APIs to support address name formatting,  multilingual translations, travel-aware search, multi-city postal codes, and unit-level address resolution.
+* `github.com/aws/aws-sdk-go-v2/service/iotwireless`: [v1.58.0](service/iotwireless/CHANGELOG.md#v1580-2026-07-08)
+  * **Feature**: Default session downlink transmission parameters have been added to the existing Multicast Group APIs. Explicit transmission parameters are no longer required when starting a multicast session during the FUOTA procedure.
+* `github.com/aws/aws-sdk-go-v2/service/resiliencehubv2`: [v1.2.0](service/resiliencehubv2/CHANGELOG.md#v120-2026-07-08)
+  * **Feature**: Next Generation Resilience Hub now supports filtering and sorting failure mode assessments, resource type filtering in ListResources, cross-region and cross-account topology edges, data recovery achievability status, and more granular dependency discovery progress tracking.
+
 # Release (2026-07-07)
 
 ## Module Highlights

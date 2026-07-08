@@ -1,8 +1,0 @@
-{
-    "id": "7496d068-187b-468e-9e2b-48c43b73d156",
-    "type": "feature",
-    "description": "Default session downlink transmission parameters have been added to the existing Multicast Group APIs. Explicit transmission parameters are no longer required when starting a multicast session during the FUOTA procedure.",
-    "modules": [
-        "service/iotwireless"
-    ]
-}

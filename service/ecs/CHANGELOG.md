@@ -1,3 +1,7 @@
+# v1.88.0 (2026-07-08)
+
+* **Feature**: Amazon ECS now automatically detects the correct CPU architecture for Express Mode services.
+
 # v1.87.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

@@ -1,8 +1,0 @@
-{
-    "id": "298590f9-0410-4ef6-a08d-63436877b33a",
-    "type": "feature",
-    "description": "Amazon ECS now automatically detects the correct CPU architecture for Express Mode services.",
-    "modules": [
-        "service/ecs"
-    ]
-}

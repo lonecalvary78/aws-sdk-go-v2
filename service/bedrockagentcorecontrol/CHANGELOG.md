@@ -1,3 +1,7 @@
+# v1.47.0 (2026-07-08)
+
+* **Feature**: AgentCore Gateway now supports mapping allowed scopes to separate advertised scopes on the inbound authorizer.
+
 # v1.46.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.
