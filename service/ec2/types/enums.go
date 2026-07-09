@@ -2960,6 +2960,25 @@ func (FleetExcessCapacityTerminationPolicy) Values() []FleetExcessCapacityTermin
 	}
 }
 
+type FleetHttpTokensState string
+
+// Enum values for FleetHttpTokensState
+const (
+	FleetHttpTokensStateOptional FleetHttpTokensState = "optional"
+	FleetHttpTokensStateRequired FleetHttpTokensState = "required"
+)
+
+// Values returns all known values for FleetHttpTokensState. Note that this can be
+// expanded in the future, and so it is only as up to date as the client.
+//
+// The ordering of this slice is not guaranteed to be stable across updates.
+func (FleetHttpTokensState) Values() []FleetHttpTokensState {
+	return []FleetHttpTokensState{
+		"optional",
+		"required",
+	}
+}
+
 type FleetInstanceMatchCriteria string
 
 // Enum values for FleetInstanceMatchCriteria
@@ -2974,6 +2993,26 @@ const (
 func (FleetInstanceMatchCriteria) Values() []FleetInstanceMatchCriteria {
 	return []FleetInstanceMatchCriteria{
 		"open",
+	}
+}
+
+type FleetInstanceMetadataEndpointState string
+
+// Enum values for FleetInstanceMetadataEndpointState
+const (
+	FleetInstanceMetadataEndpointStateDisabled FleetInstanceMetadataEndpointState = "disabled"
+	FleetInstanceMetadataEndpointStateEnabled  FleetInstanceMetadataEndpointState = "enabled"
+)
+
+// Values returns all known values for FleetInstanceMetadataEndpointState. Note
+// that this can be expanded in the future, and so it is only as up to date as the
+// client.
+//
+// The ordering of this slice is not guaranteed to be stable across updates.
+func (FleetInstanceMetadataEndpointState) Values() []FleetInstanceMetadataEndpointState {
+	return []FleetInstanceMetadataEndpointState{
+		"disabled",
+		"enabled",
 	}
 }
 

@@ -938,6 +938,18 @@ func TestCheckSnapshot_DeleteAttachedFile(t *testing.T) {
 	}
 }
 
+func TestCheckSnapshot_DeleteContactData(t *testing.T) {
+	svc := New(Options{})
+	_, err := svc.DeleteContactData(context.Background(), nil, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			return testSnapshot(stack, "DeleteContactData")
+		})
+	})
+	if _, ok := err.(snapshotOK); !ok && err != nil {
+		t.Fatal(err)
+	}
+}
+
 func TestCheckSnapshot_DeleteContactEvaluation(t *testing.T) {
 	svc := New(Options{})
 	_, err := svc.DeleteContactEvaluation(context.Background(), nil, func(o *Options) {
@@ -5454,6 +5466,18 @@ func TestUpdateSnapshot_DeleteAttachedFile(t *testing.T) {
 	_, err := svc.DeleteAttachedFile(context.Background(), nil, func(o *Options) {
 		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
 			return updateSnapshot(stack, "DeleteAttachedFile")
+		})
+	})
+	if _, ok := err.(snapshotOK); !ok && err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestUpdateSnapshot_DeleteContactData(t *testing.T) {
+	svc := New(Options{})
+	_, err := svc.DeleteContactData(context.Background(), nil, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			return updateSnapshot(stack, "DeleteContactData")
 		})
 	})
 	if _, ok := err.(snapshotOK); !ok && err != nil {

@@ -339,6 +339,7 @@ const (
 	DetectorFeatureLambdaNetworkLogs    DetectorFeature = "LAMBDA_NETWORK_LOGS"
 	DetectorFeatureEksRuntimeMonitoring DetectorFeature = "EKS_RUNTIME_MONITORING"
 	DetectorFeatureRuntimeMonitoring    DetectorFeature = "RUNTIME_MONITORING"
+	DetectorFeatureAiAnalyst            DetectorFeature = "AI_ANALYST"
 )
 
 // Values returns all known values for DetectorFeature. Note that this can be
@@ -354,6 +355,7 @@ func (DetectorFeature) Values() []DetectorFeature {
 		"LAMBDA_NETWORK_LOGS",
 		"EKS_RUNTIME_MONITORING",
 		"RUNTIME_MONITORING",
+		"AI_ANALYST",
 	}
 }
 
@@ -371,6 +373,7 @@ const (
 	DetectorFeatureResultLambdaNetworkLogs    DetectorFeatureResult = "LAMBDA_NETWORK_LOGS"
 	DetectorFeatureResultEksRuntimeMonitoring DetectorFeatureResult = "EKS_RUNTIME_MONITORING"
 	DetectorFeatureResultRuntimeMonitoring    DetectorFeatureResult = "RUNTIME_MONITORING"
+	DetectorFeatureResultAiAnalyst            DetectorFeatureResult = "AI_ANALYST"
 )
 
 // Values returns all known values for DetectorFeatureResult. Note that this can
@@ -389,6 +392,7 @@ func (DetectorFeatureResult) Values() []DetectorFeatureResult {
 		"LAMBDA_NETWORK_LOGS",
 		"EKS_RUNTIME_MONITORING",
 		"RUNTIME_MONITORING",
+		"AI_ANALYST",
 	}
 }
 

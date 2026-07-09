@@ -293,6 +293,7 @@ func TestSerdeCheckSnapshot_CreateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 			{
 				Location: ptr.String("__Location__"),
@@ -307,6 +308,7 @@ func TestSerdeCheckSnapshot_CreateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 		},
 		Tags: map[string]string{
@@ -318,6 +320,7 @@ func TestSerdeCheckSnapshot_CreateCanary(t *testing.T) {
 				KmsKeyArn:      ptr.String("__KmsKeyArn__"),
 			},
 		},
+		KmsKeyArn: ptr.String("__KmsKeyArn__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -1160,6 +1163,7 @@ func TestSerdeCheckSnapshot_UpdateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 			{
 				Location: ptr.String("__Location__"),
@@ -1174,12 +1178,14 @@ func TestSerdeCheckSnapshot_UpdateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 		},
 		RemoveReplicaLocations: []string{
 			"__Member__",
 			"__Member__",
 		},
+		KmsKeyArn: ptr.String("__KmsKeyArn__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -1314,6 +1320,7 @@ func TestSerdeUpdateSnapshot_CreateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 			{
 				Location: ptr.String("__Location__"),
@@ -1328,6 +1335,7 @@ func TestSerdeUpdateSnapshot_CreateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 		},
 		Tags: map[string]string{
@@ -1339,6 +1347,7 @@ func TestSerdeUpdateSnapshot_CreateCanary(t *testing.T) {
 				KmsKeyArn:      ptr.String("__KmsKeyArn__"),
 			},
 		},
+		KmsKeyArn: ptr.String("__KmsKeyArn__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -2181,6 +2190,7 @@ func TestSerdeUpdateSnapshot_UpdateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 			{
 				Location: ptr.String("__Location__"),
@@ -2195,12 +2205,14 @@ func TestSerdeUpdateSnapshot_UpdateCanary(t *testing.T) {
 					},
 					Ipv6AllowedForDualStack: ptr.Bool(true),
 				},
+				KmsKeyArn: ptr.String("__KmsKeyArn__"),
 			},
 		},
 		RemoveReplicaLocations: []string{
 			"__Member__",
 			"__Member__",
 		},
+		KmsKeyArn: ptr.String("__KmsKeyArn__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""

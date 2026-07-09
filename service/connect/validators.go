@@ -1470,6 +1470,26 @@ func (m *validateOpDeleteAttachedFile) HandleInitialize(ctx context.Context, in 
 	return next.HandleInitialize(ctx, in)
 }
 
+type validateOpDeleteContactData struct {
+}
+
+func (*validateOpDeleteContactData) ID() string {
+	return "OperationInputValidation"
+}
+
+func (m *validateOpDeleteContactData) HandleInitialize(ctx context.Context, in middleware.InitializeInput, next middleware.InitializeHandler) (
+	out middleware.InitializeOutput, metadata middleware.Metadata, err error,
+) {
+	input, ok := in.Parameters.(*DeleteContactDataInput)
+	if !ok {
+		return out, metadata, fmt.Errorf("unknown input parameters type %T", in.Parameters)
+	}
+	if err := validateOpDeleteContactDataInput(input); err != nil {
+		return out, metadata, err
+	}
+	return next.HandleInitialize(ctx, in)
+}
+
 type validateOpDeleteContactEvaluation struct {
 }
 
@@ -7740,6 +7760,10 @@ func addOpDeactivateEvaluationFormValidationMiddleware(stack *middleware.Stack) 
 
 func addOpDeleteAttachedFileValidationMiddleware(stack *middleware.Stack) error {
 	return stack.Initialize.Add(&validateOpDeleteAttachedFile{}, middleware.After)
+}
+
+func addOpDeleteContactDataValidationMiddleware(stack *middleware.Stack) error {
+	return stack.Initialize.Add(&validateOpDeleteContactData{}, middleware.After)
 }
 
 func addOpDeleteContactEvaluationValidationMiddleware(stack *middleware.Stack) error {
@@ -14306,6 +14330,27 @@ func validateOpDeleteAttachedFileInput(v *DeleteAttachedFileInput) error {
 	}
 	if v.AssociatedResourceArn == nil {
 		invalidParams.Add(smithy.NewErrParamRequired("AssociatedResourceArn"))
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
+func validateOpDeleteContactDataInput(v *DeleteContactDataInput) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "DeleteContactDataInput"}
+	if v.InstanceId == nil {
+		invalidParams.Add(smithy.NewErrParamRequired("InstanceId"))
+	}
+	if v.ContactId == nil {
+		invalidParams.Add(smithy.NewErrParamRequired("ContactId"))
+	}
+	if v.ContactFields == nil {
+		invalidParams.Add(smithy.NewErrParamRequired("ContactFields"))
 	}
 	if invalidParams.Len() > 0 {
 		return invalidParams

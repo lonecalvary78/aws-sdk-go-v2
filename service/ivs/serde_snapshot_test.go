@@ -291,6 +291,10 @@ func TestSerdeCheckSnapshot_CreateAdConfiguration(t *testing.T) {
 				PlaybackConfigurationArn: ptr.String("__PlaybackConfigurationArn__"),
 			},
 		},
+		PostRollConfiguration: &types.PostRollConfiguration{
+			DurationSeconds: ptr.Int32(1),
+			Enabled:         true,
+		},
 		Tags: map[string]string{
 			"key0": "__Value__",
 		},
@@ -1338,6 +1342,10 @@ func TestSerdeCheckSnapshot_UpdateAdConfiguration(t *testing.T) {
 				PlaybackConfigurationArn: ptr.String("__PlaybackConfigurationArn__"),
 			},
 		},
+		PostRollConfiguration: &types.PostRollConfiguration{
+			DurationSeconds: ptr.Int32(1),
+			Enabled:         true,
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -1548,6 +1556,10 @@ func TestSerdeUpdateSnapshot_CreateAdConfiguration(t *testing.T) {
 			{
 				PlaybackConfigurationArn: ptr.String("__PlaybackConfigurationArn__"),
 			},
+		},
+		PostRollConfiguration: &types.PostRollConfiguration{
+			DurationSeconds: ptr.Int32(1),
+			Enabled:         true,
 		},
 		Tags: map[string]string{
 			"key0": "__Value__",
@@ -2595,6 +2607,10 @@ func TestSerdeUpdateSnapshot_UpdateAdConfiguration(t *testing.T) {
 			{
 				PlaybackConfigurationArn: ptr.String("__PlaybackConfigurationArn__"),
 			},
+		},
+		PostRollConfiguration: &types.PostRollConfiguration{
+			DurationSeconds: ptr.Int32(1),
+			Enabled:         true,
 		},
 	}
 	body := &bytes.Buffer{}

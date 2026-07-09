@@ -1,0 +1,8 @@
+{
+    "id": "ea35c0eb-cec3-4b16-8184-841577834982",
+    "type": "feature",
+    "description": "Added support for additional override parameters in CreateFleet, including LaunchTemplateSpecificationUserData, KeyName, IamInstanceProfile, and MetadataOptions. The CreateFleet response now also includes SubnetId, AvailabilityZone, and AvailabilityZoneId for launched instances.",
+    "modules": [
+        "service/ec2"
+    ]
+}

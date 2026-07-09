@@ -1,0 +1,8 @@
+{
+    "id": "9aee881d-452d-4cc3-bbe2-edd4dbb88345",
+    "type": "feature",
+    "description": "adds support for AWS IVS ad configuration APIs to allow for a postRollConfiguration object on the ad configuration resource",
+    "modules": [
+        "service/ivs"
+    ]
+}

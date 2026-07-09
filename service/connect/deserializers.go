@@ -11821,6 +11821,109 @@ func awsRestjson1_deserializeOpErrorDeleteAttachedFile(response *smithyhttp.Resp
 	}
 }
 
+type awsRestjson1_deserializeOpDeleteContactData struct {
+}
+
+func (*awsRestjson1_deserializeOpDeleteContactData) ID() string {
+	return "OperationDeserializer"
+}
+
+func (m *awsRestjson1_deserializeOpDeleteContactData) HandleDeserialize(ctx context.Context, in middleware.DeserializeInput, next middleware.DeserializeHandler) (
+	out middleware.DeserializeOutput, metadata middleware.Metadata, err error,
+) {
+	out, metadata, err = next.HandleDeserialize(ctx, in)
+	if err != nil {
+		return out, metadata, err
+	}
+
+	_, span := tracing.StartSpan(ctx, "OperationDeserializer")
+	endTimer := startMetricTimer(ctx, "client.call.deserialization_duration")
+	defer endTimer()
+	defer span.End()
+	response, ok := out.RawResponse.(*smithyhttp.Response)
+	if !ok {
+		return out, metadata, &smithy.DeserializationError{Err: fmt.Errorf("unknown transport type %T", out.RawResponse)}
+	}
+
+	if response.StatusCode < 200 || response.StatusCode >= 300 {
+		return out, metadata, awsRestjson1_deserializeOpErrorDeleteContactData(response, &metadata)
+	}
+	output := &DeleteContactDataOutput{}
+	out.Result = output
+
+	span.End()
+	return out, metadata, err
+}
+
+func awsRestjson1_deserializeOpErrorDeleteContactData(response *smithyhttp.Response, metadata *middleware.Metadata) error {
+	var errorBuffer bytes.Buffer
+	if _, err := io.Copy(&errorBuffer, response.Body); err != nil {
+		return &smithy.DeserializationError{Err: fmt.Errorf("failed to copy error response body, %w", err)}
+	}
+	errorBody := bytes.NewReader(errorBuffer.Bytes())
+
+	errorCode := "UnknownError"
+	errorMessage := errorCode
+
+	headerCode := response.Header.Get("X-Amzn-ErrorType")
+	if len(headerCode) != 0 {
+		errorCode = restjson.SanitizeErrorCode(headerCode)
+	}
+
+	var buff [1024]byte
+	ringBuffer := smithyio.NewRingBuffer(buff[:])
+
+	body := io.TeeReader(errorBody, ringBuffer)
+	decoder := json.NewDecoder(body)
+	decoder.UseNumber()
+	jsonCode, message, err := restjson.GetErrorInfo(decoder)
+	if err != nil {
+		var snapshot bytes.Buffer
+		io.Copy(&snapshot, ringBuffer)
+		err = &smithy.DeserializationError{
+			Err:      fmt.Errorf("failed to decode response body, %w", err),
+			Snapshot: snapshot.Bytes(),
+		}
+		return err
+	}
+
+	errorBody.Seek(0, io.SeekStart)
+	if len(headerCode) == 0 && len(jsonCode) != 0 {
+		errorCode = restjson.SanitizeErrorCode(jsonCode)
+	}
+	if len(message) != 0 {
+		errorMessage = message
+	}
+
+	switch {
+	case strings.EqualFold("ContactNotTerminatedException", errorCode):
+		return awsRestjson1_deserializeErrorContactNotTerminatedException(response, errorBody)
+
+	case strings.EqualFold("InternalServiceException", errorCode):
+		return awsRestjson1_deserializeErrorInternalServiceException(response, errorBody)
+
+	case strings.EqualFold("InvalidParameterException", errorCode):
+		return awsRestjson1_deserializeErrorInvalidParameterException(response, errorBody)
+
+	case strings.EqualFold("InvalidRequestException", errorCode):
+		return awsRestjson1_deserializeErrorInvalidRequestException(response, errorBody)
+
+	case strings.EqualFold("ResourceNotFoundException", errorCode):
+		return awsRestjson1_deserializeErrorResourceNotFoundException(response, errorBody)
+
+	case strings.EqualFold("ThrottlingException", errorCode):
+		return awsRestjson1_deserializeErrorThrottlingException(response, errorBody)
+
+	default:
+		genericError := &smithy.GenericAPIError{
+			Code:    errorCode,
+			Message: errorMessage,
+		}
+		return genericError
+
+	}
+}
+
 type awsRestjson1_deserializeOpDeleteContactEvaluation struct {
 }
 
@@ -57222,6 +57325,42 @@ func awsRestjson1_deserializeErrorContactNotFoundException(response *smithyhttp.
 	return output
 }
 
+func awsRestjson1_deserializeErrorContactNotTerminatedException(response *smithyhttp.Response, errorBody *bytes.Reader) error {
+	output := &types.ContactNotTerminatedException{}
+	var buff [1024]byte
+	ringBuffer := smithyio.NewRingBuffer(buff[:])
+
+	body := io.TeeReader(errorBody, ringBuffer)
+	decoder := json.NewDecoder(body)
+	decoder.UseNumber()
+	var shape interface{}
+	if err := decoder.Decode(&shape); err != nil && err != io.EOF {
+		var snapshot bytes.Buffer
+		io.Copy(&snapshot, ringBuffer)
+		err = &smithy.DeserializationError{
+			Err:      fmt.Errorf("failed to decode response body, %w", err),
+			Snapshot: snapshot.Bytes(),
+		}
+		return err
+	}
+
+	err := awsRestjson1_deserializeDocumentContactNotTerminatedException(&output, shape)
+
+	if err != nil {
+		var snapshot bytes.Buffer
+		io.Copy(&snapshot, ringBuffer)
+		err = &smithy.DeserializationError{
+			Err:      fmt.Errorf("failed to decode response body, %w", err),
+			Snapshot: snapshot.Bytes(),
+		}
+		return err
+	}
+
+	errorBody.Seek(0, io.SeekStart)
+
+	return output
+}
+
 func awsRestjson1_deserializeErrorDestinationNotAllowedException(response *smithyhttp.Response, errorBody *bytes.Reader) error {
 	output := &types.DestinationNotAllowedException{}
 	var buff [1024]byte
@@ -64976,6 +65115,46 @@ func awsRestjson1_deserializeDocumentContactNotFoundException(v **types.ContactN
 	var sv *types.ContactNotFoundException
 	if *v == nil {
 		sv = &types.ContactNotFoundException{}
+	} else {
+		sv = *v
+	}
+
+	for key, value := range shape {
+		switch key {
+		case "message", "Message":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected Message to be of type string, got %T instead", value)
+				}
+				sv.Message = ptr.String(jtv)
+			}
+
+		default:
+			_, _ = key, value
+
+		}
+	}
+	*v = sv
+	return nil
+}
+
+func awsRestjson1_deserializeDocumentContactNotTerminatedException(v **types.ContactNotTerminatedException, value interface{}) error {
+	if v == nil {
+		return fmt.Errorf("unexpected nil of type %T", v)
+	}
+	if value == nil {
+		return nil
+	}
+
+	shape, ok := value.(map[string]interface{})
+	if !ok {
+		return fmt.Errorf("unexpected JSON type %v", value)
+	}
+
+	var sv *types.ContactNotTerminatedException
+	if *v == nil {
+		sv = &types.ContactNotTerminatedException{}
 	} else {
 		sv = *v
 	}

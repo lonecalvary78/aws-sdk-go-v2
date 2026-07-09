@@ -3681,9 +3681,10 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 		LaunchTemplateConfigs: []types.FleetLaunchTemplateConfigRequest{
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -3705,6 +3706,7 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -3736,6 +3738,15 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -3849,6 +3860,7 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -3880,6 +3892,15 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -3978,9 +3999,10 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 			},
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -4002,6 +4024,7 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -4033,6 +4056,15 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -4146,6 +4178,7 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -4177,6 +4210,15 @@ func TestSerdeCheckSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -28709,9 +28751,10 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 		LaunchTemplateConfigs: []types.FleetLaunchTemplateConfigRequest{
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -28733,6 +28776,7 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -28764,6 +28808,15 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -28877,6 +28930,7 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -28908,6 +28962,15 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -29006,9 +29069,10 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 			},
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -29030,6 +29094,7 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -29061,6 +29126,15 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -29174,6 +29248,7 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -29205,6 +29280,15 @@ func TestSerdeCheckSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -41528,9 +41612,10 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 		LaunchTemplateConfigs: []types.FleetLaunchTemplateConfigRequest{
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -41552,6 +41637,7 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -41583,6 +41669,15 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -41696,6 +41791,7 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -41727,6 +41823,15 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -41825,9 +41930,10 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 			},
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -41849,6 +41955,7 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -41880,6 +41987,15 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -41993,6 +42109,7 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -42024,6 +42141,15 @@ func TestSerdeUpdateSnapshot_CreateFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -66556,9 +66682,10 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 		LaunchTemplateConfigs: []types.FleetLaunchTemplateConfigRequest{
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -66580,6 +66707,7 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -66611,6 +66739,15 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -66724,6 +66861,7 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -66755,6 +66893,15 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -66853,9 +67000,10 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 			},
 			{
 				LaunchTemplateSpecification: &types.FleetLaunchTemplateSpecificationRequest{
-					LaunchTemplateId:   ptr.String("__LaunchTemplateId__"),
-					LaunchTemplateName: ptr.String("__LaunchTemplateName__"),
-					Version:            ptr.String("__Version__"),
+					LaunchTemplateId:                    ptr.String("__LaunchTemplateId__"),
+					LaunchTemplateName:                  ptr.String("__LaunchTemplateName__"),
+					Version:                             ptr.String("__Version__"),
+					LaunchTemplateSpecificationUserData: ptr.String("__LaunchTemplateSpecificationUserData__"),
 				},
 				Overrides: []types.FleetLaunchTemplateOverridesRequest{
 					{
@@ -66877,6 +67025,7 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -66908,6 +67057,15 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{
@@ -67021,6 +67179,7 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 							GroupId:              ptr.String("__GroupId__"),
 							AvailabilityZone:     ptr.String("__AvailabilityZone__"),
 						},
+						KeyName: ptr.String("__KeyName__"),
 						BlockDeviceMappings: []types.FleetBlockDeviceMappingRequest{
 							{
 								DeviceName:  ptr.String("__DeviceName__"),
@@ -67052,6 +67211,15 @@ func TestSerdeUpdateSnapshot_ModifyFleet(t *testing.T) {
 								},
 								NoDevice: ptr.String("__NoDevice__"),
 							},
+						},
+						IamInstanceProfile: &types.FleetIamInstanceProfileSpecificationRequest{
+							Arn:  ptr.String("__Arn__"),
+							Name: ptr.String("__Name__"),
+						},
+						MetadataOptions: &types.FleetInstanceMetadataOptionsRequest{
+							HttpTokens:              types.FleetHttpTokensState("optional"),
+							HttpPutResponseHopLimit: ptr.Int32(1),
+							HttpEndpoint:            types.FleetInstanceMetadataEndpointState("disabled"),
 						},
 						InstanceRequirements: &types.InstanceRequirementsRequest{
 							VCpuCount: &types.VCpuCountRangeRequest{

@@ -4178,6 +4178,38 @@ func TestSerdeCheckSnapshot_DeleteAttachedFile(t *testing.T) {
 	}
 }
 
+func TestSerdeCheckSnapshot_DeleteContactData(t *testing.T) {
+	input := &DeleteContactDataInput{
+		InstanceId: ptr.String("__InstanceId__"),
+		ContactId:  ptr.String("__ContactId__"),
+		ContactFields: []types.ContactField{
+			types.ContactField("CUSTOMER_ENDPOINT"),
+			types.ContactField("CUSTOMER_ENDPOINT"),
+		},
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.DeleteContactData(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeTestSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "DeleteContactData"); err != nil {
+		t.Fatal(err)
+	}
+}
+
 func TestSerdeCheckSnapshot_DeleteContactEvaluation(t *testing.T) {
 	input := &DeleteContactEvaluationInput{
 		InstanceId:   ptr.String("__InstanceId__"),
@@ -21299,6 +21331,38 @@ func TestSerdeUpdateSnapshot_DeleteAttachedFile(t *testing.T) {
 		t.Fatal(err)
 	}
 	if err := serdeUpdateSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "DeleteAttachedFile"); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func TestSerdeUpdateSnapshot_DeleteContactData(t *testing.T) {
+	input := &DeleteContactDataInput{
+		InstanceId: ptr.String("__InstanceId__"),
+		ContactId:  ptr.String("__ContactId__"),
+		ContactFields: []types.ContactField{
+			types.ContactField("CUSTOMER_ENDPOINT"),
+			types.ContactField("CUSTOMER_ENDPOINT"),
+		},
+	}
+	body := &bytes.Buffer{}
+	method := ""
+	rawPath := ""
+	rawQuery := ""
+	header := map[string][]string{}
+	svc := serdeNewClient()
+	_, err := svc.DeleteContactData(context.Background(), input, func(o *Options) {
+		o.APIOptions = append(o.APIOptions, func(stack *middleware.Stack) error {
+			stack.Initialize.Remove("OperationInputValidation")
+			stack.Serialize.Remove("RequestCompression")
+			return stack.Finalize.Add(&captureSerdeRequestMiddleware{
+				body: body, method: &method, rawPath: &rawPath, rawQuery: &rawQuery, header: &header,
+			}, middleware.Before)
+		})
+	})
+	if err != nil && !errors.Is(err, errSerdeSnapshotOK) {
+		t.Fatal(err)
+	}
+	if err := serdeUpdateSnapshot(method, rawPath, rawQuery, header, body.Bytes(), "DeleteContactData"); err != nil {
 		t.Fatal(err)
 	}
 }

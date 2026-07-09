@@ -533,6 +533,27 @@ func (ContactEvaluationAttributeKey) Values() []ContactEvaluationAttributeKey {
 	}
 }
 
+type ContactField string
+
+// Enum values for ContactField
+const (
+	ContactFieldCustomerEndpoint          ContactField = "CUSTOMER_ENDPOINT"
+	ContactFieldAdditionalEmailRecipients ContactField = "ADDITIONAL_EMAIL_RECIPIENTS"
+	ContactFieldEmailSubject              ContactField = "EMAIL_SUBJECT"
+)
+
+// Values returns all known values for ContactField. Note that this can be
+// expanded in the future, and so it is only as up to date as the client.
+//
+// The ordering of this slice is not guaranteed to be stable across updates.
+func (ContactField) Values() []ContactField {
+	return []ContactField{
+		"CUSTOMER_ENDPOINT",
+		"ADDITIONAL_EMAIL_RECIPIENTS",
+		"EMAIL_SUBJECT",
+	}
+}
+
 type ContactFlowModuleState string
 
 // Enum values for ContactFlowModuleState
