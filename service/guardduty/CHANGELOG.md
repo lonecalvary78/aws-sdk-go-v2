@@ -1,3 +1,7 @@
+# v1.82.0 (2026-07-09)
+
+* **Feature**: Adding "AI Analyst" enum value for detector
+
 # v1.81.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

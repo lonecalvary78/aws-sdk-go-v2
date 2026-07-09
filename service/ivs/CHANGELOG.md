@@ -1,3 +1,7 @@
+# v1.54.0 (2026-07-09)
+
+* **Feature**: adds support for AWS IVS ad configuration APIs to allow for a postRollConfiguration object on the ad configuration resource
+
 # v1.53.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

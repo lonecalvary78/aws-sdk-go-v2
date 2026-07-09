@@ -1,3 +1,17 @@
+# Release (2026-07-09)
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/connect`: [v1.182.0](service/connect/CHANGELOG.md#v11820-2026-07-09)
+  * **Feature**: Amazon Connect - Added DeleteContactData API to support PII deletion of customer endpoint, additional email recipients and email subject.
+* `github.com/aws/aws-sdk-go-v2/service/ec2`: [v1.315.0](service/ec2/CHANGELOG.md#v13150-2026-07-09)
+  * **Feature**: Added support for additional override parameters in CreateFleet, including LaunchTemplateSpecificationUserData, KeyName, IamInstanceProfile, and MetadataOptions. The CreateFleet response now also includes SubnetId, AvailabilityZone, and AvailabilityZoneId for launched instances.
+* `github.com/aws/aws-sdk-go-v2/service/guardduty`: [v1.82.0](service/guardduty/CHANGELOG.md#v1820-2026-07-09)
+  * **Feature**: Adding "AI Analyst" enum value for detector
+* `github.com/aws/aws-sdk-go-v2/service/ivs`: [v1.54.0](service/ivs/CHANGELOG.md#v1540-2026-07-09)
+  * **Feature**: adds support for AWS IVS ad configuration APIs to allow for a postRollConfiguration object on the ad configuration resource
+* `github.com/aws/aws-sdk-go-v2/service/synthetics`: [v1.46.0](service/synthetics/CHANGELOG.md#v1460-2026-07-09)
+  * **Feature**: CloudWatch Synthetics adds support for customer managed KMS keys for canary environment variables. Customers can now encrypt their canary's Lambda function environment variables at rest using their own AWS KMS key, providing additional control over data protection.
+
 # Release (2026-07-08.2)
 
 ## General Highlights

@@ -1,8 +1,0 @@
-{
-    "id": "8e34647f-6ed7-4c7b-b5c0-970b8d919fc1",
-    "type": "feature",
-    "description": "Adding \"AI Analyst\" enum value for detector",
-    "modules": [
-        "service/guardduty"
-    ]
-}

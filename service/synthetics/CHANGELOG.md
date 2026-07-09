@@ -1,3 +1,7 @@
+# v1.46.0 (2026-07-09)
+
+* **Feature**: CloudWatch Synthetics adds support for customer managed KMS keys for canary environment variables. Customers can now encrypt their canary's Lambda function environment variables at rest using their own AWS KMS key, providing additional control over data protection.
+
 # v1.45.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.
