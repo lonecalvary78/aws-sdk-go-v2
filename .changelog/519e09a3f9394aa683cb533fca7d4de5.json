@@ -1,0 +1,8 @@
+{
+    "id": "519e09a3-f939-4aa6-83cb-533fca7d4de5",
+    "type": "feature",
+    "description": "Release support for g4d, c6g, c7g, c8g instance types for SageMaker HyperPod",
+    "modules": [
+        "service/sagemaker"
+    ]
+}

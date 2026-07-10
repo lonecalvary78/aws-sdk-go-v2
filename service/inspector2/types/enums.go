@@ -1216,6 +1216,8 @@ const (
 	EcrPullDateRescanDurationDays60  EcrPullDateRescanDuration = "DAYS_60"
 	EcrPullDateRescanDurationDays90  EcrPullDateRescanDuration = "DAYS_90"
 	EcrPullDateRescanDurationDays180 EcrPullDateRescanDuration = "DAYS_180"
+	EcrPullDateRescanDurationDays3   EcrPullDateRescanDuration = "DAYS_3"
+	EcrPullDateRescanDurationDays7   EcrPullDateRescanDuration = "DAYS_7"
 )
 
 // Values returns all known values for EcrPullDateRescanDuration. Note that this
@@ -1229,6 +1231,8 @@ func (EcrPullDateRescanDuration) Values() []EcrPullDateRescanDuration {
 		"DAYS_60",
 		"DAYS_90",
 		"DAYS_180",
+		"DAYS_3",
+		"DAYS_7",
 	}
 }
 
@@ -1261,6 +1265,8 @@ const (
 	EcrRescanDurationDays14   EcrRescanDuration = "DAYS_14"
 	EcrRescanDurationDays60   EcrRescanDuration = "DAYS_60"
 	EcrRescanDurationDays90   EcrRescanDuration = "DAYS_90"
+	EcrRescanDurationDays3    EcrRescanDuration = "DAYS_3"
+	EcrRescanDurationDays7    EcrRescanDuration = "DAYS_7"
 )
 
 // Values returns all known values for EcrRescanDuration. Note that this can be
@@ -1275,6 +1281,8 @@ func (EcrRescanDuration) Values() []EcrRescanDuration {
 		"DAYS_14",
 		"DAYS_60",
 		"DAYS_90",
+		"DAYS_3",
+		"DAYS_7",
 	}
 }
 

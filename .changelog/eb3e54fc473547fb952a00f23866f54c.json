@@ -1,0 +1,8 @@
+{
+    "id": "eb3e54fc-4735-47fb-952a-00f23866f54c",
+    "type": "feature",
+    "description": "CloudWatch now assigns a unique identifier to each anomaly detector. PutAnomalyDetector and DescribeAnomalyDetectors return this AnomalyDetectorId, which you can use to describe or delete a specific anomaly detector directly.",
+    "modules": [
+        "service/cloudwatch"
+    ]
+}

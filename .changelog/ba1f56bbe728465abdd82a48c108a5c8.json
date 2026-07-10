@@ -1,0 +1,8 @@
+{
+    "id": "ba1f56bb-e728-465a-bdd8-2a48c108a5c8",
+    "type": "feature",
+    "description": "Provides CreateKnowledgeBase and UpdateKnowledgeBase APIs",
+    "modules": [
+        "service/quicksight"
+    ]
+}
