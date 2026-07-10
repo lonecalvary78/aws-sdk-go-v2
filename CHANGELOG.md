@@ -1,3 +1,21 @@
+# Release (2026-07-10)
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/cloudwatch`: [v1.63.0](service/cloudwatch/CHANGELOG.md#v1630-2026-07-10)
+  * **Feature**: CloudWatch now assigns a unique identifier to each anomaly detector. PutAnomalyDetector and DescribeAnomalyDetectors return this AnomalyDetectorId, which you can use to describe or delete a specific anomaly detector directly.
+* `github.com/aws/aws-sdk-go-v2/service/ec2`: [v1.316.0](service/ec2/CHANGELOG.md#v13160-2026-07-10)
+  * **Feature**: New Amazon EC2 instances. M9g, M9gd, C9g, and C9gd on AWS Graviton5. C8in, M8in, and R8in add 600 Gbps network. C8ib, M8ib, and R8ib add 300 Gbps EBS. C8ine, M8ine, M8idn, R8idn, M8idb, and R8idb round out Intel Xeon 6. Mac-m3ultra with Apple M3 Ultra. G7 with NVIDIA RTX PRO 4500 Blackwell GPUs.
+* `github.com/aws/aws-sdk-go-v2/service/inspector2`: [v1.52.0](service/inspector2/CHANGELOG.md#v1520-2026-07-10)
+  * **Feature**: Support for 3 day and 7 day ECR re-scan durations
+* `github.com/aws/aws-sdk-go-v2/service/lambda`: [v1.97.0](service/lambda/CHANGELOG.md#v1970-2026-07-10)
+  * **Feature**: Added TelemetryConfig support for Managed Instances Capacity Provider, enabling customers to configure system log level and custom log group for managed instance logging.
+* `github.com/aws/aws-sdk-go-v2/service/licensemanager`: [v1.40.0](service/licensemanager/CHANGELOG.md#v1400-2026-07-10)
+  * **Feature**: Added the ResetUsage field to the CreateLicenseVersion API. When set to true, the entitlement usage counts for the license are reset to 0. If it is false or not specified, entitlement usage is left unchanged.
+* `github.com/aws/aws-sdk-go-v2/service/quicksight`: [v1.118.0](service/quicksight/CHANGELOG.md#v11180-2026-07-10)
+  * **Feature**: Provides CreateKnowledgeBase and UpdateKnowledgeBase APIs
+* `github.com/aws/aws-sdk-go-v2/service/sagemaker`: [v1.258.0](service/sagemaker/CHANGELOG.md#v12580-2026-07-10)
+  * **Feature**: Release support for g4d, c6g, c7g, c8g instance types for SageMaker HyperPod
+
 # Release (2026-07-09)
 
 ## Module Highlights

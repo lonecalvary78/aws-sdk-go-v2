@@ -1,3 +1,7 @@
+# v1.40.0 (2026-07-10)
+
+* **Feature**: Added the ResetUsage field to the CreateLicenseVersion API. When set to true, the entitlement usage counts for the license are reset to 0. If it is false or not specified, entitlement usage is left unchanged.
+
 # v1.39.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

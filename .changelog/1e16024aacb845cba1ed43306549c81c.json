@@ -1,8 +1,0 @@
-{
-    "id": "1e16024a-acb8-45cb-a1ed-43306549c81c",
-    "type": "feature",
-    "description": "Added TelemetryConfig support for Managed Instances Capacity Provider, enabling customers to configure system log level and custom log group for managed instance logging.",
-    "modules": [
-        "service/lambda"
-    ]
-}

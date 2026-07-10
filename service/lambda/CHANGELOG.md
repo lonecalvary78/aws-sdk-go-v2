@@ -1,3 +1,7 @@
+# v1.97.0 (2026-07-10)
+
+* **Feature**: Added TelemetryConfig support for Managed Instances Capacity Provider, enabling customers to configure system log level and custom log group for managed instance logging.
+
 # v1.96.0 (2026-07-07)
 
 * **Feature**: AWS Lambda Durable Functions now supports customer managed KMS keys. This allows customers to configure a KMS key in Durable Config to have all their durable execution data encrypted.

@@ -1,3 +1,7 @@
+# v1.258.0 (2026-07-10)
+
+* **Feature**: Release support for g4d, c6g, c7g, c8g instance types for SageMaker HyperPod
+
 # v1.257.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

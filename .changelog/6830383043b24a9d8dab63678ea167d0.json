@@ -1,8 +1,0 @@
-{
-    "id": "68303830-43b2-4a9d-8dab-63678ea167d0",
-    "type": "feature",
-    "description": "Support for 3 day and 7 day ECR re-scan durations",
-    "modules": [
-        "service/inspector2"
-    ]
-}

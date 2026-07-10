@@ -1,3 +1,7 @@
+# v1.118.0 (2026-07-10)
+
+* **Feature**: Provides CreateKnowledgeBase and UpdateKnowledgeBase APIs
+
 # v1.117.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

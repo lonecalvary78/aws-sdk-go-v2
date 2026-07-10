@@ -1,3 +1,7 @@
+# v1.52.0 (2026-07-10)
+
+* **Feature**: Support for 3 day and 7 day ECR re-scan durations
+
 # v1.51.0 (2026-07-07)
 
 * **Feature**: This release extends vulnerability management to Azure VM, container registries and function apps. Adds support for per-member-account scan configuration settings.
