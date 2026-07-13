@@ -437,6 +437,8 @@ func TestCheckResponseSnapshot_CreateElasticsearchDomain(t *testing.T) {
 				EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				State:     types.PauseState("Active"),
 			},
+			UseCase:    types.DomainUseCase("SEARCH"),
+			EngineMode: types.DomainEngineMode("GENERAL"),
 		},
 	}
 	status, header, body, err := serdeRespReadSnapshot("CreateElasticsearchDomain.response")
@@ -717,6 +719,8 @@ func TestCheckResponseSnapshot_DeleteElasticsearchDomain(t *testing.T) {
 				EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				State:     types.PauseState("Active"),
 			},
+			UseCase:    types.DomainUseCase("SEARCH"),
+			EngineMode: types.DomainEngineMode("GENERAL"),
 		},
 	}
 	status, header, body, err := serdeRespReadSnapshot("DeleteElasticsearchDomain.response")
@@ -1135,6 +1139,8 @@ func TestCheckResponseSnapshot_DescribeElasticsearchDomain(t *testing.T) {
 				EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				State:     types.PauseState("Active"),
 			},
+			UseCase:    types.DomainUseCase("SEARCH"),
+			EngineMode: types.DomainEngineMode("GENERAL"),
 		},
 	}
 	status, header, body, err := serdeRespReadSnapshot("DescribeElasticsearchDomain.response")
@@ -1444,6 +1450,26 @@ func TestCheckResponseSnapshot_DescribeElasticsearchDomainConfig(t *testing.T) {
 					PendingDeletion: ptr.Bool(true),
 				},
 			},
+			UseCase: &types.UseCaseStatus{
+				Options: types.DomainUseCase("SEARCH"),
+				Status: &types.OptionStatus{
+					CreationDate:    ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateDate:      ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateVersion:   1,
+					State:           types.OptionState("RequiresIndexDocuments"),
+					PendingDeletion: ptr.Bool(true),
+				},
+			},
+			EngineMode: &types.EngineModeStatus{
+				Options: types.DomainEngineMode("GENERAL"),
+				Status: &types.OptionStatus{
+					CreationDate:    ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateDate:      ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateVersion:   1,
+					State:           types.OptionState("RequiresIndexDocuments"),
+					PendingDeletion: ptr.Bool(true),
+				},
+			},
 		},
 	}
 	status, header, body, err := serdeRespReadSnapshot("DescribeElasticsearchDomainConfig.response")
@@ -1613,6 +1639,8 @@ func TestCheckResponseSnapshot_DescribeElasticsearchDomains(t *testing.T) {
 					EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 					State:     types.PauseState("Active"),
 				},
+				UseCase:    types.DomainUseCase("SEARCH"),
+				EngineMode: types.DomainEngineMode("GENERAL"),
 			},
 			{
 				DomainId:   ptr.String("__DomainId__"),
@@ -1761,6 +1789,8 @@ func TestCheckResponseSnapshot_DescribeElasticsearchDomains(t *testing.T) {
 					EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 					State:     types.PauseState("Active"),
 				},
+				UseCase:    types.DomainUseCase("SEARCH"),
+				EngineMode: types.DomainEngineMode("GENERAL"),
 			},
 		},
 	}
@@ -3168,6 +3198,26 @@ func TestCheckResponseSnapshot_UpdateElasticsearchDomainConfig(t *testing.T) {
 					EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 					State:     types.PauseState("Active"),
 				},
+				Status: &types.OptionStatus{
+					CreationDate:    ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateDate:      ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateVersion:   1,
+					State:           types.OptionState("RequiresIndexDocuments"),
+					PendingDeletion: ptr.Bool(true),
+				},
+			},
+			UseCase: &types.UseCaseStatus{
+				Options: types.DomainUseCase("SEARCH"),
+				Status: &types.OptionStatus{
+					CreationDate:    ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateDate:      ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+					UpdateVersion:   1,
+					State:           types.OptionState("RequiresIndexDocuments"),
+					PendingDeletion: ptr.Bool(true),
+				},
+			},
+			EngineMode: &types.EngineModeStatus{
+				Options: types.DomainEngineMode("GENERAL"),
 				Status: &types.OptionStatus{
 					CreationDate:    ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 					UpdateDate:      ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),

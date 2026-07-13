@@ -1,0 +1,8 @@
+{
+    "id": "0744127c-f11e-4b40-aa52-cb187a5db04a",
+    "type": "feature",
+    "description": "Add Java 8, 11 and 17 on AL2023 (java8.al2023, java11.al2023, java17.al2023) support to AWS Lambda.",
+    "modules": [
+        "service/lambda"
+    ]
+}

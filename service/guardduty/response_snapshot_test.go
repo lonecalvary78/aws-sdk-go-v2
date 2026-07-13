@@ -1799,6 +1799,46 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 					RecoveryPointDetails: &types.RecoveryPointDetails{
 						RecoveryPointArn: ptr.String("__RecoveryPointArn__"),
 						BackupVaultName:  ptr.String("__BackupVaultName__"),
+						ContinuousScanDetails: &types.ScanConfigurationContinuousScanDetails{
+							StartTime: ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+							EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+						},
+					},
+					BedrockGuardrailDetails: &types.BedrockGuardrailDetails{
+						GuardrailArn:     ptr.String("__GuardrailArn__"),
+						GuardrailVersion: ptr.String("__GuardrailVersion__"),
+						Guardrails: []types.BedrockGuardrail{
+							{
+								Arn:     ptr.String("__Arn__"),
+								Version: ptr.String("__Version__"),
+							},
+							{
+								Arn:     ptr.String("__Arn__"),
+								Version: ptr.String("__Version__"),
+							},
+						},
+						GuardrailAction: types.GuardrailAction("GUARDRAIL_INTERVENED"),
+						GuardrailSource: types.GuardrailSource("INPUT"),
+						ContentPolicyFilters: []types.ContentPolicyFilter{
+							{
+								Type:       types.ContentPolicyFilterType("PROMPT_ATTACK"),
+								Confidence: types.ConfidenceLevel("HIGH"),
+								Action:     types.ContentPolicyFilterAction("BLOCKED"),
+							},
+							{
+								Type:       types.ContentPolicyFilterType("PROMPT_ATTACK"),
+								Confidence: types.ConfidenceLevel("HIGH"),
+								Action:     types.ContentPolicyFilterAction("BLOCKED"),
+							},
+						},
+					},
+					ModelDetails: []types.ModelDetail{
+						{
+							ModelId: ptr.String("__ModelId__"),
+						},
+						{
+							ModelId: ptr.String("__ModelId__"),
+						},
 					},
 				},
 				SchemaVersion: ptr.String("__SchemaVersion__"),
@@ -2318,6 +2358,10 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 													"__Member__",
 													"__Member__",
 												},
+												Number: []int64{
+													1,
+													1,
+												},
 											},
 										},
 										{
@@ -2327,6 +2371,10 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 												Text: []string{
 													"__Member__",
 													"__Member__",
+												},
+												Number: []int64{
+													1,
+													1,
 												},
 											},
 										},
@@ -2343,6 +2391,10 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 												Text: []string{
 													"__Member__",
 													"__Member__",
+												},
+												Number: []int64{
+													1,
+													1,
 												},
 											},
 										},
@@ -3631,6 +3683,46 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 					RecoveryPointDetails: &types.RecoveryPointDetails{
 						RecoveryPointArn: ptr.String("__RecoveryPointArn__"),
 						BackupVaultName:  ptr.String("__BackupVaultName__"),
+						ContinuousScanDetails: &types.ScanConfigurationContinuousScanDetails{
+							StartTime: ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+							EndTime:   ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+						},
+					},
+					BedrockGuardrailDetails: &types.BedrockGuardrailDetails{
+						GuardrailArn:     ptr.String("__GuardrailArn__"),
+						GuardrailVersion: ptr.String("__GuardrailVersion__"),
+						Guardrails: []types.BedrockGuardrail{
+							{
+								Arn:     ptr.String("__Arn__"),
+								Version: ptr.String("__Version__"),
+							},
+							{
+								Arn:     ptr.String("__Arn__"),
+								Version: ptr.String("__Version__"),
+							},
+						},
+						GuardrailAction: types.GuardrailAction("GUARDRAIL_INTERVENED"),
+						GuardrailSource: types.GuardrailSource("INPUT"),
+						ContentPolicyFilters: []types.ContentPolicyFilter{
+							{
+								Type:       types.ContentPolicyFilterType("PROMPT_ATTACK"),
+								Confidence: types.ConfidenceLevel("HIGH"),
+								Action:     types.ContentPolicyFilterAction("BLOCKED"),
+							},
+							{
+								Type:       types.ContentPolicyFilterType("PROMPT_ATTACK"),
+								Confidence: types.ConfidenceLevel("HIGH"),
+								Action:     types.ContentPolicyFilterAction("BLOCKED"),
+							},
+						},
+					},
+					ModelDetails: []types.ModelDetail{
+						{
+							ModelId: ptr.String("__ModelId__"),
+						},
+						{
+							ModelId: ptr.String("__ModelId__"),
+						},
 					},
 				},
 				SchemaVersion: ptr.String("__SchemaVersion__"),
@@ -4150,6 +4242,10 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 													"__Member__",
 													"__Member__",
 												},
+												Number: []int64{
+													1,
+													1,
+												},
 											},
 										},
 										{
@@ -4159,6 +4255,10 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 												Text: []string{
 													"__Member__",
 													"__Member__",
+												},
+												Number: []int64{
+													1,
+													1,
 												},
 											},
 										},
@@ -4175,6 +4275,10 @@ func TestCheckResponseSnapshot_GetFindings(t *testing.T) {
 												Text: []string{
 													"__Member__",
 													"__Member__",
+												},
+												Number: []int64{
+													1,
+													1,
 												},
 											},
 										},

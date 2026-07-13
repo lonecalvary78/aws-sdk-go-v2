@@ -1,0 +1,8 @@
+{
+    "id": "eb088927-bf8b-414e-b250-7a2f719447fc",
+    "type": "feature",
+    "description": "Amazon GameLift Servers now includes fleet expiration for managed fleets. A managed fleet expires one year after creation, transitioning to EXPIRED status, emitting a FLEET EXPIRED event, and scaling to zero instances. Expired fleets cannot host new game sessions or increase capacity.",
+    "modules": [
+        "service/gamelift"
+    ]
+}

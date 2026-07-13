@@ -1722,9 +1722,10 @@ func TestCheckRequestSnapshot_PutResourcePolicy(t *testing.T) {
 
 func TestCheckRequestSnapshot_RestoreFromRecoveryPoint(t *testing.T) {
 	input := &RestoreFromRecoveryPointInput{
-		RecoveryPointId: ptr.String("__RecoveryPointId__"),
-		NamespaceName:   ptr.String("__NamespaceName__"),
-		WorkgroupName:   ptr.String("__WorkgroupName__"),
+		RecoveryPointId:     ptr.String("__RecoveryPointId__"),
+		NamespaceName:       ptr.String("__NamespaceName__"),
+		WorkgroupName:       ptr.String("__WorkgroupName__"),
+		MaintainIntegration: ptr.Bool(true),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -1758,6 +1759,7 @@ func TestCheckRequestSnapshot_RestoreFromSnapshot(t *testing.T) {
 		OwnerAccount:                ptr.String("__OwnerAccount__"),
 		ManageAdminPassword:         ptr.Bool(true),
 		AdminPasswordSecretKmsKeyId: ptr.String("__AdminPasswordSecretKmsKeyId__"),
+		MaintainIntegration:         ptr.Bool(true),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -3787,9 +3789,10 @@ func TestUpdateRequestSnapshot_PutResourcePolicy(t *testing.T) {
 
 func TestUpdateRequestSnapshot_RestoreFromRecoveryPoint(t *testing.T) {
 	input := &RestoreFromRecoveryPointInput{
-		RecoveryPointId: ptr.String("__RecoveryPointId__"),
-		NamespaceName:   ptr.String("__NamespaceName__"),
-		WorkgroupName:   ptr.String("__WorkgroupName__"),
+		RecoveryPointId:     ptr.String("__RecoveryPointId__"),
+		NamespaceName:       ptr.String("__NamespaceName__"),
+		WorkgroupName:       ptr.String("__WorkgroupName__"),
+		MaintainIntegration: ptr.Bool(true),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -3823,6 +3826,7 @@ func TestUpdateRequestSnapshot_RestoreFromSnapshot(t *testing.T) {
 		OwnerAccount:                ptr.String("__OwnerAccount__"),
 		ManageAdminPassword:         ptr.Bool(true),
 		AdminPasswordSecretKmsKeyId: ptr.String("__AdminPasswordSecretKmsKeyId__"),
+		MaintainIntegration:         ptr.Bool(true),
 	}
 	body := &bytes.Buffer{}
 	method := ""
