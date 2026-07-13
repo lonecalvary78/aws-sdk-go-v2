@@ -1,3 +1,7 @@
+# v1.67.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.67.0 (2026-07-07)
 
 * **Feature**: Added support for connecting AWS Config to third-party cloud service providers. New APIs include PutConnector, GetConnector, DeleteConnector, and ListConnectors for managing connectors, and PutThirdPartyServiceLinkedConfigurationRecorder for creating third-party service-linked recorders.

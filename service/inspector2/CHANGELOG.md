@@ -1,3 +1,7 @@
+# v1.52.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.52.0 (2026-07-10)
 
 * **Feature**: Support for 3 day and 7 day ECR re-scan durations

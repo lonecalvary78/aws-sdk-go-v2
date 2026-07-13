@@ -1,3 +1,7 @@
+# v1.58.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.58.0 (2026-07-08)
 
 * **Feature**: Default session downlink transmission parameters have been added to the existing Multicast Group APIs. Explicit transmission parameters are no longer required when starting a multicast session during the FUOTA procedure.

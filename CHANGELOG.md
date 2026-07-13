@@ -1,3 +1,20 @@
+# Release (2026-07-13)
+
+## General Highlights
+* **Dependency Update**: Updated to the latest SDK module versions
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/elasticsearchservice`: [v1.44.0](service/elasticsearchservice/CHANGELOG.md#v1440-2026-07-13)
+  * **Feature**: Adds support for the EngineMode and UseCase parameters on Amazon Elasticsearch Service domains, enabling GENERAL or OPTIMIZED engine modes and SEARCH, VECTOR, OBSERVABILITY, or MIXED usecases when creating and updating domain configurations.
+* `github.com/aws/aws-sdk-go-v2/service/gamelift`: [v1.58.0](service/gamelift/CHANGELOG.md#v1580-2026-07-13)
+  * **Feature**: Amazon GameLift Servers now includes fleet expiration for managed fleets. A managed fleet expires one year after creation, transitioning to EXPIRED status, emitting a FLEET EXPIRED event, and scaling to zero instances. Expired fleets cannot host new game sessions or increase capacity.
+* `github.com/aws/aws-sdk-go-v2/service/guardduty`: [v1.83.0](service/guardduty/CHANGELOG.md#v1830-2026-07-13)
+  * **Feature**: GuardDuty AI Protection is now publicly available. Findings include Bedrock guardrail details, model details, observation numbers, and continuous scan details. GuardrailArn and GuardrailVersion are deprecated in favor of the guardrails list.
+* `github.com/aws/aws-sdk-go-v2/service/lambda`: [v1.98.0](service/lambda/CHANGELOG.md#v1980-2026-07-13)
+  * **Feature**: Add Java 8, 11 and 17 on AL2023 (java8.al2023, java11.al2023, java17.al2023) support to AWS Lambda.
+* `github.com/aws/aws-sdk-go-v2/service/redshiftserverless`: [v1.37.0](service/redshiftserverless/CHANGELOG.md#v1370-2026-07-13)
+  * **Feature**: Add support for preserving datasharing, zero-ETL and S3 event integrations on snapshot restore to serverless namespace.
+
 # Release (2026-07-10)
 
 ## Module Highlights

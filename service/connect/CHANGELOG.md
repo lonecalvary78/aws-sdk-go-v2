@@ -1,3 +1,7 @@
+# v1.182.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.182.0 (2026-07-09)
 
 * **Feature**: Amazon Connect - Added DeleteContactData API to support PII deletion of customer endpoint, additional email recipients and email subject.

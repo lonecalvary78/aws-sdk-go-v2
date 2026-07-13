@@ -1,3 +1,7 @@
+# v1.2.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.2.0 (2026-07-08)
 
 * **Feature**: Next Generation Resilience Hub now supports filtering and sorting failure mode assessments, resource type filtering in ListResources, cross-region and cross-account topology edges, data recovery achievability status, and more granular dependency discovery progress tracking.

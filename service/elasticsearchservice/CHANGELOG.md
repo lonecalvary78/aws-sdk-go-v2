@@ -1,3 +1,7 @@
+# v1.44.0 (2026-07-13)
+
+* **Feature**: Adds support for the EngineMode and UseCase parameters on Amazon Elasticsearch Service domains, enabling GENERAL or OPTIMIZED engine modes and SEARCH, VECTOR, OBSERVABILITY, or MIXED usecases when creating and updating domain configurations.
+
 # v1.43.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

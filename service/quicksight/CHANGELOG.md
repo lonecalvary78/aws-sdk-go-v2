@@ -1,3 +1,7 @@
+# v1.118.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.118.0 (2026-07-10)
 
 * **Feature**: Provides CreateKnowledgeBase and UpdateKnowledgeBase APIs

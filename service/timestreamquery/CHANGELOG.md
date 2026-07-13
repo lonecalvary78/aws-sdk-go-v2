@@ -1,3 +1,7 @@
+# v1.38.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.38.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

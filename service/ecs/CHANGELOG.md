@@ -1,3 +1,7 @@
+# v1.88.1 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.88.0 (2026-07-08)
 
 * **Feature**: Amazon ECS now automatically detects the correct CPU architecture for Express Mode services.

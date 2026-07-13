@@ -1,3 +1,7 @@
+# v1.0.3 (2026-07-13)
+
+* No change notes available for this release.
+
 # v1.0.2 (2026-07-06)
 
 * No change notes available for this release.

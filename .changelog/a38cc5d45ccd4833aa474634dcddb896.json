@@ -1,8 +1,0 @@
-{
-    "id": "a38cc5d4-5ccd-4833-aa47-4634dcddb896",
-    "type": "feature",
-    "description": "GuardDuty AI Protection is now publicly available. Findings include Bedrock guardrail details, model details, observation numbers, and continuous scan details. GuardrailArn and GuardrailVersion are deprecated in favor of the guardrails list.",
-    "modules": [
-        "service/guardduty"
-    ]
-}

@@ -1,3 +1,7 @@
+# v1.98.0 (2026-07-13)
+
+* **Feature**: Add Java 8, 11 and 17 on AL2023 (java8.al2023, java11.al2023, java17.al2023) support to AWS Lambda.
+
 # v1.97.0 (2026-07-10)
 
 * **Feature**: Added TelemetryConfig support for Managed Instances Capacity Provider, enabling customers to configure system log level and custom log group for managed instance logging.

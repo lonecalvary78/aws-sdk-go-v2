@@ -1,3 +1,7 @@
+# v1.37.0 (2026-07-13)
+
+* **Feature**: Add support for preserving datasharing, zero-ETL and S3 event integrations on snapshot restore to serverless namespace.
+
 # v1.36.0 (2026-07-06)
 
 * **Feature**: Add request serialization snapshot tests.

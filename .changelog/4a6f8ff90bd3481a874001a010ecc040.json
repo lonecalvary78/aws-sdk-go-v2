@@ -1,8 +1,0 @@
-{
-    "id": "4a6f8ff9-0bd3-481a-8740-01a010ecc040",
-    "type": "feature",
-    "description": "Adds support for the EngineMode and UseCase parameters on Amazon Elasticsearch Service domains, enabling GENERAL or OPTIMIZED engine modes and SEARCH, VECTOR, OBSERVABILITY, or MIXED usecases when creating and updating domain configurations.",
-    "modules": [
-        "service/elasticsearchservice"
-    ]
-}
