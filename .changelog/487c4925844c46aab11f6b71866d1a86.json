@@ -1,8 +1,0 @@
-{
-    "id": "487c4925-844c-46aa-b11f-6b71866d1a86",
-    "type": "feature",
-    "description": "Update AWS Systems Manager Automation Targets to be correct max value.",
-    "modules": [
-        "service/ssm"
-    ]
-}

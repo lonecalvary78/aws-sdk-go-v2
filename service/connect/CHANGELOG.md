@@ -1,3 +1,7 @@
+# v1.183.0 (2026-07-14)
+
+* **Feature**: This release adds SearchRules API which can be used to search for rules within an Amazon Connect instance.
+
 # v1.182.1 (2026-07-13)
 
 * No change notes available for this release.

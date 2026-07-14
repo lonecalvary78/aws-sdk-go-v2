@@ -1,3 +1,7 @@
+# v1.41.0 (2026-07-14)
+
+* **Feature**: Fast recovery of EC2 based drs workloads by skipping the conversion step
+
 # v1.40.1 (2026-07-13)
 
 * No change notes available for this release.

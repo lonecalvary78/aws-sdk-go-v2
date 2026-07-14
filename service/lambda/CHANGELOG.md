@@ -1,3 +1,7 @@
+# v1.99.0 (2026-07-14)
+
+* **Feature**: AWS Lambda now returns a new DependencyError value in StateReasonCode and LastUpdateStatusReasonCode to provide more actionable information when a function reaches a failed state due to an error from an upstream dependency or service.
+
 # v1.98.0 (2026-07-13)
 
 * **Feature**: Add Java 8, 11 and 17 on AL2023 (java8.al2023, java11.al2023, java17.al2023) support to AWS Lambda.

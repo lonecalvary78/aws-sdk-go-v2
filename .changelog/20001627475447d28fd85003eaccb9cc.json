@@ -1,8 +1,0 @@
-{
-    "id": "20001627-4754-47d2-8fd8-5003eaccb9cc",
-    "type": "feature",
-    "description": "Fast recovery of EC2 based drs workloads by skipping the conversion step",
-    "modules": [
-        "service/drs"
-    ]
-}

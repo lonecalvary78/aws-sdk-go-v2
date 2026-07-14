@@ -1,8 +1,0 @@
-{
-    "id": "ad6ba156-e0ad-41dc-bfa7-bd996fdf2eb5",
-    "type": "feature",
-    "description": "AWS Lambda now returns a new DependencyError value in StateReasonCode and LastUpdateStatusReasonCode to provide more actionable information when a function reaches a failed state due to an error from an upstream dependency or service.",
-    "modules": [
-        "service/lambda"
-    ]
-}

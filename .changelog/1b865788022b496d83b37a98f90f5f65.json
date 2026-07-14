@@ -1,8 +1,0 @@
-{
-    "id": "1b865788-022b-496d-83b3-7a98f90f5f65",
-    "type": "feature",
-    "description": "AWS Security Hub now provides an AI inventory, giving central security teams a continuously updated, organization-wide view of AI assets and their security posture",
-    "modules": [
-        "service/securityhub"
-    ]
-}

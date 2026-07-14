@@ -1,3 +1,7 @@
+# v1.74.0 (2026-07-14)
+
+* **Feature**: AWS Security Hub now provides an AI inventory, giving central security teams a continuously updated, organization-wide view of AI assets and their security posture
+
 # v1.73.1 (2026-07-13)
 
 * No change notes available for this release.

@@ -1,8 +1,0 @@
-{
-    "id": "297b6945-7339-4a1c-8ad5-a40604272739",
-    "type": "feature",
-    "description": "Fixed Cloud Map endpoint resolution to correctly route to the dualstack endpoint when dualstack is enabled.",
-    "modules": [
-        "service/servicediscovery"
-    ]
-}

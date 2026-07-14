@@ -1,8 +1,0 @@
-{
-    "id": "1b1aeb03-0c5e-4ee6-b6be-51d4f2920ce9",
-    "type": "feature",
-    "description": "Introduced 5 new fields across 3 APIs as part of Spark Connect server launch for EMR on EKS. The fields added are sessionIdleTimeoutInMinutes, sessionEnabled, endpointToken, authProxyUrl and encryptionKeyArn.",
-    "modules": [
-        "service/emrcontainers"
-    ]
-}

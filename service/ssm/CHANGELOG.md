@@ -1,3 +1,7 @@
+# v1.72.0 (2026-07-14)
+
+* **Feature**: Update AWS Systems Manager Automation Targets to be correct max value.
+
 # v1.71.1 (2026-07-13)
 
 * No change notes available for this release.

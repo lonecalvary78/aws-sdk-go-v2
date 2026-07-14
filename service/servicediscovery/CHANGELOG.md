@@ -1,3 +1,7 @@
+# v1.42.0 (2026-07-14)
+
+* **Feature**: Fixed Cloud Map endpoint resolution to correctly route to the dualstack endpoint when dualstack is enabled.
+
 # v1.41.1 (2026-07-13)
 
 * No change notes available for this release.

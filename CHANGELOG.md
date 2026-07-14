@@ -1,3 +1,23 @@
+# Release (2026-07-14)
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/connect`: [v1.183.0](service/connect/CHANGELOG.md#v11830-2026-07-14)
+  * **Feature**: This release adds SearchRules API which can be used to search for rules within an Amazon Connect instance.
+* `github.com/aws/aws-sdk-go-v2/service/drs`: [v1.41.0](service/drs/CHANGELOG.md#v1410-2026-07-14)
+  * **Feature**: Fast recovery of EC2 based drs workloads by skipping the conversion step
+* `github.com/aws/aws-sdk-go-v2/service/emrcontainers`: [v1.43.0](service/emrcontainers/CHANGELOG.md#v1430-2026-07-14)
+  * **Feature**: Introduced 5 new fields across 3 APIs as part of Spark Connect server launch for EMR on EKS. The fields added are sessionIdleTimeoutInMinutes, sessionEnabled, endpointToken, authProxyUrl and encryptionKeyArn.
+* `github.com/aws/aws-sdk-go-v2/service/lambda`: [v1.99.0](service/lambda/CHANGELOG.md#v1990-2026-07-14)
+  * **Feature**: AWS Lambda now returns a new DependencyError value in StateReasonCode and LastUpdateStatusReasonCode to provide more actionable information when a function reaches a failed state due to an error from an upstream dependency or service.
+* `github.com/aws/aws-sdk-go-v2/service/mq`: [v1.38.0](service/mq/CHANGELOG.md#v1380-2026-07-14)
+  * **Feature**: This release adds storage size parameter for Amazon MQ for RabbitMQ cluster deployment broker on engine version RabbitMQ 4.2. You can now set a configurable storage size within a range of sizes dependent on broker instance size.
+* `github.com/aws/aws-sdk-go-v2/service/securityhub`: [v1.74.0](service/securityhub/CHANGELOG.md#v1740-2026-07-14)
+  * **Feature**: AWS Security Hub now provides an AI inventory, giving central security teams a continuously updated, organization-wide view of AI assets and their security posture
+* `github.com/aws/aws-sdk-go-v2/service/servicediscovery`: [v1.42.0](service/servicediscovery/CHANGELOG.md#v1420-2026-07-14)
+  * **Feature**: Fixed Cloud Map endpoint resolution to correctly route to the dualstack endpoint when dualstack is enabled.
+* `github.com/aws/aws-sdk-go-v2/service/ssm`: [v1.72.0](service/ssm/CHANGELOG.md#v1720-2026-07-14)
+  * **Feature**: Update AWS Systems Manager Automation Targets to be correct max value.
+
 # Release (2026-07-13)
 
 ## General Highlights
