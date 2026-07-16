@@ -1,0 +1,8 @@
+{
+    "id": "a6decefb-d04d-489d-868c-9e4087a5a390",
+    "type": "feature",
+    "description": "Amazon EMR updates the Session object returned by GetSession API",
+    "modules": [
+        "service/emr"
+    ]
+}

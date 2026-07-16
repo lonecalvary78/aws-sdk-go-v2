@@ -1,0 +1,8 @@
+{
+    "id": "81f9b364-bc87-4b10-b14a-130fba5c56e4",
+    "type": "feature",
+    "description": "Adds support for returning the task UUID (universally unique identifier) in GetRunTask and ListRunTasks responses",
+    "modules": [
+        "service/omics"
+    ]
+}

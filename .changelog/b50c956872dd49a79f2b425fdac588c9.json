@@ -1,0 +1,8 @@
+{
+    "id": "b50c9568-72dd-49a7-9f2b-425fdac588c9",
+    "type": "feature",
+    "description": "Adds support for retrieving estimated water allocation data.",
+    "modules": [
+        "service/sustainability"
+    ]
+}

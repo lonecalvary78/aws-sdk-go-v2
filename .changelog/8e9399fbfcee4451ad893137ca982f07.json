@@ -1,0 +1,8 @@
+{
+    "id": "8e9399fb-fcee-4451-ad89-3137ca982f07",
+    "type": "documentation",
+    "description": "Amazon Redshift - Added support for rg.large and rg.12xlarge node types in CreateCluster, ModifyCluster, and ResizeCluster API operations.",
+    "modules": [
+        "service/redshift"
+    ]
+}

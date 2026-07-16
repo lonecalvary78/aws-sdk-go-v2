@@ -1,0 +1,8 @@
+{
+    "id": "80b66897-bf1b-4bb7-a6ce-580875b15ca2",
+    "type": "feature",
+    "description": "Release support for g7 instance type for SageMaker inference endpoints.",
+    "modules": [
+        "service/sagemaker"
+    ]
+}

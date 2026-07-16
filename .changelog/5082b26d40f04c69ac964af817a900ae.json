@@ -1,0 +1,8 @@
+{
+    "id": "5082b26d-40f0-4c69-ac96-4af817a900ae",
+    "type": "feature",
+    "description": "Marked CreateProxySession, DeleteProxySession, GetProxySession, ListProxySessions, UpdateProxySession, PutVoiceConnectorProxy, DeleteVoiceConnectorProxy, and GetVoiceConnectorProxy as deprecated.",
+    "modules": [
+        "service/chimesdkvoice"
+    ]
+}

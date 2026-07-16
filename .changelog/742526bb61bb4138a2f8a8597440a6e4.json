@@ -1,0 +1,8 @@
+{
+    "id": "742526bb-61bb-4138-a2f8-a8597440a6e4",
+    "type": "documentation",
+    "description": "Documentation update for removing the 30 day minimum restriction for transition to Standard-IA or OneZone-IA storage classes",
+    "modules": [
+        "service/s3"
+    ]
+}
