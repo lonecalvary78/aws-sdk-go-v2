@@ -339,6 +339,14 @@ func TestCheckRequestSnapshot_CreateAutonomousDatabase(t *testing.T) {
 				KmsKeyId:       ptr.String("__KmsKeyId__"),
 			},
 		},
+		AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+		AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationInputMemberCustomerManagedAwsSecret{
+			Value: types.CustomerManagedAwsSecretConfigurationInput{
+				SecretId:       ptr.String("__SecretId__"),
+				IamRoleArn:     ptr.String("__IamRoleArn__"),
+				ExternalIdType: types.ExternalIdType("database_ocid"),
+			},
+		},
 		ClientToken: ptr.String("__ClientToken__"),
 		Tags: map[string]string{
 			"key0": "__Value__",
@@ -405,7 +413,15 @@ func TestCheckRequestSnapshot_CreateAutonomousDatabaseWallet(t *testing.T) {
 		AutonomousDatabaseId: ptr.String("__AutonomousDatabaseId__"),
 		WalletType:           types.WalletType("REGIONAL"),
 		Password:             ptr.String("__Password__"),
-		ClientToken:          ptr.String("__ClientToken__"),
+		PasswordSource:       types.WalletPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+		PasswordSourceConfiguration: &types.WalletPasswordSourceConfigurationInputMemberCustomerManagedAwsSecret{
+			Value: types.CustomerManagedAwsSecretConfigurationInput{
+				SecretId:       ptr.String("__SecretId__"),
+				IamRoleArn:     ptr.String("__IamRoleArn__"),
+				ExternalIdType: types.ExternalIdType("database_ocid"),
+			},
+		},
+		ClientToken: ptr.String("__ClientToken__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -1313,6 +1329,7 @@ func TestCheckRequestSnapshot_GetOdbPeeringConnection(t *testing.T) {
 func TestCheckRequestSnapshot_InitializeService(t *testing.T) {
 	input := &InitializeServiceInput{
 		OciIdentityDomain: ptr.Bool(true),
+		AutonomousDatabaseOciAwsSecretsManagerIntegration: types.Access("ENABLED"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -2272,6 +2289,14 @@ func TestCheckRequestSnapshot_UpdateAutonomousDatabase(t *testing.T) {
 				KmsKeyId:       ptr.String("__KmsKeyId__"),
 			},
 		},
+		AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+		AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationInputMemberCustomerManagedAwsSecret{
+			Value: types.CustomerManagedAwsSecretConfigurationInput{
+				SecretId:       ptr.String("__SecretId__"),
+				IamRoleArn:     ptr.String("__IamRoleArn__"),
+				ExternalIdType: types.ExternalIdType("database_ocid"),
+			},
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -2625,6 +2650,14 @@ func TestUpdateRequestSnapshot_CreateAutonomousDatabase(t *testing.T) {
 				KmsKeyId:       ptr.String("__KmsKeyId__"),
 			},
 		},
+		AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+		AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationInputMemberCustomerManagedAwsSecret{
+			Value: types.CustomerManagedAwsSecretConfigurationInput{
+				SecretId:       ptr.String("__SecretId__"),
+				IamRoleArn:     ptr.String("__IamRoleArn__"),
+				ExternalIdType: types.ExternalIdType("database_ocid"),
+			},
+		},
 		ClientToken: ptr.String("__ClientToken__"),
 		Tags: map[string]string{
 			"key0": "__Value__",
@@ -2691,7 +2724,15 @@ func TestUpdateRequestSnapshot_CreateAutonomousDatabaseWallet(t *testing.T) {
 		AutonomousDatabaseId: ptr.String("__AutonomousDatabaseId__"),
 		WalletType:           types.WalletType("REGIONAL"),
 		Password:             ptr.String("__Password__"),
-		ClientToken:          ptr.String("__ClientToken__"),
+		PasswordSource:       types.WalletPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+		PasswordSourceConfiguration: &types.WalletPasswordSourceConfigurationInputMemberCustomerManagedAwsSecret{
+			Value: types.CustomerManagedAwsSecretConfigurationInput{
+				SecretId:       ptr.String("__SecretId__"),
+				IamRoleArn:     ptr.String("__IamRoleArn__"),
+				ExternalIdType: types.ExternalIdType("database_ocid"),
+			},
+		},
+		ClientToken: ptr.String("__ClientToken__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -3599,6 +3640,7 @@ func TestUpdateRequestSnapshot_GetOdbPeeringConnection(t *testing.T) {
 func TestUpdateRequestSnapshot_InitializeService(t *testing.T) {
 	input := &InitializeServiceInput{
 		OciIdentityDomain: ptr.Bool(true),
+		AutonomousDatabaseOciAwsSecretsManagerIntegration: types.Access("ENABLED"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -4556,6 +4598,14 @@ func TestUpdateRequestSnapshot_UpdateAutonomousDatabase(t *testing.T) {
 				IamRoleArn:     ptr.String("__IamRoleArn__"),
 				ExternalIdType: types.ExternalIdType("database_ocid"),
 				KmsKeyId:       ptr.String("__KmsKeyId__"),
+			},
+		},
+		AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+		AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationInputMemberCustomerManagedAwsSecret{
+			Value: types.CustomerManagedAwsSecretConfigurationInput{
+				SecretId:       ptr.String("__SecretId__"),
+				IamRoleArn:     ptr.String("__IamRoleArn__"),
+				ExternalIdType: types.ExternalIdType("database_ocid"),
 			},
 		},
 	}

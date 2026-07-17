@@ -3320,6 +3320,21 @@ func validateCustomSMSLambdaVersionConfigType(v *types.CustomSMSLambdaVersionCon
 	}
 }
 
+func validateEumsSmsConfigurationType(v *types.EumsSmsConfigurationType) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "EumsSmsConfigurationType"}
+	if v.CallerArn == nil {
+		invalidParams.Add(smithy.NewErrParamRequired("CallerArn"))
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
 func validateFailoverType(v *types.FailoverType) error {
 	if v == nil {
 		return nil
@@ -3611,8 +3626,10 @@ func validateSmsConfigurationType(v *types.SmsConfigurationType) error {
 		return nil
 	}
 	invalidParams := smithy.InvalidParamsError{Context: "SmsConfigurationType"}
-	if v.SnsCallerArn == nil {
-		invalidParams.Add(smithy.NewErrParamRequired("SnsCallerArn"))
+	if v.EumsSms != nil {
+		if err := validateEumsSmsConfigurationType(v.EumsSms); err != nil {
+			invalidParams.AddNested("EumsSms", err.(smithy.InvalidParamsError))
+		}
 	}
 	if invalidParams.Len() > 0 {
 		return invalidParams

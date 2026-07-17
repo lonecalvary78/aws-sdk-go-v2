@@ -3,4 +3,4 @@ POST /
 Content-Type: application/x-amz-json-1.0
 X-Amz-Target: Odb.InitializeService
 
-{"ociIdentityDomain":true}
+{"autonomousDatabaseOciAwsSecretsManagerIntegration":"ENABLED","ociIdentityDomain":true}

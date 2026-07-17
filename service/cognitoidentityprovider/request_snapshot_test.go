@@ -1551,9 +1551,10 @@ func TestCheckRequestSnapshot_CreateTerms(t *testing.T) {
 
 func TestCheckRequestSnapshot_CreateUserImportJob(t *testing.T) {
 	input := &CreateUserImportJobInput{
-		JobName:               ptr.String("__JobName__"),
-		UserPoolId:            ptr.String("__UserPoolId__"),
-		CloudWatchLogsRoleArn: ptr.String("__CloudWatchLogsRoleArn__"),
+		JobName:                  ptr.String("__JobName__"),
+		UserPoolId:               ptr.String("__UserPoolId__"),
+		CloudWatchLogsRoleArn:    ptr.String("__CloudWatchLogsRoleArn__"),
+		PasswordHashingAlgorithm: types.PasswordHashingAlgorithmType("BCRYPT"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -1674,6 +1675,15 @@ func TestCheckRequestSnapshot_CreateUserPool(t *testing.T) {
 			SnsCallerArn: ptr.String("__SnsCallerArn__"),
 			ExternalId:   ptr.String("__ExternalId__"),
 			SnsRegion:    ptr.String("__SnsRegion__"),
+			EumsSms: &types.EumsSmsConfigurationType{
+				CallerArn:            ptr.String("__CallerArn__"),
+				ExternalId:           ptr.String("__ExternalId__"),
+				OriginationIdentity:  ptr.String("__OriginationIdentity__"),
+				ConfigurationSetName: ptr.String("__ConfigurationSetName__"),
+				InEntityId:           ptr.String("__InEntityId__"),
+				InTemplateId:         ptr.String("__InTemplateId__"),
+				Region:               ptr.String("__Region__"),
+			},
 		},
 		UserPoolTags: map[string]string{
 			"key0": "__Value__",
@@ -3818,6 +3828,15 @@ func TestCheckRequestSnapshot_SetUserPoolMfaConfig(t *testing.T) {
 				SnsCallerArn: ptr.String("__SnsCallerArn__"),
 				ExternalId:   ptr.String("__ExternalId__"),
 				SnsRegion:    ptr.String("__SnsRegion__"),
+				EumsSms: &types.EumsSmsConfigurationType{
+					CallerArn:            ptr.String("__CallerArn__"),
+					ExternalId:           ptr.String("__ExternalId__"),
+					OriginationIdentity:  ptr.String("__OriginationIdentity__"),
+					ConfigurationSetName: ptr.String("__ConfigurationSetName__"),
+					InEntityId:           ptr.String("__InEntityId__"),
+					InTemplateId:         ptr.String("__InTemplateId__"),
+					Region:               ptr.String("__Region__"),
+				},
 			},
 		},
 		SoftwareTokenMfaConfiguration: &types.SoftwareTokenMfaConfigType{
@@ -4507,6 +4526,15 @@ func TestCheckRequestSnapshot_UpdateUserPool(t *testing.T) {
 			SnsCallerArn: ptr.String("__SnsCallerArn__"),
 			ExternalId:   ptr.String("__ExternalId__"),
 			SnsRegion:    ptr.String("__SnsRegion__"),
+			EumsSms: &types.EumsSmsConfigurationType{
+				CallerArn:            ptr.String("__CallerArn__"),
+				ExternalId:           ptr.String("__ExternalId__"),
+				OriginationIdentity:  ptr.String("__OriginationIdentity__"),
+				ConfigurationSetName: ptr.String("__ConfigurationSetName__"),
+				InEntityId:           ptr.String("__InEntityId__"),
+				InTemplateId:         ptr.String("__InTemplateId__"),
+				Region:               ptr.String("__Region__"),
+			},
 		},
 		UserPoolTags: map[string]string{
 			"key0": "__Value__",
@@ -6152,9 +6180,10 @@ func TestUpdateRequestSnapshot_CreateTerms(t *testing.T) {
 
 func TestUpdateRequestSnapshot_CreateUserImportJob(t *testing.T) {
 	input := &CreateUserImportJobInput{
-		JobName:               ptr.String("__JobName__"),
-		UserPoolId:            ptr.String("__UserPoolId__"),
-		CloudWatchLogsRoleArn: ptr.String("__CloudWatchLogsRoleArn__"),
+		JobName:                  ptr.String("__JobName__"),
+		UserPoolId:               ptr.String("__UserPoolId__"),
+		CloudWatchLogsRoleArn:    ptr.String("__CloudWatchLogsRoleArn__"),
+		PasswordHashingAlgorithm: types.PasswordHashingAlgorithmType("BCRYPT"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -6275,6 +6304,15 @@ func TestUpdateRequestSnapshot_CreateUserPool(t *testing.T) {
 			SnsCallerArn: ptr.String("__SnsCallerArn__"),
 			ExternalId:   ptr.String("__ExternalId__"),
 			SnsRegion:    ptr.String("__SnsRegion__"),
+			EumsSms: &types.EumsSmsConfigurationType{
+				CallerArn:            ptr.String("__CallerArn__"),
+				ExternalId:           ptr.String("__ExternalId__"),
+				OriginationIdentity:  ptr.String("__OriginationIdentity__"),
+				ConfigurationSetName: ptr.String("__ConfigurationSetName__"),
+				InEntityId:           ptr.String("__InEntityId__"),
+				InTemplateId:         ptr.String("__InTemplateId__"),
+				Region:               ptr.String("__Region__"),
+			},
 		},
 		UserPoolTags: map[string]string{
 			"key0": "__Value__",
@@ -8419,6 +8457,15 @@ func TestUpdateRequestSnapshot_SetUserPoolMfaConfig(t *testing.T) {
 				SnsCallerArn: ptr.String("__SnsCallerArn__"),
 				ExternalId:   ptr.String("__ExternalId__"),
 				SnsRegion:    ptr.String("__SnsRegion__"),
+				EumsSms: &types.EumsSmsConfigurationType{
+					CallerArn:            ptr.String("__CallerArn__"),
+					ExternalId:           ptr.String("__ExternalId__"),
+					OriginationIdentity:  ptr.String("__OriginationIdentity__"),
+					ConfigurationSetName: ptr.String("__ConfigurationSetName__"),
+					InEntityId:           ptr.String("__InEntityId__"),
+					InTemplateId:         ptr.String("__InTemplateId__"),
+					Region:               ptr.String("__Region__"),
+				},
 			},
 		},
 		SoftwareTokenMfaConfiguration: &types.SoftwareTokenMfaConfigType{
@@ -9108,6 +9155,15 @@ func TestUpdateRequestSnapshot_UpdateUserPool(t *testing.T) {
 			SnsCallerArn: ptr.String("__SnsCallerArn__"),
 			ExternalId:   ptr.String("__ExternalId__"),
 			SnsRegion:    ptr.String("__SnsRegion__"),
+			EumsSms: &types.EumsSmsConfigurationType{
+				CallerArn:            ptr.String("__CallerArn__"),
+				ExternalId:           ptr.String("__ExternalId__"),
+				OriginationIdentity:  ptr.String("__OriginationIdentity__"),
+				ConfigurationSetName: ptr.String("__ConfigurationSetName__"),
+				InEntityId:           ptr.String("__InEntityId__"),
+				InTemplateId:         ptr.String("__InTemplateId__"),
+				Region:               ptr.String("__Region__"),
+			},
 		},
 		UserPoolTags: map[string]string{
 			"key0": "__Value__",

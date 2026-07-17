@@ -21396,6 +21396,100 @@ func awsAwsjson11_deserializeDocumentEnableSoftwareTokenMFAException(v **types.E
 	return nil
 }
 
+func awsAwsjson11_deserializeDocumentEumsSmsConfigurationType(v **types.EumsSmsConfigurationType, value interface{}) error {
+	if v == nil {
+		return fmt.Errorf("unexpected nil of type %T", v)
+	}
+	if value == nil {
+		return nil
+	}
+
+	shape, ok := value.(map[string]interface{})
+	if !ok {
+		return fmt.Errorf("unexpected JSON type %v", value)
+	}
+
+	var sv *types.EumsSmsConfigurationType
+	if *v == nil {
+		sv = &types.EumsSmsConfigurationType{}
+	} else {
+		sv = *v
+	}
+
+	for key, value := range shape {
+		switch key {
+		case "CallerArn":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected ArnType to be of type string, got %T instead", value)
+				}
+				sv.CallerArn = ptr.String(jtv)
+			}
+
+		case "ConfigurationSetName":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected StringType to be of type string, got %T instead", value)
+				}
+				sv.ConfigurationSetName = ptr.String(jtv)
+			}
+
+		case "ExternalId":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected StringType to be of type string, got %T instead", value)
+				}
+				sv.ExternalId = ptr.String(jtv)
+			}
+
+		case "InEntityId":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected StringType to be of type string, got %T instead", value)
+				}
+				sv.InEntityId = ptr.String(jtv)
+			}
+
+		case "InTemplateId":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected StringType to be of type string, got %T instead", value)
+				}
+				sv.InTemplateId = ptr.String(jtv)
+			}
+
+		case "OriginationIdentity":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected StringType to be of type string, got %T instead", value)
+				}
+				sv.OriginationIdentity = ptr.String(jtv)
+			}
+
+		case "Region":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected RegionCodeType to be of type string, got %T instead", value)
+				}
+				sv.Region = ptr.String(jtv)
+			}
+
+		default:
+			_, _ = key, value
+
+		}
+	}
+	*v = sv
+	return nil
+}
+
 func awsAwsjson11_deserializeDocumentEventContextDataType(v **types.EventContextDataType, value interface{}) error {
 	if v == nil {
 		return fmt.Errorf("unexpected nil of type %T", v)
@@ -25353,6 +25447,11 @@ func awsAwsjson11_deserializeDocumentSmsConfigurationType(v **types.SmsConfigura
 
 	for key, value := range shape {
 		switch key {
+		case "EumsSms":
+			if err := awsAwsjson11_deserializeDocumentEumsSmsConfigurationType(&sv.EumsSms, value); err != nil {
+				return err
+			}
+
 		case "ExternalId":
 			if value != nil {
 				jtv, ok := value.(string)
@@ -25366,7 +25465,7 @@ func awsAwsjson11_deserializeDocumentSmsConfigurationType(v **types.SmsConfigura
 			if value != nil {
 				jtv, ok := value.(string)
 				if !ok {
-					return fmt.Errorf("expected ArnType to be of type string, got %T instead", value)
+					return fmt.Errorf("expected OptionalArnType to be of type string, got %T instead", value)
 				}
 				sv.SnsCallerArn = ptr.String(jtv)
 			}
@@ -26671,6 +26770,15 @@ func awsAwsjson11_deserializeDocumentUserImportJobType(v **types.UserImportJobTy
 					return fmt.Errorf("expected UserImportJobNameType to be of type string, got %T instead", value)
 				}
 				sv.JobName = ptr.String(jtv)
+			}
+
+		case "PasswordHashingAlgorithm":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected PasswordHashingAlgorithmType to be of type string, got %T instead", value)
+				}
+				sv.PasswordHashingAlgorithm = types.PasswordHashingAlgorithmType(jtv)
 			}
 
 		case "PreSignedUrl":

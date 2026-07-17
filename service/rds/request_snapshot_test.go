@@ -849,8 +849,18 @@ func TestCheckRequestSnapshot_CreateDBCluster(t *testing.T) {
 		},
 		MasterUserAuthenticationType: types.MasterUserAuthenticationType("password"),
 		WithExpressConfiguration:     ptr.Bool(true),
-		SourceRegion:                 ptr.String("__SourceRegion__"),
-		destinationRegion:            ptr.String("__destinationRegion__"),
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
+		SourceRegion:      ptr.String("__SourceRegion__"),
+		destinationRegion: ptr.String("__destinationRegion__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -6444,6 +6454,16 @@ func TestCheckRequestSnapshot_RestoreDBClusterFromS3(t *testing.T) {
 				},
 			},
 		},
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -6570,6 +6590,16 @@ func TestCheckRequestSnapshot_RestoreDBClusterFromSnapshot(t *testing.T) {
 		},
 		EnableVPCNetworking:         ptr.Bool(true),
 		EnableInternetAccessGateway: ptr.Bool(true),
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -6693,6 +6723,16 @@ func TestCheckRequestSnapshot_RestoreDBClusterToPointInTime(t *testing.T) {
 		},
 		EnableVPCNetworking:         ptr.Bool(true),
 		EnableInternetAccessGateway: ptr.Bool(true),
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -8212,8 +8252,18 @@ func TestUpdateRequestSnapshot_CreateDBCluster(t *testing.T) {
 		},
 		MasterUserAuthenticationType: types.MasterUserAuthenticationType("password"),
 		WithExpressConfiguration:     ptr.Bool(true),
-		SourceRegion:                 ptr.String("__SourceRegion__"),
-		destinationRegion:            ptr.String("__destinationRegion__"),
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
+		SourceRegion:      ptr.String("__SourceRegion__"),
+		destinationRegion: ptr.String("__destinationRegion__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -13807,6 +13857,16 @@ func TestUpdateRequestSnapshot_RestoreDBClusterFromS3(t *testing.T) {
 				},
 			},
 		},
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -13933,6 +13993,16 @@ func TestUpdateRequestSnapshot_RestoreDBClusterFromSnapshot(t *testing.T) {
 		},
 		EnableVPCNetworking:         ptr.Bool(true),
 		EnableInternetAccessGateway: ptr.Bool(true),
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -14056,6 +14126,16 @@ func TestUpdateRequestSnapshot_RestoreDBClusterToPointInTime(t *testing.T) {
 		},
 		EnableVPCNetworking:         ptr.Bool(true),
 		EnableInternetAccessGateway: ptr.Bool(true),
+		AssociatedRoles: []types.DBClusterAssociatedRole{
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+			{
+				RoleArn:     ptr.String("__RoleArn__"),
+				FeatureName: ptr.String("__FeatureName__"),
+			},
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""

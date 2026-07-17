@@ -623,6 +623,7 @@ func TestCheckResponseSnapshot_GetStreamSession(t *testing.T) {
 			StatusReason: ptr.String("__StatusReason__"),
 			OutputUri:    ptr.String("__OutputUri__"),
 		},
+		RoleArn: ptr.String("__RoleArn__"),
 	}
 	status, header, body, err := serdeRespReadSnapshot("GetStreamSession.response")
 	if errors.Is(err, fs.ErrNotExist) {
@@ -757,6 +758,7 @@ func TestCheckResponseSnapshot_ListStreamSessions(t *testing.T) {
 					OutputUri:    ptr.String("__OutputUri__"),
 				},
 				Location: ptr.String("__Location__"),
+				RoleArn:  ptr.String("__RoleArn__"),
 			},
 			{
 				Arn:            ptr.String("__Arn__"),
@@ -773,6 +775,7 @@ func TestCheckResponseSnapshot_ListStreamSessions(t *testing.T) {
 					OutputUri:    ptr.String("__OutputUri__"),
 				},
 				Location: ptr.String("__Location__"),
+				RoleArn:  ptr.String("__RoleArn__"),
 			},
 		},
 		NextToken: ptr.String("__NextToken__"),
@@ -812,6 +815,7 @@ func TestCheckResponseSnapshot_ListStreamSessionsByAccount(t *testing.T) {
 					OutputUri:    ptr.String("__OutputUri__"),
 				},
 				Location: ptr.String("__Location__"),
+				RoleArn:  ptr.String("__RoleArn__"),
 			},
 			{
 				Arn:            ptr.String("__Arn__"),
@@ -828,6 +832,7 @@ func TestCheckResponseSnapshot_ListStreamSessionsByAccount(t *testing.T) {
 					OutputUri:    ptr.String("__OutputUri__"),
 				},
 				Location: ptr.String("__Location__"),
+				RoleArn:  ptr.String("__RoleArn__"),
 			},
 		},
 		NextToken: ptr.String("__NextToken__"),
@@ -925,6 +930,7 @@ func TestCheckResponseSnapshot_StartStreamSession(t *testing.T) {
 			StatusReason: ptr.String("__StatusReason__"),
 			OutputUri:    ptr.String("__OutputUri__"),
 		},
+		RoleArn: ptr.String("__RoleArn__"),
 	}
 	status, header, body, err := serdeRespReadSnapshot("StartStreamSession.response")
 	if errors.Is(err, fs.ErrNotExist) {

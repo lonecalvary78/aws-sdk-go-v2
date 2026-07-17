@@ -829,6 +829,7 @@ func TestCheckRequestSnapshot_StartStreamSession(t *testing.T) {
 		PerformanceStatsConfiguration: &types.PerformanceStatsConfiguration{
 			SharedWithClient: ptr.Bool(true),
 		},
+		RoleArn: ptr.String("__RoleArn__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -1680,6 +1681,7 @@ func TestUpdateRequestSnapshot_StartStreamSession(t *testing.T) {
 		PerformanceStatsConfiguration: &types.PerformanceStatsConfiguration{
 			SharedWithClient: ptr.Bool(true),
 		},
+		RoleArn: ptr.String("__RoleArn__"),
 	}
 	body := &bytes.Buffer{}
 	method := ""

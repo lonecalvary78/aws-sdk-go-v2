@@ -8450,6 +8450,48 @@ func awsAwsjson11_serializeDocumentEmailMfaSettingsType(v *types.EmailMfaSetting
 	return nil
 }
 
+func awsAwsjson11_serializeDocumentEumsSmsConfigurationType(v *types.EumsSmsConfigurationType, value smithyjson.Value) error {
+	object := value.Object()
+	defer object.Close()
+
+	if v.CallerArn != nil {
+		ok := object.Key("CallerArn")
+		ok.String(*v.CallerArn)
+	}
+
+	if v.ConfigurationSetName != nil {
+		ok := object.Key("ConfigurationSetName")
+		ok.String(*v.ConfigurationSetName)
+	}
+
+	if v.ExternalId != nil {
+		ok := object.Key("ExternalId")
+		ok.String(*v.ExternalId)
+	}
+
+	if v.InEntityId != nil {
+		ok := object.Key("InEntityId")
+		ok.String(*v.InEntityId)
+	}
+
+	if v.InTemplateId != nil {
+		ok := object.Key("InTemplateId")
+		ok.String(*v.InTemplateId)
+	}
+
+	if v.OriginationIdentity != nil {
+		ok := object.Key("OriginationIdentity")
+		ok.String(*v.OriginationIdentity)
+	}
+
+	if v.Region != nil {
+		ok := object.Key("Region")
+		ok.String(*v.Region)
+	}
+
+	return nil
+}
+
 func awsAwsjson11_serializeDocumentEventFiltersType(v []types.EventFilterType, value smithyjson.Value) error {
 	array := value.Array()
 	defer array.Close()
@@ -9240,6 +9282,13 @@ func awsAwsjson11_serializeDocumentSkippedIPRangeListType(v []string, value smit
 func awsAwsjson11_serializeDocumentSmsConfigurationType(v *types.SmsConfigurationType, value smithyjson.Value) error {
 	object := value.Object()
 	defer object.Close()
+
+	if v.EumsSms != nil {
+		ok := object.Key("EumsSms")
+		if err := awsAwsjson11_serializeDocumentEumsSmsConfigurationType(v.EumsSms, ok); err != nil {
+			return err
+		}
+	}
 
 	if v.ExternalId != nil {
 		ok := object.Key("ExternalId")
@@ -10735,6 +10784,11 @@ func awsAwsjson11_serializeOpDocumentCreateUserImportJobInput(v *CreateUserImpor
 	if v.JobName != nil {
 		ok := object.Key("JobName")
 		ok.String(*v.JobName)
+	}
+
+	if len(v.PasswordHashingAlgorithm) > 0 {
+		ok := object.Key("PasswordHashingAlgorithm")
+		ok.String(string(v.PasswordHashingAlgorithm))
 	}
 
 	if v.UserPoolId != nil {

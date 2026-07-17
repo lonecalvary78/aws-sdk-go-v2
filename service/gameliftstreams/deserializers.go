@@ -2619,6 +2619,15 @@ func awsRestjson1_deserializeOpDocumentGetStreamSessionOutput(v **GetStreamSessi
 				sv.Protocol = types.Protocol(jtv)
 			}
 
+		case "RoleArn":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected IamRoleArn to be of type string, got %T instead", value)
+				}
+				sv.RoleArn = ptr.String(jtv)
+			}
+
 		case "SessionLengthSeconds":
 			if value != nil {
 				jtv, ok := value.(json.Number)
@@ -3924,6 +3933,15 @@ func awsRestjson1_deserializeOpDocumentStartStreamSessionOutput(v **StartStreamS
 					return fmt.Errorf("expected Protocol to be of type string, got %T instead", value)
 				}
 				sv.Protocol = types.Protocol(jtv)
+			}
+
+		case "RoleArn":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected IamRoleArn to be of type string, got %T instead", value)
+				}
+				sv.RoleArn = ptr.String(jtv)
 			}
 
 		case "SessionLengthSeconds":
@@ -6445,6 +6463,15 @@ func awsRestjson1_deserializeDocumentStreamSessionSummary(v **types.StreamSessio
 					return fmt.Errorf("expected Protocol to be of type string, got %T instead", value)
 				}
 				sv.Protocol = types.Protocol(jtv)
+			}
+
+		case "RoleArn":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected IamRoleArn to be of type string, got %T instead", value)
+				}
+				sv.RoleArn = ptr.String(jtv)
 			}
 
 		case "Status":

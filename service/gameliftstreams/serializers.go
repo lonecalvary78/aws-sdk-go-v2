@@ -1782,6 +1782,11 @@ func awsRestjson1_serializeOpDocumentStartStreamSessionInput(v *StartStreamSessi
 		ok.String(string(v.Protocol))
 	}
 
+	if v.RoleArn != nil {
+		ok := object.Key("RoleArn")
+		ok.String(*v.RoleArn)
+	}
+
 	if v.SessionLengthSeconds != nil {
 		ok := object.Key("SessionLengthSeconds")
 		ok.Integer(*v.SessionLengthSeconds)

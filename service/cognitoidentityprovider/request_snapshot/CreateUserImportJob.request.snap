@@ -3,4 +3,4 @@ POST /
 Content-Type: application/x-amz-json-1.1
 X-Amz-Target: AWSCognitoIdentityProviderService.CreateUserImportJob
 
-{"CloudWatchLogsRoleArn":"__CloudWatchLogsRoleArn__","JobName":"__JobName__","UserPoolId":"__UserPoolId__"}
+{"CloudWatchLogsRoleArn":"__CloudWatchLogsRoleArn__","JobName":"__JobName__","PasswordHashingAlgorithm":"BCRYPT","UserPoolId":"__UserPoolId__"}

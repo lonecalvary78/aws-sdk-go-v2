@@ -1,0 +1,8 @@
+{
+    "id": "ca00ca11-1531-4d5f-954e-1a790cae573e",
+    "type": "feature",
+    "description": "Adds support for sourcing Autonomous Database admin and wallet passwords from customer-managed AWS Secrets Manager secrets, including password source configuration and summaries, and enabling or disabling the OCI IAM service role for Secrets Manager integration via InitializeService.",
+    "modules": [
+        "service/odb"
+    ]
+}

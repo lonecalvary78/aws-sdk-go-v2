@@ -760,6 +760,16 @@ func TestCheckResponseSnapshot_GetAutonomousDatabase(t *testing.T) {
 			TimeUntilReconnectCloneEnabled:          ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 			NextLongTermBackupTimeStamp:             ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 			TimeUndeleted:                           ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+			AdminPasswordSourceSummary: &types.AdminPasswordSourceSummary{
+				AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+				AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationMemberCustomerManagedAwsSecret{
+					Value: types.CustomerManagedAwsSecretConfiguration{
+						IamRoleArn:     ptr.String("__IamRoleArn__"),
+						SecretId:       ptr.String("__SecretId__"),
+						ExternalIdType: types.ExternalIdType("database_ocid"),
+					},
+				},
+			},
 		},
 	}
 	status, header, body, err := serdeRespReadSnapshot("GetAutonomousDatabase.response")
@@ -821,6 +831,16 @@ func TestCheckResponseSnapshot_GetAutonomousDatabaseWalletDetails(t *testing.T) 
 		AutonomousDatabaseWalletDetails: &types.AutonomousDatabaseWalletDetails{
 			Status:      types.AutonomousDatabaseWalletStatus("ACTIVE"),
 			TimeRotated: ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+			PasswordSourceSummary: &types.WalletPasswordSourceSummary{
+				PasswordSource: types.WalletPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+				PasswordSourceConfiguration: &types.WalletPasswordSourceConfigurationMemberCustomerManagedAwsSecret{
+					Value: types.CustomerManagedAwsSecretConfiguration{
+						IamRoleArn:     ptr.String("__IamRoleArn__"),
+						SecretId:       ptr.String("__SecretId__"),
+						ExternalIdType: types.ExternalIdType("database_ocid"),
+					},
+				},
+			},
 		},
 	}
 	status, header, body, err := serdeRespReadSnapshot("GetAutonomousDatabaseWalletDetails.response")
@@ -1330,10 +1350,14 @@ func TestCheckResponseSnapshot_GetOciOnboardingStatus(t *testing.T) {
 			{
 				IamRoleArn:     ptr.String("__IamRoleArn__"),
 				AwsIntegration: types.OciAwsIntegration("KmsTde"),
+				Status:         types.OciIamRoleStatus("PROVISIONING"),
+				StatusReason:   ptr.String("__StatusReason__"),
 			},
 			{
 				IamRoleArn:     ptr.String("__IamRoleArn__"),
 				AwsIntegration: types.OciAwsIntegration("KmsTde"),
+				Status:         types.OciIamRoleStatus("PROVISIONING"),
+				StatusReason:   ptr.String("__StatusReason__"),
 			},
 		},
 		LinkedOciTenancyId:     ptr.String("__LinkedOciTenancyId__"),
@@ -1883,6 +1907,16 @@ func TestCheckResponseSnapshot_ListAutonomousDatabaseClones(t *testing.T) {
 				TimeUntilReconnectCloneEnabled:          ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				NextLongTermBackupTimeStamp:             ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				TimeUndeleted:                           ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+				AdminPasswordSourceSummary: &types.AdminPasswordSourceSummary{
+					AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+					AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationMemberCustomerManagedAwsSecret{
+						Value: types.CustomerManagedAwsSecretConfiguration{
+							IamRoleArn:     ptr.String("__IamRoleArn__"),
+							SecretId:       ptr.String("__SecretId__"),
+							ExternalIdType: types.ExternalIdType("database_ocid"),
+						},
+					},
+				},
 			},
 			{
 				AutonomousDatabaseId:              ptr.String("__AutonomousDatabaseId__"),
@@ -2132,6 +2166,16 @@ func TestCheckResponseSnapshot_ListAutonomousDatabaseClones(t *testing.T) {
 				TimeUntilReconnectCloneEnabled:          ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				NextLongTermBackupTimeStamp:             ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				TimeUndeleted:                           ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+				AdminPasswordSourceSummary: &types.AdminPasswordSourceSummary{
+					AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+					AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationMemberCustomerManagedAwsSecret{
+						Value: types.CustomerManagedAwsSecretConfiguration{
+							IamRoleArn:     ptr.String("__IamRoleArn__"),
+							SecretId:       ptr.String("__SecretId__"),
+							ExternalIdType: types.ExternalIdType("database_ocid"),
+						},
+					},
+				},
 			},
 		},
 	}
@@ -2472,6 +2516,16 @@ func TestCheckResponseSnapshot_ListAutonomousDatabases(t *testing.T) {
 				TimeUntilReconnectCloneEnabled:          ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				NextLongTermBackupTimeStamp:             ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				TimeUndeleted:                           ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+				AdminPasswordSourceSummary: &types.AdminPasswordSourceSummary{
+					AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+					AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationMemberCustomerManagedAwsSecret{
+						Value: types.CustomerManagedAwsSecretConfiguration{
+							IamRoleArn:     ptr.String("__IamRoleArn__"),
+							SecretId:       ptr.String("__SecretId__"),
+							ExternalIdType: types.ExternalIdType("database_ocid"),
+						},
+					},
+				},
 			},
 			{
 				AutonomousDatabaseId:              ptr.String("__AutonomousDatabaseId__"),
@@ -2721,6 +2775,16 @@ func TestCheckResponseSnapshot_ListAutonomousDatabases(t *testing.T) {
 				TimeUntilReconnectCloneEnabled:          ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				NextLongTermBackupTimeStamp:             ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
 				TimeUndeleted:                           ptr.Time(time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC)),
+				AdminPasswordSourceSummary: &types.AdminPasswordSourceSummary{
+					AdminPasswordSource: types.AdminPasswordSource("CUSTOMER_MANAGED_AWS_SECRET"),
+					AdminPasswordSourceConfiguration: &types.AdminPasswordSourceConfigurationMemberCustomerManagedAwsSecret{
+						Value: types.CustomerManagedAwsSecretConfiguration{
+							IamRoleArn:     ptr.String("__IamRoleArn__"),
+							SecretId:       ptr.String("__SecretId__"),
+							ExternalIdType: types.ExternalIdType("database_ocid"),
+						},
+					},
+				},
 			},
 		},
 	}
