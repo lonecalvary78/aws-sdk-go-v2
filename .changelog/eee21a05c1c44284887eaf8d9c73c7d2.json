@@ -1,8 +1,0 @@
-{
-    "id": "eee21a05-c1c4-4284-887e-af8d9c73c7d2",
-    "type": "feature",
-    "description": "Amazon Cognito user pools now support sending SMS via AWS End User Messaging. A new EumsSms object in SmsConfigurationType lets you deliver MFA and verification texts through AWS End User Messaging, alongside the existing Amazon SNS option.",
-    "modules": [
-        "service/cognitoidentityprovider"
-    ]
-}

@@ -1,3 +1,7 @@
+# v1.83.1 (2026-07-17)
+
+* No change notes available for this release.
+
 # v1.83.0 (2026-07-13)
 
 * **Feature**: GuardDuty AI Protection is now publicly available. Findings include Bedrock guardrail details, model details, observation numbers, and continuous scan details. GuardrailArn and GuardrailVersion are deprecated in favor of the guardrails list.

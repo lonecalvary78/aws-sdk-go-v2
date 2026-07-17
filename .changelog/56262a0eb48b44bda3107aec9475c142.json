@@ -1,8 +1,0 @@
-{
-    "id": "56262a0e-b48b-44bd-a310-7aec9475c142",
-    "type": "feature",
-    "description": "Adds the AssociatedRoles parameter to CreateDBCluster, RestoreDBClusterFromSnapshot, RestoreDBClusterToPointInTime, and RestoreDBClusterFromS3, letting customers associate IAM roles with an Aurora DB cluster at create or restore time instead of calling AddRoleToDBCluster afterward.",
-    "modules": [
-        "service/rds"
-    ]
-}
