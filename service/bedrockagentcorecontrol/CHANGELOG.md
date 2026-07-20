@@ -1,3 +1,7 @@
+# v1.49.0 (2026-07-20)
+
+* **Feature**: This release adds support for specifying a connector version on Gateway targets to pin the connector's tool schema. It also introduces web-search connector version 1.2.0, which adds agent-side domain filtering, published date range filtering, and admin-side domain allowlisting.
+
 # v1.48.0 (2026-07-15)
 
 * **Feature**: Fix HarnessEndpointArn pattern to match the actual service-emitted ARN format ('harness-endpoint' instead of 'endpoint'). Add additionalParams to Gemini model configuration for passing provider-specific parameters through to the model unchanged.

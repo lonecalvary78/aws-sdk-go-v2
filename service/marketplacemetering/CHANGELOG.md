@@ -1,3 +1,7 @@
+# v1.38.3 (2026-07-20)
+
+* **Documentation**: For new SaaS product integrations, CustomerIdentifier is not populated in ResolveCustomer responses and is not supported in BatchMeterUsage. Use CustomerAWSAccountId and LicenseArn instead.
+
 # v1.38.2 (2026-07-13)
 
 * No change notes available for this release.

@@ -1,3 +1,7 @@
+# v1.52.2 (2026-07-20)
+
+* **Documentation**: Updated InvalidInputException error documentation to clarify that the service validates free-text field values against common cross-site scripting (XSS) patterns.
+
 # v1.52.1 (2026-07-13)
 
 * No change notes available for this release.

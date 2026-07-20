@@ -1,3 +1,7 @@
+# v1.62.0 (2026-07-20)
+
+* **Feature**: This change adds api support for configuring ad decision server timeouts and concurrency fields on MediaTailor playback configurations
+
 # v1.61.1 (2026-07-13)
 
 * No change notes available for this release.

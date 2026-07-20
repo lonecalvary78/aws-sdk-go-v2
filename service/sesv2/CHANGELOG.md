@@ -1,3 +1,7 @@
+# v1.64.0 (2026-07-20)
+
+* **Feature**: Amazon SES introduces three new Pricing Plans (Essentials, Pro, Enterprise), which bundle SES features under one pricing umbrella.  The new PutAccountPricingAttributes API lets the user set the account's plan, while current plan retrievalif done through the new PricingAttributes field on GetAccount.
+
 # v1.63.1 (2026-07-13)
 
 * No change notes available for this release.

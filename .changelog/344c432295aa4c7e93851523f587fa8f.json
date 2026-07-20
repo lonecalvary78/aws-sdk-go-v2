@@ -1,8 +1,0 @@
-{
-    "id": "344c4322-95aa-4c7e-9385-1523f587fa8f",
-    "type": "documentation",
-    "description": "Updated InvalidInputException error documentation to clarify that the service validates free-text field values against common cross-site scripting (XSS) patterns.",
-    "modules": [
-        "service/organizations"
-    ]
-}

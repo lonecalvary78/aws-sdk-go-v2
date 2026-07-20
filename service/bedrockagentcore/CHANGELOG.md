@@ -1,3 +1,7 @@
+# v1.34.0 (2026-07-20)
+
+* **Feature**: Add W3C trace context headers (traceparent, tracestate, baggage) and X-Amzn-Trace-Id to InvokeHarness request for end-to-end observability propagation. Add toolResultMetadata to the streaming content block delta for MCP tool result meta delivery without oversized SSE frames.
+
 # v1.33.1 (2026-07-13)
 
 * No change notes available for this release.

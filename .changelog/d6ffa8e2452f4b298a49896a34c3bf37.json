@@ -1,8 +1,0 @@
-{
-    "id": "d6ffa8e2-452f-4b29-8a49-896a34c3bf37",
-    "type": "feature",
-    "description": "This change adds api support for configuring ad decision server timeouts and concurrency fields on MediaTailor playback configurations",
-    "modules": [
-        "service/mediatailor"
-    ]
-}
