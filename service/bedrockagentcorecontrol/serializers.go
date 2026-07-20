@@ -15289,6 +15289,11 @@ func awsRestjson1_serializeDocumentConnectorSource(v *types.ConnectorSource, val
 		ok.String(*v.ConnectorId)
 	}
 
+	if v.Version != nil {
+		ok := object.Key("version")
+		ok.String(*v.Version)
+	}
+
 	return nil
 }
 

@@ -3566,6 +3566,10 @@ type Capabilities struct {
 	// The ability to perform actions using HuggingFace connectors.
 	HuggingFaceAction CapabilityState
 
+	// The ability to create, view, edit, delete, and run inbound email triggers for
+	// flows and automations.
+	InboundEmailTrigger CapabilityState
+
 	// The ability to include content in scheduled email reports.
 	IncludeContentInScheduledReportsEmail CapabilityState
 
@@ -3629,6 +3633,10 @@ type Capabilities struct {
 	// The ability to enable approvals for flow share.
 	PublishWithoutApproval CapabilityState
 
+	// The ability to create, view, edit, delete, and run Quick event triggers for
+	// flows and automations.
+	QuickEventTrigger CapabilityState
+
 	// The ability to rename shared folders.
 	RenameSharedFolders CapabilityState
 
@@ -3661,6 +3669,10 @@ type Capabilities struct {
 
 	// The ability to perform Scenario-related actions.
 	Scenario CapabilityState
+
+	// The ability to create, view, edit, delete, and run schedule triggers for flows
+	// and automations.
+	ScheduleTrigger CapabilityState
 
 	// The ability to enable users to upgrade their user role.
 	SelfUpgradeUserRole CapabilityState
@@ -3841,6 +3853,9 @@ type Capabilities struct {
 
 	// The ability to perform Topic-related actions.
 	Topic CapabilityState
+
+	// The ability to manage trigger-related settings for flows and automations.
+	Trigger CapabilityState
 
 	// The ability to use internet to enhance results in Chat Agents, Flows, and Quick
 	// Research. Web search queries will be processed securely in an Amazon Web

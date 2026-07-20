@@ -2108,6 +2108,17 @@ func TestCheckRequestSnapshot_PutPlaybackConfiguration(t *testing.T) {
 		FunctionMapping: map[string]string{
 			"key0": "__Value__",
 		},
+		AdsPersonalizationTimeouts: &types.AdsPersonalizationTimeouts{
+			AdsRequestTimeoutMilliseconds:                     ptr.Int32(1),
+			LiveMaximumAdsPersonalizationTimeMilliseconds:     ptr.Int32(1),
+			VodMaximumAdsPersonalizationTimeMilliseconds:      ptr.Int32(1),
+			PrefetchAdsRequestTimeoutMilliseconds:             ptr.Int32(1),
+			PrefetchMaximumAdsPersonalizationTimeMilliseconds: ptr.Int32(1),
+		},
+		AdsPersonalizationConcurrency: &types.AdsPersonalizationConcurrency{
+			MaxConcurrentAdsRequests:     ptr.Int32(1),
+			EnableVodVastParallelization: ptr.Bool(true),
+		},
 	}
 	body := &bytes.Buffer{}
 	method := ""
@@ -4959,6 +4970,17 @@ func TestUpdateRequestSnapshot_PutPlaybackConfiguration(t *testing.T) {
 		},
 		FunctionMapping: map[string]string{
 			"key0": "__Value__",
+		},
+		AdsPersonalizationTimeouts: &types.AdsPersonalizationTimeouts{
+			AdsRequestTimeoutMilliseconds:                     ptr.Int32(1),
+			LiveMaximumAdsPersonalizationTimeMilliseconds:     ptr.Int32(1),
+			VodMaximumAdsPersonalizationTimeMilliseconds:      ptr.Int32(1),
+			PrefetchAdsRequestTimeoutMilliseconds:             ptr.Int32(1),
+			PrefetchMaximumAdsPersonalizationTimeMilliseconds: ptr.Int32(1),
+		},
+		AdsPersonalizationConcurrency: &types.AdsPersonalizationConcurrency{
+			MaxConcurrentAdsRequests:     ptr.Int32(1),
+			EnableVodVastParallelization: ptr.Bool(true),
 		},
 	}
 	body := &bytes.Buffer{}

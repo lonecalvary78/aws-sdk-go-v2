@@ -6428,6 +6428,10 @@ func TestCheckRequestSnapshot_CreateCustomPermissions(t *testing.T) {
 			GenerateAnalyses:                          types.CapabilityState("DENY"),
 			Story:                                     types.CapabilityState("DENY"),
 			Scenario:                                  types.CapabilityState("DENY"),
+			Trigger:                                   types.CapabilityState("DENY"),
+			ScheduleTrigger:                           types.CapabilityState("DENY"),
+			InboundEmailTrigger:                       types.CapabilityState("DENY"),
+			QuickEventTrigger:                         types.CapabilityState("DENY"),
 		},
 		Tags: []types.Tag{
 			{
@@ -22903,6 +22907,10 @@ func TestCheckRequestSnapshot_UpdateCustomPermissions(t *testing.T) {
 			GenerateAnalyses:                          types.CapabilityState("DENY"),
 			Story:                                     types.CapabilityState("DENY"),
 			Scenario:                                  types.CapabilityState("DENY"),
+			Trigger:                                   types.CapabilityState("DENY"),
+			ScheduleTrigger:                           types.CapabilityState("DENY"),
+			InboundEmailTrigger:                       types.CapabilityState("DENY"),
+			QuickEventTrigger:                         types.CapabilityState("DENY"),
 		},
 	}
 	body := &bytes.Buffer{}
@@ -37128,6 +37136,10 @@ func TestUpdateRequestSnapshot_CreateCustomPermissions(t *testing.T) {
 			GenerateAnalyses:                          types.CapabilityState("DENY"),
 			Story:                                     types.CapabilityState("DENY"),
 			Scenario:                                  types.CapabilityState("DENY"),
+			Trigger:                                   types.CapabilityState("DENY"),
+			ScheduleTrigger:                           types.CapabilityState("DENY"),
+			InboundEmailTrigger:                       types.CapabilityState("DENY"),
+			QuickEventTrigger:                         types.CapabilityState("DENY"),
 		},
 		Tags: []types.Tag{
 			{
@@ -53603,6 +53615,10 @@ func TestUpdateRequestSnapshot_UpdateCustomPermissions(t *testing.T) {
 			GenerateAnalyses:                          types.CapabilityState("DENY"),
 			Story:                                     types.CapabilityState("DENY"),
 			Scenario:                                  types.CapabilityState("DENY"),
+			Trigger:                                   types.CapabilityState("DENY"),
+			ScheduleTrigger:                           types.CapabilityState("DENY"),
+			InboundEmailTrigger:                       types.CapabilityState("DENY"),
+			QuickEventTrigger:                         types.CapabilityState("DENY"),
 		},
 	}
 	body := &bytes.Buffer{}

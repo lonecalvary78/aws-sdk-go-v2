@@ -57,6 +57,16 @@ type GetPlaybackConfigurationOutput struct {
 	// VAST URL. The maximum length is 25,000 characters.
 	AdDecisionServerUrl *string
 
+	// The concurrency settings for ad decision server interactions. These settings
+	// control how many simultaneous ADS requests MediaTailor makes per manifest
+	// request.
+	AdsPersonalizationConcurrency *types.AdsPersonalizationConcurrency
+
+	// The timeout settings for ad decision server interactions. These settings
+	// control how long MediaTailor waits for ADS responses and the total time budget
+	// for ad personalization across live, VOD, and prefetch workflows.
+	AdsPersonalizationTimeouts *types.AdsPersonalizationTimeouts
+
 	// The configuration for avail suppression, also known as ad suppression. For more
 	// information about ad suppression, see [Ad Suppression].
 	//

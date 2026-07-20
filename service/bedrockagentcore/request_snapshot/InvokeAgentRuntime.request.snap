@@ -3,6 +3,8 @@ POST /runtimes/__AgentRuntimeArn__/invocations?accountId=__AccountId__&qualifier
 Accept: __Accept__
 Baggage: __Baggage__
 Content-Type: __ContentType__
+Mcp-Method: __McpMethod__
+Mcp-Name: __McpName__
 Mcp-Protocol-Version: __McpProtocolVersion__
 Mcp-Session-Id: __McpSessionId__
 Traceparent: __TraceParent__

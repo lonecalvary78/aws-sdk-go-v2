@@ -35919,6 +35919,15 @@ func awsRestjson1_deserializeDocumentConnectorSource(v **types.ConnectorSource, 
 				sv.ConnectorId = ptr.String(jtv)
 			}
 
+		case "version":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected ConnectorVersion to be of type string, got %T instead", value)
+				}
+				sv.Version = ptr.String(jtv)
+			}
+
 		default:
 			_, _ = key, value
 

@@ -5317,9 +5317,10 @@ type ServiceType string
 
 // Enum values for ServiceType
 const (
-	ServiceTypeRedshift  ServiceType = "REDSHIFT"
-	ServiceTypeQbusiness ServiceType = "QBUSINESS"
-	ServiceTypeAthena    ServiceType = "ATHENA"
+	ServiceTypeRedshift        ServiceType = "REDSHIFT"
+	ServiceTypeQbusiness       ServiceType = "QBUSINESS"
+	ServiceTypeAthena          ServiceType = "ATHENA"
+	ServiceTypeGlueDataCatalog ServiceType = "GLUE_DATA_CATALOG"
 )
 
 // Values returns all known values for ServiceType. Note that this can be expanded
@@ -5331,6 +5332,7 @@ func (ServiceType) Values() []ServiceType {
 		"REDSHIFT",
 		"QBUSINESS",
 		"ATHENA",
+		"GLUE_DATA_CATALOG",
 	}
 }
 

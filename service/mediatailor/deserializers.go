@@ -4316,6 +4316,16 @@ func awsRestjson1_deserializeOpDocumentGetPlaybackConfigurationOutput(v **GetPla
 				sv.AdDecisionServerUrl = ptr.String(jtv)
 			}
 
+		case "AdsPersonalizationConcurrency":
+			if err := awsRestjson1_deserializeDocumentAdsPersonalizationConcurrency(&sv.AdsPersonalizationConcurrency, value); err != nil {
+				return err
+			}
+
+		case "AdsPersonalizationTimeouts":
+			if err := awsRestjson1_deserializeDocumentAdsPersonalizationTimeouts(&sv.AdsPersonalizationTimeouts, value); err != nil {
+				return err
+			}
+
 		case "AvailSuppression":
 			if err := awsRestjson1_deserializeDocumentAvailSuppression(&sv.AvailSuppression, value); err != nil {
 				return err
@@ -6545,6 +6555,16 @@ func awsRestjson1_deserializeOpDocumentPutPlaybackConfigurationOutput(v **PutPla
 					return fmt.Errorf("expected __string to be of type string, got %T instead", value)
 				}
 				sv.AdDecisionServerUrl = ptr.String(jtv)
+			}
+
+		case "AdsPersonalizationConcurrency":
+			if err := awsRestjson1_deserializeDocumentAdsPersonalizationConcurrency(&sv.AdsPersonalizationConcurrency, value); err != nil {
+				return err
+			}
+
+		case "AdsPersonalizationTimeouts":
+			if err := awsRestjson1_deserializeDocumentAdsPersonalizationTimeouts(&sv.AdsPersonalizationTimeouts, value); err != nil {
+				return err
 			}
 
 		case "AvailSuppression":
@@ -9481,6 +9501,155 @@ func awsRestjson1_deserializeDocumentAdsInteractionLog(v **types.AdsInteractionL
 	return nil
 }
 
+func awsRestjson1_deserializeDocumentAdsPersonalizationConcurrency(v **types.AdsPersonalizationConcurrency, value interface{}) error {
+	if v == nil {
+		return fmt.Errorf("unexpected nil of type %T", v)
+	}
+	if value == nil {
+		return nil
+	}
+
+	shape, ok := value.(map[string]interface{})
+	if !ok {
+		return fmt.Errorf("unexpected JSON type %v", value)
+	}
+
+	var sv *types.AdsPersonalizationConcurrency
+	if *v == nil {
+		sv = &types.AdsPersonalizationConcurrency{}
+	} else {
+		sv = *v
+	}
+
+	for key, value := range shape {
+		switch key {
+		case "EnableVodVastParallelization":
+			if value != nil {
+				jtv, ok := value.(bool)
+				if !ok {
+					return fmt.Errorf("expected __boolean to be of type *bool, got %T instead", value)
+				}
+				sv.EnableVodVastParallelization = ptr.Bool(jtv)
+			}
+
+		case "MaxConcurrentAdsRequests":
+			if value != nil {
+				jtv, ok := value.(json.Number)
+				if !ok {
+					return fmt.Errorf("expected __integer to be json.Number, got %T instead", value)
+				}
+				i64, err := jtv.Int64()
+				if err != nil {
+					return err
+				}
+				sv.MaxConcurrentAdsRequests = ptr.Int32(int32(i64))
+			}
+
+		default:
+			_, _ = key, value
+
+		}
+	}
+	*v = sv
+	return nil
+}
+
+func awsRestjson1_deserializeDocumentAdsPersonalizationTimeouts(v **types.AdsPersonalizationTimeouts, value interface{}) error {
+	if v == nil {
+		return fmt.Errorf("unexpected nil of type %T", v)
+	}
+	if value == nil {
+		return nil
+	}
+
+	shape, ok := value.(map[string]interface{})
+	if !ok {
+		return fmt.Errorf("unexpected JSON type %v", value)
+	}
+
+	var sv *types.AdsPersonalizationTimeouts
+	if *v == nil {
+		sv = &types.AdsPersonalizationTimeouts{}
+	} else {
+		sv = *v
+	}
+
+	for key, value := range shape {
+		switch key {
+		case "AdsRequestTimeoutMilliseconds":
+			if value != nil {
+				jtv, ok := value.(json.Number)
+				if !ok {
+					return fmt.Errorf("expected __integer to be json.Number, got %T instead", value)
+				}
+				i64, err := jtv.Int64()
+				if err != nil {
+					return err
+				}
+				sv.AdsRequestTimeoutMilliseconds = ptr.Int32(int32(i64))
+			}
+
+		case "LiveMaximumAdsPersonalizationTimeMilliseconds":
+			if value != nil {
+				jtv, ok := value.(json.Number)
+				if !ok {
+					return fmt.Errorf("expected __integer to be json.Number, got %T instead", value)
+				}
+				i64, err := jtv.Int64()
+				if err != nil {
+					return err
+				}
+				sv.LiveMaximumAdsPersonalizationTimeMilliseconds = ptr.Int32(int32(i64))
+			}
+
+		case "PrefetchAdsRequestTimeoutMilliseconds":
+			if value != nil {
+				jtv, ok := value.(json.Number)
+				if !ok {
+					return fmt.Errorf("expected __integer to be json.Number, got %T instead", value)
+				}
+				i64, err := jtv.Int64()
+				if err != nil {
+					return err
+				}
+				sv.PrefetchAdsRequestTimeoutMilliseconds = ptr.Int32(int32(i64))
+			}
+
+		case "PrefetchMaximumAdsPersonalizationTimeMilliseconds":
+			if value != nil {
+				jtv, ok := value.(json.Number)
+				if !ok {
+					return fmt.Errorf("expected __integer to be json.Number, got %T instead", value)
+				}
+				i64, err := jtv.Int64()
+				if err != nil {
+					return err
+				}
+				sv.PrefetchMaximumAdsPersonalizationTimeMilliseconds = ptr.Int32(int32(i64))
+			}
+
+		case "VodMaximumAdsPersonalizationTimeMilliseconds":
+			if value != nil {
+				jtv, ok := value.(json.Number)
+				if !ok {
+					return fmt.Errorf("expected __integer to be json.Number, got %T instead", value)
+				}
+				i64, err := jtv.Int64()
+				if err != nil {
+					return err
+				}
+				sv.VodMaximumAdsPersonalizationTimeMilliseconds = ptr.Int32(int32(i64))
+			}
+
+		default:
+			_, _ = key, value
+
+		}
+	}
+	*v = sv
+	return nil
+}
+
 func awsRestjson1_deserializeDocumentAlert(v **types.Alert, value interface{}) error {
 	if v == nil {
 		return fmt.Errorf("unexpected nil of type %T", v)
@@ -11452,6 +11621,16 @@ func awsRestjson1_deserializeDocumentPlaybackConfiguration(v **types.PlaybackCon
 					return fmt.Errorf("expected __string to be of type string, got %T instead", value)
 				}
 				sv.AdDecisionServerUrl = ptr.String(jtv)
+			}
+
+		case "AdsPersonalizationConcurrency":
+			if err := awsRestjson1_deserializeDocumentAdsPersonalizationConcurrency(&sv.AdsPersonalizationConcurrency, value); err != nil {
+				return err
+			}
+
+		case "AdsPersonalizationTimeouts":
+			if err := awsRestjson1_deserializeDocumentAdsPersonalizationTimeouts(&sv.AdsPersonalizationTimeouts, value); err != nil {
+				return err
 			}
 
 		case "AvailSuppression":

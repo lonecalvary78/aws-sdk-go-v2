@@ -31159,6 +31159,11 @@ func awsRestjson1_serializeDocumentCapabilities(v *types.Capabilities, value smi
 		ok.String(string(v.HuggingFaceAction))
 	}
 
+	if len(v.InboundEmailTrigger) > 0 {
+		ok := object.Key("InboundEmailTrigger")
+		ok.String(string(v.InboundEmailTrigger))
+	}
+
 	if len(v.IncludeContentInScheduledReportsEmail) > 0 {
 		ok := object.Key("IncludeContentInScheduledReportsEmail")
 		ok.String(string(v.IncludeContentInScheduledReportsEmail))
@@ -31254,6 +31259,11 @@ func awsRestjson1_serializeDocumentCapabilities(v *types.Capabilities, value smi
 		ok.String(string(v.PublishWithoutApproval))
 	}
 
+	if len(v.QuickEventTrigger) > 0 {
+		ok := object.Key("QuickEventTrigger")
+		ok.String(string(v.QuickEventTrigger))
+	}
+
 	if len(v.RenameSharedFolders) > 0 {
 		ok := object.Key("RenameSharedFolders")
 		ok.String(string(v.RenameSharedFolders))
@@ -31307,6 +31317,11 @@ func awsRestjson1_serializeDocumentCapabilities(v *types.Capabilities, value smi
 	if len(v.Scenario) > 0 {
 		ok := object.Key("Scenario")
 		ok.String(string(v.Scenario))
+	}
+
+	if len(v.ScheduleTrigger) > 0 {
+		ok := object.Key("ScheduleTrigger")
+		ok.String(string(v.ScheduleTrigger))
 	}
 
 	if len(v.SelfUpgradeUserRole) > 0 {
@@ -31607,6 +31622,11 @@ func awsRestjson1_serializeDocumentCapabilities(v *types.Capabilities, value smi
 	if len(v.Topic) > 0 {
 		ok := object.Key("Topic")
 		ok.String(string(v.Topic))
+	}
+
+	if len(v.Trigger) > 0 {
+		ok := object.Key("Trigger")
+		ok.String(string(v.Trigger))
 	}
 
 	if len(v.UseAgentWebSearch) > 0 {

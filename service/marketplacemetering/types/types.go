@@ -78,6 +78,9 @@ type UsageRecord struct {
 
 	// The CustomerIdentifier is obtained through the ResolveCustomer operation and
 	// represents an individual buyer in your application.
+	//
+	// CustomerIdentifier is not supported for new SaaS product integrations. Use
+	// CustomerAWSAccountId to identify the buyer.
 	CustomerIdentifier *string
 
 	// The LicenseArn is a unique identifier for a specific granted license. These are

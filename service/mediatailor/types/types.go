@@ -191,6 +191,52 @@ type AdsInteractionLog struct {
 	noSmithyDocumentSerde
 }
 
+// The concurrency settings for ad decision server interactions during ad
+// personalization.
+type AdsPersonalizationConcurrency struct {
+
+	// Enables parallel processing of ad decision server requests in VOD workflows
+	// when the ADS returns VAST responses. The default is false.
+	EnableVodVastParallelization *bool
+
+	// The maximum number of simultaneous requests that MediaTailor makes to the ad
+	// decision server per manifest request. The default is 1.
+	MaxConcurrentAdsRequests *int32
+
+	noSmithyDocumentSerde
+}
+
+// The timeout settings for ad decision server interactions during ad
+// personalization.
+type AdsPersonalizationTimeouts struct {
+
+	// The maximum time, in milliseconds, that MediaTailor waits for a single ad
+	// decision server response during live or VOD playback. The default is 3000.
+	AdsRequestTimeoutMilliseconds *int32
+
+	// The maximum total time, in milliseconds, that MediaTailor spends on ad decision
+	// server activity for live manifests, including making requests, waiting for
+	// responses, and following VAST wrapper redirects. The default is 10000.
+	LiveMaximumAdsPersonalizationTimeMilliseconds *int32
+
+	// The maximum time, in milliseconds, that MediaTailor waits for a single ad
+	// decision server response during prefetch retrieval. If not set, the value of
+	// AdsRequestTimeoutMilliseconds is used.
+	PrefetchAdsRequestTimeoutMilliseconds *int32
+
+	// The maximum total time, in milliseconds, that MediaTailor spends on ad decision
+	// server activity during prefetch retrieval, including making requests, waiting
+	// for responses, and following VAST wrapper redirects.
+	PrefetchMaximumAdsPersonalizationTimeMilliseconds *int32
+
+	// The maximum total time, in milliseconds, that MediaTailor spends on ad decision
+	// server activity for VOD manifests, including making requests, waiting for
+	// responses, and following VAST wrapper redirects. The default is 10000.
+	VodMaximumAdsPersonalizationTimeMilliseconds *int32
+
+	noSmithyDocumentSerde
+}
+
 // Alert configuration parameters.
 type Alert struct {
 
@@ -576,7 +622,11 @@ type DefaultSegmentDeliveryConfiguration struct {
 	noSmithyDocumentSerde
 }
 
-// -- Define Mixin --
+// Defines reusable logic that MediaTailor executes at lifecycle hooks during ad
+// insertion. The FunctionType determines the function's runtime behavior. For
+// more information about functions, see [Working with functions]in the MediaTailor User Guide.
+//
+// [Working with functions]: https://docs.aws.amazon.com/mediatailor/latest/ug/monetization-functions.html
 type Function struct {
 
 	// The identifier of the function.
@@ -719,7 +769,11 @@ type HttpRequest struct {
 	noSmithyDocumentSerde
 }
 
-// -- Function Configuration DataStructure
+// The configuration for an HTTP_REQUEST function. Specifies the HTTP method, URL,
+// headers, body, timeout, and output expressions for the request. For more
+// information, see [HTTP_REQUEST]in the MediaTailor User Guide.
+//
+// [HTTP_REQUEST]: https://docs.aws.amazon.com/mediatailor/latest/ug/monetization-functions-types-http-request.html
 type HttpRequestConfiguration struct {
 
 	// The HTTP method for the request. Valid values: GET and POST .
@@ -953,6 +1007,16 @@ type PlaybackConfiguration struct {
 	// needed when calling the ADS. Alternately, for testing you can provide a static
 	// VAST URL. The maximum length is 25,000 characters.
 	AdDecisionServerUrl *string
+
+	// The concurrency settings for ad decision server interactions. These settings
+	// control how many simultaneous ADS requests MediaTailor makes per manifest
+	// request.
+	AdsPersonalizationConcurrency *AdsPersonalizationConcurrency
+
+	// The timeout settings for ad decision server interactions. These settings
+	// control how long MediaTailor waits for ADS responses and the total time budget
+	// for ad personalization across live, VOD, and prefetch workflows.
+	AdsPersonalizationTimeouts *AdsPersonalizationTimeouts
 
 	// The configuration for avail suppression, also known as ad suppression. For more
 	// information about ad suppression, see [Ad Suppression].

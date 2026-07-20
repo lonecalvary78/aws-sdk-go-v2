@@ -66911,6 +66911,15 @@ func awsRestjson1_deserializeDocumentCapabilities(v **types.Capabilities, value 
 				sv.HuggingFaceAction = types.CapabilityState(jtv)
 			}
 
+		case "InboundEmailTrigger":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected CapabilityState to be of type string, got %T instead", value)
+				}
+				sv.InboundEmailTrigger = types.CapabilityState(jtv)
+			}
+
 		case "IncludeContentInScheduledReportsEmail":
 			if value != nil {
 				jtv, ok := value.(string)
@@ -67082,6 +67091,15 @@ func awsRestjson1_deserializeDocumentCapabilities(v **types.Capabilities, value 
 				sv.PublishWithoutApproval = types.CapabilityState(jtv)
 			}
 
+		case "QuickEventTrigger":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected CapabilityState to be of type string, got %T instead", value)
+				}
+				sv.QuickEventTrigger = types.CapabilityState(jtv)
+			}
+
 		case "RenameSharedFolders":
 			if value != nil {
 				jtv, ok := value.(string)
@@ -67179,6 +67197,15 @@ func awsRestjson1_deserializeDocumentCapabilities(v **types.Capabilities, value 
 					return fmt.Errorf("expected CapabilityState to be of type string, got %T instead", value)
 				}
 				sv.Scenario = types.CapabilityState(jtv)
+			}
+
+		case "ScheduleTrigger":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected CapabilityState to be of type string, got %T instead", value)
+				}
+				sv.ScheduleTrigger = types.CapabilityState(jtv)
 			}
 
 		case "SelfUpgradeUserRole":
@@ -67719,6 +67746,15 @@ func awsRestjson1_deserializeDocumentCapabilities(v **types.Capabilities, value 
 					return fmt.Errorf("expected CapabilityState to be of type string, got %T instead", value)
 				}
 				sv.Topic = types.CapabilityState(jtv)
+			}
+
+		case "Trigger":
+			if value != nil {
+				jtv, ok := value.(string)
+				if !ok {
+					return fmt.Errorf("expected CapabilityState to be of type string, got %T instead", value)
+				}
+				sv.Trigger = types.CapabilityState(jtv)
 			}
 
 		case "UseAgentWebSearch":

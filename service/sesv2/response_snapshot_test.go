@@ -813,6 +813,10 @@ func TestCheckResponseSnapshot_GetAccount(t *testing.T) {
 				OptimizedSharedDelivery: types.FeatureStatus("ENABLED"),
 			},
 		},
+		PricingAttributes: &types.PricingAttributes{
+			CurrentPlan: types.PricingPlan("NONE"),
+			NextPlan:    types.PricingPlan("NONE"),
+		},
 	}
 	status, header, body, err := serdeRespReadSnapshot("GetAccount.response")
 	if errors.Is(err, fs.ErrNotExist) {
@@ -2901,6 +2905,25 @@ func TestCheckResponseSnapshot_PutAccountDetails(t *testing.T) {
 	}
 	if err := smithytesting.CompareValues(want, got); err != nil {
 		t.Errorf("response snapshot mismatch for %s: %v", "PutAccountDetails.response", err)
+	}
+}
+
+func TestCheckResponseSnapshot_PutAccountPricingAttributes(t *testing.T) {
+	want := &PutAccountPricingAttributesOutput{}
+	status, header, body, err := serdeRespReadSnapshot("PutAccountPricingAttributes.response")
+	if errors.Is(err, fs.ErrNotExist) {
+		t.Skip("no response snapshot fixture")
+	}
+	if err != nil {
+		t.Fatal(err)
+	}
+	svc := serdeRespClient(status, header, body)
+	got, err := svc.PutAccountPricingAttributes(context.Background(), &PutAccountPricingAttributesInput{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := smithytesting.CompareValues(want, got); err != nil {
+		t.Errorf("response snapshot mismatch for %s: %v", "PutAccountPricingAttributes.response", err)
 	}
 }
 

@@ -1,0 +1,8 @@
+{
+    "id": "306cb807-fc03-4445-a503-e59fc0a49b7d",
+    "type": "feature",
+    "description": "Add W3C trace context headers (traceparent, tracestate, baggage) and X-Amzn-Trace-Id to InvokeHarness request for end-to-end observability propagation. Add toolResultMetadata to the streaming content block delta for MCP tool result meta delivery without oversized SSE frames.",
+    "modules": [
+        "service/bedrockagentcore"
+    ]
+}

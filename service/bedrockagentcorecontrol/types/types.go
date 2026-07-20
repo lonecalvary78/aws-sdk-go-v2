@@ -1178,6 +1178,10 @@ type ConnectorSource struct {
 	// This member is required.
 	ConnectorId *string
 
+	// The version of the connector to use (for example, 1.1.0 ). If you don't specify
+	// a version, the service uses the latest available version.
+	Version *string
+
 	noSmithyDocumentSerde
 }
 
