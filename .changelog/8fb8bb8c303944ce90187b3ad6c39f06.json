@@ -1,8 +1,0 @@
-{
-    "id": "8fb8bb8c-3039-44ce-9018-7b3ad6c39f06",
-    "type": "feature",
-    "description": "Added new capabilities to custom permissions profiles to control access to Amazon Quick through the browser extension and Microsoft Word, Outlook, Excel, and PowerPoint add-ins.",
-    "modules": [
-        "service/quicksight"
-    ]
-}

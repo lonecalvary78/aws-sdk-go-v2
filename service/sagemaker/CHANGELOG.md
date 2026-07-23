@@ -1,3 +1,7 @@
+# v1.261.0 (2026-07-23)
+
+* **Feature**: Release support for c6a, m6a, m6g, m7g, m8g instance types for SageMaker HyperPod
+
 # v1.260.0 (2026-07-21)
 
 * **Feature**: Add an option to clients to disable clock skew

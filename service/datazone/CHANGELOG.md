@@ -1,3 +1,7 @@
+# v1.67.0 (2026-07-23)
+
+* **Feature**: Adds support for notebook sync with S3 ipynb files
+
 # v1.66.0 (2026-07-21)
 
 * **Feature**: Add an option to clients to disable clock skew

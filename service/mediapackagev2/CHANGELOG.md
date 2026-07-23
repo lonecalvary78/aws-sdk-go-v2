@@ -1,3 +1,7 @@
+# v1.43.0 (2026-07-23)
+
+* **Feature**: This release adds support for non-epoch-locked CMAF ingest in MediaPackageV2 channels.
+
 # v1.42.0 (2026-07-21)
 
 * **Feature**: Add an option to clients to disable clock skew

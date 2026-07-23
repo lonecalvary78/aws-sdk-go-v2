@@ -1,8 +1,0 @@
-{
-    "id": "d8e12d85-c0e7-4508-a836-fb3cf94aaaf0",
-    "type": "feature",
-    "description": "Adds support for the Bring Your Own Storage(BYOS) feature in AgentCore Browser and Code Interpreter. Enables mounting S3Files and EFS File Systems via Access points.",
-    "modules": [
-        "service/bedrockagentcore"
-    ]
-}

@@ -1,3 +1,7 @@
+# v1.121.0 (2026-07-23)
+
+* **Feature**: Added new capabilities to custom permissions profiles to control access to Amazon Quick through the browser extension and Microsoft Word, Outlook, Excel, and PowerPoint add-ins.
+
 # v1.120.0 (2026-07-21)
 
 * **Feature**: Add an option to clients to disable clock skew

@@ -1,8 +1,0 @@
-{
-    "id": "0b269238-39b9-4ddc-b08f-a9a48e6bd8d2",
-    "type": "feature",
-    "description": "GameLift Streams now supports configuring a custom aspect ratio per stream session to accommodate different player devices. Supported aspect ratios include landscape, portrait, and square - delivering a full-screen experience without letterboxing or cropping.",
-    "modules": [
-        "service/gameliftstreams"
-    ]
-}

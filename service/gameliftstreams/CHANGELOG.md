@@ -1,3 +1,7 @@
+# v1.16.0 (2026-07-23)
+
+* **Feature**: GameLift Streams now supports configuring a custom aspect ratio per stream session to accommodate different player devices. Supported aspect ratios include landscape, portrait, and square - delivering a full-screen experience without letterboxing or cropping.
+
 # v1.15.0 (2026-07-21)
 
 * **Feature**: Add an option to clients to disable clock skew

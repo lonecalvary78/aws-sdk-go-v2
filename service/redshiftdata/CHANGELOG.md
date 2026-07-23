@@ -1,3 +1,7 @@
+# v1.43.0 (2026-07-23)
+
+* **Feature**: This release include long polling provids a new parameter wait-time-seconds to 5 API operations, new API ListSessions, and a new parameter execution-mode to BatchExecuteStatement
+
 # v1.42.0 (2026-07-21)
 
 * **Feature**: Add an option to clients to disable clock skew

@@ -1,8 +1,0 @@
-{
-    "id": "c4403d82-7a34-4c41-bb1d-4600605873fe",
-    "type": "feature",
-    "description": "Adds support for notebook sync with S3 ipynb files",
-    "modules": [
-        "service/datazone"
-    ]
-}

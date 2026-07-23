@@ -1,8 +1,0 @@
-{
-    "id": "6e5b7048-66c9-46dc-95ed-cd7e8af6385d",
-    "type": "feature",
-    "description": "This release include long polling provids a new parameter wait-time-seconds to 5 API operations, new API ListSessions, and a new parameter execution-mode to BatchExecuteStatement",
-    "modules": [
-        "service/redshiftdata"
-    ]
-}

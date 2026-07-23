@@ -1,3 +1,35 @@
+# Release (2026-07-23)
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/appstream`: [v1.64.0](service/appstream/CHANGELOG.md#v1640-2026-07-23)
+  * **Feature**: This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.1. The SDK will prioritize its most performant protocol.
+* `github.com/aws/aws-sdk-go-v2/service/backupgateway`: [v1.30.0](service/backupgateway/CHANGELOG.md#v1300-2026-07-23)
+  * **Feature**: This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `github.com/aws/aws-sdk-go-v2/service/bcmpricingcalculator`: [v1.14.0](service/bcmpricingcalculator/CHANGELOG.md#v1140-2026-07-23)
+  * **Feature**: This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `github.com/aws/aws-sdk-go-v2/service/bcmrecommendedactions`: [v1.5.0](service/bcmrecommendedactions/CHANGELOG.md#v150-2026-07-23)
+  * **Feature**: This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `github.com/aws/aws-sdk-go-v2/service/bedrockagentcore`: [v1.36.0](service/bedrockagentcore/CHANGELOG.md#v1360-2026-07-23)
+  * **Feature**: Adds support for the Bring Your Own Storage(BYOS) feature in AgentCore Browser and Code Interpreter. Enables mounting S3Files and EFS File Systems via Access points.
+* `github.com/aws/aws-sdk-go-v2/service/bedrockagentcorecontrol`: [v1.51.0](service/bedrockagentcorecontrol/CHANGELOG.md#v1510-2026-07-23)
+  * **Feature**: Adds support for the Bring Your Own Storage(BYOS) feature in AgentCore Browser and Code Interpreter. Enables mounting S3Files and EFS File Systems via Access points.
+* `github.com/aws/aws-sdk-go-v2/service/datazone`: [v1.67.0](service/datazone/CHANGELOG.md#v1670-2026-07-23)
+  * **Feature**: Adds support for notebook sync with S3 ipynb files
+* `github.com/aws/aws-sdk-go-v2/service/gameliftstreams`: [v1.16.0](service/gameliftstreams/CHANGELOG.md#v1160-2026-07-23)
+  * **Feature**: GameLift Streams now supports configuring a custom aspect ratio per stream session to accommodate different player devices. Supported aspect ratios include landscape, portrait, and square - delivering a full-screen experience without letterboxing or cropping.
+* `github.com/aws/aws-sdk-go-v2/service/kendraranking`: [v1.19.0](service/kendraranking/CHANGELOG.md#v1190-2026-07-23)
+  * **Feature**: This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+* `github.com/aws/aws-sdk-go-v2/service/mediapackagev2`: [v1.43.0](service/mediapackagev2/CHANGELOG.md#v1430-2026-07-23)
+  * **Feature**: This release adds support for non-epoch-locked CMAF ingest in MediaPackageV2 channels.
+* `github.com/aws/aws-sdk-go-v2/service/quicksight`: [v1.121.0](service/quicksight/CHANGELOG.md#v11210-2026-07-23)
+  * **Feature**: Added new capabilities to custom permissions profiles to control access to Amazon Quick through the browser extension and Microsoft Word, Outlook, Excel, and PowerPoint add-ins.
+* `github.com/aws/aws-sdk-go-v2/service/redshiftdata`: [v1.43.0](service/redshiftdata/CHANGELOG.md#v1430-2026-07-23)
+  * **Feature**: This release include long polling provids a new parameter wait-time-seconds to 5 API operations, new API ListSessions, and a new parameter execution-mode to BatchExecuteStatement
+* `github.com/aws/aws-sdk-go-v2/service/sagemaker`: [v1.261.0](service/sagemaker/CHANGELOG.md#v12610-2026-07-23)
+  * **Feature**: Release support for c6a, m6a, m6g, m7g, m8g instance types for SageMaker HyperPod
+* `github.com/aws/aws-sdk-go-v2/service/workspacesinstances`: [v1.9.0](service/workspacesinstances/CHANGELOG.md#v190-2026-07-23)
+  * **Feature**: This release adds Smithy RPC v2 CBOR as an additional protocol alongside the existing AWS JSON 1.0. The SDK will prioritize its most performant protocol.
+
 # Release (2026-07-22)
 
 ## Module Highlights

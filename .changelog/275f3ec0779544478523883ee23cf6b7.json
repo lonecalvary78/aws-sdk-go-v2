@@ -1,8 +1,0 @@
-{
-    "id": "275f3ec0-7795-4447-8523-883ee23cf6b7",
-    "type": "feature",
-    "description": "This release adds support for non-epoch-locked CMAF ingest in MediaPackageV2 channels.",
-    "modules": [
-        "service/mediapackagev2"
-    ]
-}

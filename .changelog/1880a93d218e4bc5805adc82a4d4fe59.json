@@ -1,8 +1,0 @@
-{
-    "id": "1880a93d-218e-4bc5-805a-dc82a4d4fe59",
-    "type": "feature",
-    "description": "Release support for c6a, m6a, m6g, m7g, m8g instance types for SageMaker HyperPod",
-    "modules": [
-        "service/sagemaker"
-    ]
-}
