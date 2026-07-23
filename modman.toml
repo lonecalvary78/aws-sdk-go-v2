@@ -76,6 +76,15 @@
   [modules."internal/kitchensinktest"]
     no_tag = true
 
+  [modules."internal/kitchensinktestlegacy"]
+    no_tag = true
+
+  [modules."internal/kitchensinktestrestjson"]
+    no_tag = true
+
+  [modules."internal/kitchensinktestrestjsonlegacy"]
+    no_tag = true
+
   [modules."internal/repotools"]
     no_tag = true
 
