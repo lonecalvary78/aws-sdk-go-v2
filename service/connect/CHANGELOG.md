@@ -1,3 +1,7 @@
+# v1.197.0 (2026-09-08)
+
+* **Feature**: Releasing workload types feature. A proper launch announcement or details will follow up.
+
 # v1.196.0 (2026-09-04)
 
 * **Feature**: Stop registering the `spanRetryLoop` middleware in generated clients. The retry loop's tracing span is now opened by the retry middleware itself.

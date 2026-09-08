@@ -1,3 +1,7 @@
+# v1.55.0 (2026-09-08)
+
+* **Feature**: This release adds support for configuring the EBS volume initialization rate and delete on termination behavior in launch configuration template
+
 # v1.54.0 (2026-09-04)
 
 * **Feature**: Stop registering the `spanRetryLoop` middleware in generated clients. The retry loop's tracing span is now opened by the retry middleware itself.

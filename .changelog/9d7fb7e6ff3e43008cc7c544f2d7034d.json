@@ -1,8 +1,0 @@
-{
-    "id": "9d7fb7e6-ff3e-4300-8cc7-c544f2d7034d",
-    "type": "feature",
-    "description": "This release adds support for configuring the EBS volume initialization rate and delete on termination behavior in launch configuration template",
-    "modules": [
-        "service/mgn"
-    ]
-}

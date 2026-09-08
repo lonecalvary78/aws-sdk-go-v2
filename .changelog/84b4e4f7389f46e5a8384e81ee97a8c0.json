@@ -1,8 +1,0 @@
-{
-    "id": "84b4e4f7-389f-46e5-a838-4e81ee97a8c0",
-    "type": "feature",
-    "description": "Added support for session policies in AWS HealthOmics Workflows, allowing customers to scope down IAM permissions for individual workflow runs without modifying the service role.",
-    "modules": [
-        "service/omics"
-    ]
-}

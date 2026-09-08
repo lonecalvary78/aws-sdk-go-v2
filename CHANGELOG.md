@@ -1,3 +1,30 @@
+# Release (2026-09-08)
+
+## General Highlights
+* **Dependency Update**: Updated to the latest SDK module versions
+
+## Module Highlights
+* `github.com/aws/aws-sdk-go-v2/service/appflow`: [v1.60.0](service/appflow/CHANGELOG.md#v1600-2026-09-08)
+  * **Feature**: Amazon AppFlow now supports key pair (RSA private key) authentication for the Snowflake connector. You can provide a privateKey in SnowflakeConnectorProfileCredentials, and password is no longer required. This is a non-breaking, additive change available via the AWS SDK and CLI.
+* `github.com/aws/aws-sdk-go-v2/service/cloudtrail`: [v1.64.0](service/cloudtrail/CHANGELOG.md#v1640-2026-09-08)
+  * **Feature**: Adds support for the RecursiveLogging trail setting, which suppresses recursive events generated when CloudTrail delivers logs to a trail's destinations.
+* `github.com/aws/aws-sdk-go-v2/service/connect`: [v1.197.0](service/connect/CHANGELOG.md#v11970-2026-09-08)
+  * **Feature**: Releasing workload types feature. A proper launch announcement or details will follow up.
+* `github.com/aws/aws-sdk-go-v2/service/ec2`: [v1.330.0](service/ec2/CHANGELOG.md#v13300-2026-09-08)
+  * **Feature**: Adds the InterfaceTypes field to NetworkCardInfo in the DescribeInstanceTypes response. This field identifies the network interface types supported by each network card.
+* `github.com/aws/aws-sdk-go-v2/service/mgn`: [v1.55.0](service/mgn/CHANGELOG.md#v1550-2026-09-08)
+  * **Feature**: This release adds support for configuring the EBS volume initialization rate and delete on termination behavior in launch configuration template
+* `github.com/aws/aws-sdk-go-v2/service/omics`: [v1.54.0](service/omics/CHANGELOG.md#v1540-2026-09-08)
+  * **Feature**: Added support for session policies in AWS HealthOmics Workflows, allowing customers to scope down IAM permissions for individual workflow runs without modifying the service role.
+* `github.com/aws/aws-sdk-go-v2/service/pinpointsmsvoicev2`: [v1.39.0](service/pinpointsmsvoicev2/CHANGELOG.md#v1390-2026-09-08)
+  * **Feature**: This feature will allow customers to specify an area-code when requesting a 10DLC number. Why it matters- Customers can now select a number that matches where their business is located.
+* `github.com/aws/aws-sdk-go-v2/service/s3`: [v1.112.0](service/s3/CHANGELOG.md#v11120-2026-09-08)
+  * **Feature**: Adds support for Amazon S3 Object Lock variable retention.  Existing S3 APIs that support S3 Object Lock parameters now support two new parameters EventHold and EventHoldDuration at the object level, and DefaultEventHoldDuration at the bucket level.
+* `github.com/aws/aws-sdk-go-v2/service/s3control`: [v1.78.0](service/s3control/CHANGELOG.md#v1780-2026-09-08)
+  * **Feature**: Adds support for Amazon S3 Object Lock variable retention.  Existing S3 APIs that support S3 Object Lock parameters now support two new parameters EventHold and EventHoldDuration at the object level, and DefaultEventHoldDuration at the bucket level.
+* `github.com/aws/aws-sdk-go-v2/service/sagemaker`: [v1.275.0](service/sagemaker/CHANGELOG.md#v12750-2026-09-08)
+  * **Feature**: Add support for InstancePreferences list for multiple instance type input support on SageMaker Training and Processing
+
 # Release (2026-09-04)
 
 ## General Highlights

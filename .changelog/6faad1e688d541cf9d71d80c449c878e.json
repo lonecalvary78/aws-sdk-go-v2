@@ -1,8 +1,0 @@
-{
-    "id": "6faad1e6-88d5-41cf-9d71-d80c449c878e",
-    "type": "feature",
-    "description": "This feature will allow customers to specify an area-code when requesting a 10DLC number. Why it matters- Customers can now select a number that matches where their business is located.",
-    "modules": [
-        "service/pinpointsmsvoicev2"
-    ]
-}

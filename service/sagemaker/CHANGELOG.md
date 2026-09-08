@@ -1,3 +1,7 @@
+# v1.275.0 (2026-09-08)
+
+* **Feature**: Add support for InstancePreferences list for multiple instance type input support on SageMaker Training and Processing
+
 # v1.274.0 (2026-09-04)
 
 * **Feature**: Stop registering the `spanRetryLoop` middleware in generated clients. The retry loop's tracing span is now opened by the retry middleware itself.

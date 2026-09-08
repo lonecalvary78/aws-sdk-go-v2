@@ -1,8 +1,0 @@
-{
-    "id": "82d1798d-5199-429b-8ca5-a2c7a72a4f02",
-    "type": "feature",
-    "description": "Releasing workload types feature. A proper launch announcement or details will follow up.",
-    "modules": [
-        "service/connect"
-    ]
-}

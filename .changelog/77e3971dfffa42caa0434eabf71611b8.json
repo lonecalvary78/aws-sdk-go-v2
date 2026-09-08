@@ -1,8 +1,0 @@
-{
-    "id": "77e3971d-fffa-42ca-a043-4eabf71611b8",
-    "type": "feature",
-    "description": "Adds support for the RecursiveLogging trail setting, which suppresses recursive events generated when CloudTrail delivers logs to a trail's destinations.",
-    "modules": [
-        "service/cloudtrail"
-    ]
-}

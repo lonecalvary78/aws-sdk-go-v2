@@ -1,8 +1,0 @@
-{
-    "id": "177c1553-5479-4730-bfd1-bc31dee15094",
-    "type": "feature",
-    "description": "Adds support for Amazon S3 Object Lock variable retention.  Existing S3 APIs that support S3 Object Lock parameters now support two new parameters EventHold and EventHoldDuration at the object level, and DefaultEventHoldDuration at the bucket level.",
-    "modules": [
-        "service/s3control"
-    ]
-}
