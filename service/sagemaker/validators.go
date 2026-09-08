@@ -12476,6 +12476,38 @@ func validateInstancePoolList(v []types.InstancePool) error {
 	}
 }
 
+func validateInstancePreference(v *types.InstancePreference) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "InstancePreference"}
+	if len(v.InstanceType) == 0 {
+		invalidParams.Add(smithy.NewErrParamRequired("InstanceType"))
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
+func validateInstancePreferenceList(v []types.InstancePreference) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "InstancePreferenceList"}
+	for i := range v {
+		if err := validateInstancePreference(&v[i]); err != nil {
+			invalidParams.AddNested(fmt.Sprintf("[%d]", i), err.(smithy.InvalidParamsError))
+		}
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
 func validateIntegerParameterRange(v *types.IntegerParameterRange) error {
 	if v == nil {
 		return nil
@@ -14299,6 +14331,11 @@ func validateProcessingClusterConfig(v *types.ProcessingClusterConfig) error {
 	if v.VolumeSizeInGB == nil {
 		invalidParams.Add(smithy.NewErrParamRequired("VolumeSizeInGB"))
 	}
+	if v.InstancePreferences != nil {
+		if err := validateProcessingInstancePreferenceList(v.InstancePreferences); err != nil {
+			invalidParams.AddNested("InstancePreferences", err.(smithy.InvalidParamsError))
+		}
+	}
 	if invalidParams.Len() > 0 {
 		return invalidParams
 	} else {
@@ -14353,6 +14390,38 @@ func validateProcessingInputs(v []types.ProcessingInput) error {
 	invalidParams := smithy.InvalidParamsError{Context: "ProcessingInputs"}
 	for i := range v {
 		if err := validateProcessingInput(&v[i]); err != nil {
+			invalidParams.AddNested(fmt.Sprintf("[%d]", i), err.(smithy.InvalidParamsError))
+		}
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
+func validateProcessingInstancePreference(v *types.ProcessingInstancePreference) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "ProcessingInstancePreference"}
+	if len(v.InstanceType) == 0 {
+		invalidParams.Add(smithy.NewErrParamRequired("InstanceType"))
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
+func validateProcessingInstancePreferenceList(v []types.ProcessingInstancePreference) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "ProcessingInstancePreferenceList"}
+	for i := range v {
+		if err := validateProcessingInstancePreference(&v[i]); err != nil {
 			invalidParams.AddNested(fmt.Sprintf("[%d]", i), err.(smithy.InvalidParamsError))
 		}
 	}
@@ -14815,6 +14884,11 @@ func validateResourceConfig(v *types.ResourceConfig) error {
 	if v.InstancePlacementConfig != nil {
 		if err := validateInstancePlacementConfig(v.InstancePlacementConfig); err != nil {
 			invalidParams.AddNested("InstancePlacementConfig", err.(smithy.InvalidParamsError))
+		}
+	}
+	if v.InstancePreferences != nil {
+		if err := validateInstancePreferenceList(v.InstancePreferences); err != nil {
+			invalidParams.AddNested("InstancePreferences", err.(smithy.InvalidParamsError))
 		}
 	}
 	if invalidParams.Len() > 0 {

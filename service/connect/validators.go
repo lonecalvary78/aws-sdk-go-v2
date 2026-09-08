@@ -11530,12 +11530,14 @@ func validateMediaConcurrency(v *types.MediaConcurrency) error {
 	if len(v.Channel) == 0 {
 		invalidParams.Add(smithy.NewErrParamRequired("Channel"))
 	}
-	if v.Concurrency == nil {
-		invalidParams.Add(smithy.NewErrParamRequired("Concurrency"))
-	}
 	if v.CrossChannelBehavior != nil {
 		if err := validateCrossChannelBehavior(v.CrossChannelBehavior); err != nil {
 			invalidParams.AddNested("CrossChannelBehavior", err.(smithy.InvalidParamsError))
+		}
+	}
+	if v.WorkloadTypeConcurrencies != nil {
+		if err := validateWorkloadTypeConcurrencies(v.WorkloadTypeConcurrencies); err != nil {
+			invalidParams.AddNested("WorkloadTypeConcurrencies", err.(smithy.InvalidParamsError))
 		}
 	}
 	if invalidParams.Len() > 0 {
@@ -13373,6 +13375,41 @@ func validateWidgetDestination(v *types.WidgetDestination) error {
 	}
 	if v.ProfileId == nil {
 		invalidParams.Add(smithy.NewErrParamRequired("ProfileId"))
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
+func validateWorkloadTypeConcurrencies(v []types.WorkloadTypeConcurrency) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "WorkloadTypeConcurrencies"}
+	for i := range v {
+		if err := validateWorkloadTypeConcurrency(&v[i]); err != nil {
+			invalidParams.AddNested(fmt.Sprintf("[%d]", i), err.(smithy.InvalidParamsError))
+		}
+	}
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	} else {
+		return nil
+	}
+}
+
+func validateWorkloadTypeConcurrency(v *types.WorkloadTypeConcurrency) error {
+	if v == nil {
+		return nil
+	}
+	invalidParams := smithy.InvalidParamsError{Context: "WorkloadTypeConcurrency"}
+	if v.WorkloadType == nil {
+		invalidParams.Add(smithy.NewErrParamRequired("WorkloadType"))
+	}
+	if v.Concurrency == nil {
+		invalidParams.Add(smithy.NewErrParamRequired("Concurrency"))
 	}
 	if invalidParams.Len() > 0 {
 		return invalidParams

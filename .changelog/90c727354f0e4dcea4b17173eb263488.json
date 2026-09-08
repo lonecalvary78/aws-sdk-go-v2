@@ -1,0 +1,8 @@
+{
+    "id": "90c72735-4f0e-4dce-a4b1-7173eb263488",
+    "type": "feature",
+    "description": "Add support for InstancePreferences list for multiple instance type input support on SageMaker Training and Processing",
+    "modules": [
+        "service/sagemaker"
+    ]
+}

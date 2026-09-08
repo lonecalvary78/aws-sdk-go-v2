@@ -7499,6 +7499,44 @@ func (v *CrossChannelBehavior) Deserialize(d smithy.ShapeDeserializer) error {
 	})
 }
 
+// Defines the cross-channel and workload type routing behavior that allows an
+// agent working on a contact to be offered a contact from a different channel or
+// workload type.
+type CrossChannelWorkloadBehavior struct {
+
+	// Specifies the routing behavior for an agent handling their current channel and
+	// workload type.
+	ChannelWorkloadBehaviorType ChannelWorkloadBehaviorType
+
+	noSmithyDocumentSerde
+}
+
+func (v *CrossChannelWorkloadBehavior) Serialize(s smithy.ShapeSerializer) {
+	s.WriteStruct(schemas.CrossChannelWorkloadBehavior)
+	v.SerializeMembers(s)
+	s.CloseStruct()
+}
+
+func (v *CrossChannelWorkloadBehavior) SerializeMembers(s smithy.ShapeSerializer) {
+	if v.ChannelWorkloadBehaviorType != "" {
+		s.WriteString(schemas.CrossChannelWorkloadBehavior_ChannelWorkloadBehaviorType, string(v.ChannelWorkloadBehaviorType))
+	}
+}
+func (v *CrossChannelWorkloadBehavior) Deserialize(d smithy.ShapeDeserializer) error {
+	return smithy.ReadStruct(d, schemas.CrossChannelWorkloadBehavior, func(s *smithy.Schema) error {
+		switch s {
+		case schemas.CrossChannelWorkloadBehavior_ChannelWorkloadBehaviorType:
+			var ev string
+			if err := d.ReadString(schemas.CrossChannelWorkloadBehavior_ChannelWorkloadBehaviorType, &ev); err != nil {
+				return err
+			}
+			v.ChannelWorkloadBehaviorType = ChannelWorkloadBehaviorType(ev)
+			return nil
+		}
+		return nil
+	})
+}
+
 // Contains information about a real-time metric. For a description of each
 // metric, see [Metrics definitions]in the Connect Customer Administrator Guide.
 //
@@ -19100,8 +19138,6 @@ type MediaConcurrency struct {
 	// Valid Range for CHAT : Minimum value of 1. Maximum value of 10.
 	//
 	// Valid Range for TASK : Minimum value of 1. Maximum value of 10.
-	//
-	// This member is required.
 	Concurrency *int32
 
 	// Defines the cross-channel routing behavior for each channel that is enabled for
@@ -19109,6 +19145,11 @@ type MediaConcurrency struct {
 	// contact from another channel when they are currently working with a contact from
 	// a Voice channel.
 	CrossChannelBehavior *CrossChannelBehavior
+
+	// Defines the list of workload type concurrency configurations for a channel.
+	// When provided, enables granular concurrency control based on workload type
+	// values.
+	WorkloadTypeConcurrencies []WorkloadTypeConcurrency
 
 	noSmithyDocumentSerde
 }
@@ -19131,6 +19172,7 @@ func (v *MediaConcurrency) SerializeMembers(s smithy.ShapeSerializer) {
 		v.CrossChannelBehavior.SerializeMembers(s)
 		s.CloseStruct()
 	}
+	serializeWorkloadTypeConcurrencies(s, schemas.MediaConcurrency_WorkloadTypeConcurrencies, v.WorkloadTypeConcurrencies)
 }
 func (v *MediaConcurrency) Deserialize(d smithy.ShapeDeserializer) error {
 	return smithy.ReadStruct(d, schemas.MediaConcurrency, func(s *smithy.Schema) error {
@@ -19148,6 +19190,8 @@ func (v *MediaConcurrency) Deserialize(d smithy.ShapeDeserializer) error {
 		case schemas.MediaConcurrency_CrossChannelBehavior:
 			v.CrossChannelBehavior = &CrossChannelBehavior{}
 			return v.CrossChannelBehavior.Deserialize(d)
+		case schemas.MediaConcurrency_WorkloadTypeConcurrencies:
+			return deserializeWorkloadTypeConcurrencies(d, schemas.MediaConcurrency_WorkloadTypeConcurrencies, &v.WorkloadTypeConcurrencies)
 		}
 		return nil
 	})
@@ -34834,6 +34878,70 @@ func (v *WisdomInfo) Deserialize(d smithy.ShapeDeserializer) error {
 		case schemas.WisdomInfo_SessionArn:
 			v.SessionArn = new(string)
 			return d.ReadString(schemas.WisdomInfo_SessionArn, v.SessionArn)
+		}
+		return nil
+	})
+}
+
+// Defines the maximum number of contacts an agent can handle simultaneously for a
+// specific channel and workload type combination.
+type WorkloadTypeConcurrency struct {
+
+	// The maximum number of contacts an agent can handle simultaneously for a
+	// specific channel and workload type combination.
+	//
+	// Valid Range for VOICE : Minimum value of 1. Maximum value of 1.
+	//
+	// Valid Range for CHAT : Minimum value of 1. Maximum value of 10.
+	//
+	// Valid Range for TASK : Minimum value of 1. Maximum value of 10.
+	//
+	// This member is required.
+	Concurrency *int32
+
+	// The value of the workload type.
+	//
+	// This member is required.
+	WorkloadType *string
+
+	// Defines the cross-channel and workload type routing behavior for each channel
+	// and workload type combination that is enabled for this Routing Profile.
+	CrossChannelWorkloadBehavior *CrossChannelWorkloadBehavior
+
+	noSmithyDocumentSerde
+}
+
+func (v *WorkloadTypeConcurrency) Serialize(s smithy.ShapeSerializer) {
+	s.WriteStruct(schemas.WorkloadTypeConcurrency)
+	v.SerializeMembers(s)
+	s.CloseStruct()
+}
+
+func (v *WorkloadTypeConcurrency) SerializeMembers(s smithy.ShapeSerializer) {
+	if v.Concurrency != nil {
+		s.WriteInt32(schemas.WorkloadTypeConcurrency_Concurrency, *v.Concurrency)
+	}
+	if v.CrossChannelWorkloadBehavior != nil {
+		s.WriteStruct(schemas.WorkloadTypeConcurrency_CrossChannelWorkloadBehavior)
+		v.CrossChannelWorkloadBehavior.SerializeMembers(s)
+		s.CloseStruct()
+	}
+	if v.WorkloadType != nil {
+		s.WriteString(schemas.WorkloadTypeConcurrency_WorkloadType, *v.WorkloadType)
+	}
+}
+func (v *WorkloadTypeConcurrency) Deserialize(d smithy.ShapeDeserializer) error {
+	return smithy.ReadStruct(d, schemas.WorkloadTypeConcurrency, func(s *smithy.Schema) error {
+		switch s {
+		case schemas.WorkloadTypeConcurrency_Concurrency:
+			v.Concurrency = new(int32)
+			return d.ReadInt32(schemas.WorkloadTypeConcurrency_Concurrency, v.Concurrency)
+		case schemas.WorkloadTypeConcurrency_CrossChannelWorkloadBehavior:
+			v.CrossChannelWorkloadBehavior = &CrossChannelWorkloadBehavior{}
+			return v.CrossChannelWorkloadBehavior.Deserialize(d)
+		case schemas.WorkloadTypeConcurrency_WorkloadType:
+			v.WorkloadType = new(string)
+			return d.ReadString(schemas.WorkloadTypeConcurrency_WorkloadType, v.WorkloadType)
 		}
 		return nil
 	})

@@ -460,6 +460,27 @@ func (Channel) Values() []Channel {
 	}
 }
 
+type ChannelWorkloadBehaviorType string
+
+// Enum values for ChannelWorkloadBehaviorType
+const (
+	ChannelWorkloadBehaviorTypeRouteCurrentChannelCurrentWorkloadtypeOnly ChannelWorkloadBehaviorType = "ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"
+	ChannelWorkloadBehaviorTypeRouteCurrentChannelAnyWorkloadtypeOnly     ChannelWorkloadBehaviorType = "ROUTE_CURRENT_CHANNEL_ANY_WORKLOADTYPE_ONLY"
+	ChannelWorkloadBehaviorTypeRouteAnyChannelAnyWorkloadType             ChannelWorkloadBehaviorType = "ROUTE_ANY_CHANNEL_ANY_WORKLOAD_TYPE"
+)
+
+// Values returns all known values for ChannelWorkloadBehaviorType. Note that this
+// can be expanded in the future, and so it is only as up to date as the client.
+//
+// The ordering of this slice is not guaranteed to be stable across updates.
+func (ChannelWorkloadBehaviorType) Values() []ChannelWorkloadBehaviorType {
+	return []ChannelWorkloadBehaviorType{
+		"ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY",
+		"ROUTE_CURRENT_CHANNEL_ANY_WORKLOADTYPE_ONLY",
+		"ROUTE_ANY_CHANNEL_ANY_WORKLOAD_TYPE",
+	}
+}
+
 type ChatEventType string
 
 // Enum values for ChatEventType

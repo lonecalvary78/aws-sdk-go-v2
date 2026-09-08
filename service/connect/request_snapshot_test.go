@@ -3290,12 +3290,44 @@ func TestCheckRequestSnapshot_CreateRoutingProfile(t *testing.T) {
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
 				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+				},
 			},
 			{
 				Channel:     types.Channel("VOICE"),
 				Concurrency: ptr.Int32(1),
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
+				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
 				},
 			},
 		},
@@ -16894,12 +16926,44 @@ func TestCheckRequestSnapshot_UpdateRoutingProfileConcurrency(t *testing.T) {
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
 				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+				},
 			},
 			{
 				Channel:     types.Channel("VOICE"),
 				Concurrency: ptr.Int32(1),
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
+				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
 				},
 			},
 		},
@@ -21403,12 +21467,44 @@ func TestUpdateRequestSnapshot_CreateRoutingProfile(t *testing.T) {
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
 				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+				},
 			},
 			{
 				Channel:     types.Channel("VOICE"),
 				Concurrency: ptr.Int32(1),
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
+				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
 				},
 			},
 		},
@@ -35007,12 +35103,44 @@ func TestUpdateRequestSnapshot_UpdateRoutingProfileConcurrency(t *testing.T) {
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
 				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+				},
 			},
 			{
 				Channel:     types.Channel("VOICE"),
 				Concurrency: ptr.Int32(1),
 				CrossChannelBehavior: &types.CrossChannelBehavior{
 					BehaviorType: types.BehaviorType("ROUTE_CURRENT_CHANNEL_ONLY"),
+				},
+				WorkloadTypeConcurrencies: []types.WorkloadTypeConcurrency{
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
+					{
+						WorkloadType: ptr.String("__WorkloadType__"),
+						Concurrency:  ptr.Int32(1),
+						CrossChannelWorkloadBehavior: &types.CrossChannelWorkloadBehavior{
+							ChannelWorkloadBehaviorType: types.ChannelWorkloadBehaviorType("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY"),
+						},
+					},
 				},
 			},
 		},

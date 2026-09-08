@@ -4279,6 +4279,16 @@ var _ChannelToCountMap_key *smithy.Schema
 
 var _ChannelToCountMap_value *smithy.Schema
 
+var ChannelWorkloadBehaviorType = smithy.NewSchema(smithy.ShapeID{
+	Namespace: "com.amazonaws.connect",
+	Name:      "ChannelWorkloadBehaviorType",
+}, smithy.ShapeTypeEnum, 3)
+var ChannelWorkloadBehaviorType_ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY *smithy.Schema
+
+var ChannelWorkloadBehaviorType_ROUTE_CURRENT_CHANNEL_ANY_WORKLOADTYPE_ONLY *smithy.Schema
+
+var ChannelWorkloadBehaviorType_ROUTE_ANY_CHANNEL_ANY_WORKLOAD_TYPE *smithy.Schema
+
 var ChatContactMetrics = smithy.NewSchema(smithy.ShapeID{
 	Namespace: "com.amazonaws.connect",
 	Name:      "ChatContactMetrics",
@@ -5527,6 +5537,12 @@ var CrossChannelBehavior = smithy.NewSchema(smithy.ShapeID{
 	Name:      "CrossChannelBehavior",
 }, smithy.ShapeTypeStructure, 1)
 var CrossChannelBehavior_BehaviorType *smithy.Schema
+
+var CrossChannelWorkloadBehavior = smithy.NewSchema(smithy.ShapeID{
+	Namespace: "com.amazonaws.connect",
+	Name:      "CrossChannelWorkloadBehavior",
+}, smithy.ShapeTypeStructure, 1)
+var CrossChannelWorkloadBehavior_ChannelWorkloadBehaviorType *smithy.Schema
 
 var CurrentMetric = smithy.NewSchema(smithy.ShapeID{
 	Namespace: "com.amazonaws.connect",
@@ -9914,12 +9930,14 @@ var _MediaConcurrencies_member *smithy.Schema
 var MediaConcurrency = smithy.NewSchema(smithy.ShapeID{
 	Namespace: "com.amazonaws.connect",
 	Name:      "MediaConcurrency",
-}, smithy.ShapeTypeStructure, 3)
+}, smithy.ShapeTypeStructure, 4)
 var MediaConcurrency_Channel *smithy.Schema
 
 var MediaConcurrency_Concurrency *smithy.Schema
 
 var MediaConcurrency_CrossChannelBehavior *smithy.Schema
+
+var MediaConcurrency_WorkloadTypeConcurrencies *smithy.Schema
 
 var MediaItem = smithy.NewSchema(smithy.ShapeID{
 	Namespace: "com.amazonaws.connect",
@@ -16652,6 +16670,32 @@ var WisdomInfo = smithy.NewSchema(smithy.ShapeID{
 var WisdomInfo_SessionArn *smithy.Schema
 
 var WisdomInfo_AiAgents *smithy.Schema
+
+var _WorkloadType = smithy.NewSchema(smithy.ShapeID{
+	Namespace: "com.amazonaws.connect",
+	Name:      "WorkloadType",
+}, smithy.ShapeTypeString, 0)
+
+var _WorkloadTypeConcurrencies = smithy.NewSchema(smithy.ShapeID{
+	Namespace: "com.amazonaws.connect",
+	Name:      "WorkloadTypeConcurrencies",
+}, smithy.ShapeTypeList, 1)
+var _WorkloadTypeConcurrencies_member *smithy.Schema
+
+var WorkloadTypeConcurrency = smithy.NewSchema(smithy.ShapeID{
+	Namespace: "com.amazonaws.connect",
+	Name:      "WorkloadTypeConcurrency",
+}, smithy.ShapeTypeStructure, 3)
+var WorkloadTypeConcurrency_WorkloadType *smithy.Schema
+
+var WorkloadTypeConcurrency_Concurrency *smithy.Schema
+
+var WorkloadTypeConcurrency_CrossChannelWorkloadBehavior *smithy.Schema
+
+var _WorkloadTypeConcurrencyType = smithy.NewSchema(smithy.ShapeID{
+	Namespace: "com.amazonaws.connect",
+	Name:      "WorkloadTypeConcurrencyType",
+}, smithy.ShapeTypeInteger, 0)
 
 var Workspace = smithy.NewSchema(smithy.ShapeID{
 	Namespace: "com.amazonaws.connect",
@@ -25926,6 +25970,12 @@ func init() {
 
 	_ChannelToCountMap_value = _ChannelToCountMap.AddMember("value", _IntegerCount)
 
+	ChannelWorkloadBehaviorType_ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY = ChannelWorkloadBehaviorType.AddMember("ROUTE_CURRENT_CHANNEL_CURRENT_WORKLOADTYPE_ONLY", smithyprelude.Unit)
+
+	ChannelWorkloadBehaviorType_ROUTE_CURRENT_CHANNEL_ANY_WORKLOADTYPE_ONLY = ChannelWorkloadBehaviorType.AddMember("ROUTE_CURRENT_CHANNEL_ANY_WORKLOADTYPE_ONLY", smithyprelude.Unit)
+
+	ChannelWorkloadBehaviorType_ROUTE_ANY_CHANNEL_ANY_WORKLOAD_TYPE = ChannelWorkloadBehaviorType.AddMember("ROUTE_ANY_CHANNEL_ANY_WORKLOAD_TYPE", smithyprelude.Unit)
+
 	ChatContactMetrics_MultiParty = ChatContactMetrics.AddMember("MultiParty", _NullableBoolean)
 
 	ChatContactMetrics_TotalMessages = ChatContactMetrics.AddMember("TotalMessages", _Count)
@@ -26939,6 +26989,8 @@ func init() {
 	Credentials_RefreshTokenExpiration = Credentials.AddMember("RefreshTokenExpiration", _Timestamp)
 
 	CrossChannelBehavior_BehaviorType = CrossChannelBehavior.AddMember("BehaviorType", BehaviorType)
+
+	CrossChannelWorkloadBehavior_ChannelWorkloadBehaviorType = CrossChannelWorkloadBehavior.AddMember("ChannelWorkloadBehaviorType", ChannelWorkloadBehaviorType)
 
 	CurrentMetricName_AGENTS_ONLINE = CurrentMetricName.AddMember("AGENTS_ONLINE", smithyprelude.Unit)
 
@@ -29220,11 +29272,21 @@ func init() {
 
 	MaximumResultReturnedException_Message = MaximumResultReturnedException.AddMember("Message", _Message)
 
+	WorkloadTypeConcurrency_WorkloadType = WorkloadTypeConcurrency.AddMember("WorkloadType", _WorkloadType)
+
+	WorkloadTypeConcurrency_Concurrency = WorkloadTypeConcurrency.AddMember("Concurrency", _WorkloadTypeConcurrencyType)
+
+	WorkloadTypeConcurrency_CrossChannelWorkloadBehavior = WorkloadTypeConcurrency.AddMember("CrossChannelWorkloadBehavior", CrossChannelWorkloadBehavior)
+
+	_WorkloadTypeConcurrencies_member = _WorkloadTypeConcurrencies.AddMember("member", WorkloadTypeConcurrency)
+
 	MediaConcurrency_Channel = MediaConcurrency.AddMember("Channel", Channel)
 
 	MediaConcurrency_Concurrency = MediaConcurrency.AddMember("Concurrency", _Concurrency)
 
 	MediaConcurrency_CrossChannelBehavior = MediaConcurrency.AddMember("CrossChannelBehavior", CrossChannelBehavior)
+
+	MediaConcurrency_WorkloadTypeConcurrencies = MediaConcurrency.AddMember("WorkloadTypeConcurrencies", _WorkloadTypeConcurrencies)
 
 	_MediaConcurrencies_member = _MediaConcurrencies.AddMember("member", MediaConcurrency)
 

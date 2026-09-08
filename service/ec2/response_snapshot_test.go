@@ -31140,6 +31140,10 @@ func TestCheckResponseSnapshot_DescribeInstanceTypes(t *testing.T) {
 							DefaultEnaQueueCountPerInterface:    ptr.Int32(1),
 							MaximumEnaQueueCount:                ptr.Int32(1),
 							MaximumEnaQueueCountPerInterface:    ptr.Int32(1),
+							InterfaceTypes: []types.NetworkCardInterfaceType{
+								types.NetworkCardInterfaceType("interface"),
+								types.NetworkCardInterfaceType("interface"),
+							},
 						},
 						{
 							NetworkCardIndex:                    ptr.Int32(1),
@@ -31151,6 +31155,10 @@ func TestCheckResponseSnapshot_DescribeInstanceTypes(t *testing.T) {
 							DefaultEnaQueueCountPerInterface:    ptr.Int32(1),
 							MaximumEnaQueueCount:                ptr.Int32(1),
 							MaximumEnaQueueCountPerInterface:    ptr.Int32(1),
+							InterfaceTypes: []types.NetworkCardInterfaceType{
+								types.NetworkCardInterfaceType("interface"),
+								types.NetworkCardInterfaceType("interface"),
+							},
 						},
 					},
 					Ipv4AddressesPerInterface: ptr.Int32(1),
@@ -31442,6 +31450,10 @@ func TestCheckResponseSnapshot_DescribeInstanceTypes(t *testing.T) {
 							DefaultEnaQueueCountPerInterface:    ptr.Int32(1),
 							MaximumEnaQueueCount:                ptr.Int32(1),
 							MaximumEnaQueueCountPerInterface:    ptr.Int32(1),
+							InterfaceTypes: []types.NetworkCardInterfaceType{
+								types.NetworkCardInterfaceType("interface"),
+								types.NetworkCardInterfaceType("interface"),
+							},
 						},
 						{
 							NetworkCardIndex:                    ptr.Int32(1),
@@ -31453,6 +31465,10 @@ func TestCheckResponseSnapshot_DescribeInstanceTypes(t *testing.T) {
 							DefaultEnaQueueCountPerInterface:    ptr.Int32(1),
 							MaximumEnaQueueCount:                ptr.Int32(1),
 							MaximumEnaQueueCountPerInterface:    ptr.Int32(1),
+							InterfaceTypes: []types.NetworkCardInterfaceType{
+								types.NetworkCardInterfaceType("interface"),
+								types.NetworkCardInterfaceType("interface"),
+							},
 						},
 					},
 					Ipv4AddressesPerInterface: ptr.Int32(1),
